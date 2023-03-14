@@ -63,7 +63,9 @@ module EliteBattle
   def self.GetSpeciesIndex(species)
     number = @full_species.index(species) || 0
     return number
-    #GameData::Species.try_get(species)&.species
+  end
+  def self.GetSpeciesID(species)
+    return GameData::Species.try_get(species)&.species
   end
   def self.GetItemID(item)
     return @full_items.index(item) || 0
