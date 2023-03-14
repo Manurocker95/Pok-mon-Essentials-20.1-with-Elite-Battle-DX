@@ -1,0 +1,1 @@
+These sprites are not indexed for v19 of Essentials. You will have to re-name them accordingly with the new naming convention.

@@ -1,0 +1,20 @@
+﻿Name       = Elite Battle: DX
+Version    = 1.2.7
+Essentials = 20.1
+Conflicts  = Elite Battle System
+Requires   = Luka's Scripting Utilities,3.3
+Website    = https://luka-sj.com/res/ebdx
+Credits    = Luka S.J.,Maruno,Marin,Pokecheck.org,PinkCatDragon,Tebited15,BadSamaritan,WolfPP,redblueyellow,Damien,Issei Hyoudou,Nasasu,luckygirl88,Manurocker95
+#====================================================================
+# Change log
+#====================================================================
+#
+# 1.0.2
+# - Small fix for sprites in SafariZone (as it is not initialized from regular Battle class)
+#
+# 1.0.1:
+# - Small fix while accessing trainertype ID
+#
+# 1.0.0:
+# - Initial Port from Essentials 19.1 to 20.1.
+#====================================================================

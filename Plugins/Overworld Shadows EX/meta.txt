@@ -1,0 +1,7 @@
+Name       = Overworld Shadows EX
+Version    = 2.0.2
+Essentials = 20.1
+Website    = https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Conflicts  = Overworld Shadows
+Optional   = Gen 4 Character Animations EX, 1.0.0
+Credits    = Golisopod User, Wolf PP, Marin
