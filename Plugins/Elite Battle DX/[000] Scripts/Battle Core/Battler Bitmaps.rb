@@ -181,7 +181,9 @@ def pbCheckPokemonBitmapFiles(params)
     end
     for dir in dirs
       species_id = EliteBattle.GetSpeciesIndex(species)
+      species_ = EliteBattle.GetSpeciesID(species)
       bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+      bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
       #EliteBattle.log.debug("Loading #{species} at path: #{bitmapFileName}")
       ret = pbResolveBitmap(bitmapFileName)
       return ret if ret
