@@ -120,13 +120,19 @@ Alxndre~◇, Mashirosakura, NanaelJustice, KRLW890
 Blaquaza, KattenK, Travis, G.E.Z., SpheX, Hematite
 
 Gen 9 Icons:
-Vent, Katten, leParagon, Cesare_CBass, Alxndre~◇
+Vent, Katten, leParagon, Cesare_CBass, Alxndre~◇, Jordanos11
 
 PLA Icons:
 LuigiTKO, Pikafan2000, Cesare_CBass, Vent, Cesare_Cbass, MultiDiegoDani, leParagon, JWNutz
 and thanks for 
 Pokémon Icons Act 2.9 - Teracristalizando
 (https://whackahack.com/foro/threads/pokemon-icons-act-2-9-teracristalizando-07-08-2022.63896/)
+
+Walking Wake and Iron Leaves sprites:
+Jordanos11
+
+Terapagos, munkidogi, okidogi, Fezandipiti sprites:
+Ruben1986
 
 Full Sprites Credit List:
 https://docs.google.com/spreadsheets/d/1T-KC-4XDOeFKq0Z6tfN6Sz4JIlpaK7B8A0lbmBg9fNY/edit?usp=sharing
