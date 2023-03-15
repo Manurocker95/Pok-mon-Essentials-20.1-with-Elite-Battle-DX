@@ -10,6 +10,7 @@ end
 #  additional functions for quick access to proper objects
 #===============================================================================
 def getBattlerAltitude(battler)
+  return 0 if battler.nil? || battler.displaySpecies.nil?
   dat = GameData::SpeciesMetrics.get(battler.displaySpecies)
   ret = (dat.front_sprite_altitude rescue 0)
   ret = 0 if ret.nil?

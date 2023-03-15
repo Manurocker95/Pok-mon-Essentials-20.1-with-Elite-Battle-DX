@@ -7021,3 +7021,9 @@ BackSprite = 0,44
 FrontSprite = 0,0
 ShadowX = 0
 ShadowSize = 2
+#-------------------------------
+[WALKINGWAKE]
+BackSprite = 0,35
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
