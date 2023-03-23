@@ -774,8 +774,12 @@ class Battle::Scene
     # close out bag
     @bagWindow.clearSel
     @bagWindow.hide
-    numId = EliteBattle.GetItemID(ret.id)
-    $lastUsed = nil if ret.is_a?(Numeric) || (numId > 0 && $bag.quantity(ret) <= 1)
+    if ret.nil? && !(ret.is_a?(Numeric))
+      numId = EliteBattle.GetItemID(ret.id)
+      $lastUsed = nil if (numId > 0 && $bag.quantity(ret) <= 1)
+    else
+      $lastUsed = nil
+    end
     # try to remove low HP BGM
     setBGMLowHP(false)
   end
