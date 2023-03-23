@@ -1,0 +1,11 @@
+﻿Name       = Showdown Utils
+Version    = 1.0.0
+Essentials = 20.1
+Credits    = AceOfSpadesProduc100,Cilerba,Marin,Nuri Yuri,Manurocker95
+#====================================================================
+# Change log
+#====================================================================
+#
+# 1.0.0:
+# - Initial Port from Essentials 19.1 to 20.1.
+#====================================================================
