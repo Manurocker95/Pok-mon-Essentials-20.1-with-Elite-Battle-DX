@@ -8,6 +8,10 @@ Credits    = Luka S.J.,Maruno,Marin,Pokecheck.org,PinkCatDragon,Tebited15,BadSam
 #====================================================================
 # Change log
 #====================================================================
+# 1.0.3
+# - Fix in status icons
+# - Fix in returning from bag
+# - Fix for mega evolution in battle
 #
 # 1.0.2
 # - Small fix for sprites in SafariZone (as it is not initialized from regular Battle class)
