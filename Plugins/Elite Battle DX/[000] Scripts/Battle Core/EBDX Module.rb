@@ -52,6 +52,23 @@ module EliteBattle
   #-----------------------------------------------------------------------------
   # Indices parse
   #-----------------------------------------------------------------------------
+  def self.GetStatusIconPosition(_status)
+      status = GameData::Status.get(_status)
+
+      return 0 if status.nil? || status.id == :NONE
+      return status if status.is_a?(Numeric)
+
+      iconpos = status.icon_position + 1
+      #EliteBattle.log.debug("Loading status #{status.id} with pos #{status.icon_position} and returning #{iconpos}")
+      return iconpos
+  end
+  
+  def self.ShowStatusIcon(_status)
+      status = GetStatusIconPosition(_status) 
+      return status > 0 if status.is_a?(Numeric)
+      return status.icon_position > 0
+  end
+
   def self.InitializeSpecies 
     GameData::Species.each_species { |s| @full_species.push(s.species) }
   end

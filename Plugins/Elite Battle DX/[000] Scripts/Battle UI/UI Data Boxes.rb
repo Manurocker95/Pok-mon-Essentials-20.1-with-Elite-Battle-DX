@@ -504,7 +504,7 @@ class DataBoxEBDX  <  SpriteWrapper
       end
     end
     # shows status condition
-    status = GameData::Status.get(@battler.status).icon_position
+    status = EliteBattle.GetStatusIconPosition(@battler.status) # GameData::Status.get(@battler.status).icon_position
     @sprites["status"].src_rect.y = @sprites["status"].src_rect.height * (status - 1)
     @sprites["status"].src_rect.width = status > 0 ? @sprites["status"].bitmap.width : 0
     # gets rid of the level up tone

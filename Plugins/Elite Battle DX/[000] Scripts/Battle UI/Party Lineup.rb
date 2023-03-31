@@ -52,7 +52,7 @@ class PartyLineupEBDX
         pin = 3
       elsif pty[k].hp < 1 || pty[k].egg?
         pin = 2
-      elsif GameData::Status.get(pty[k].status).icon_position > 0
+      elsif EliteBattle.ShowStatusIcon(pty[k].status) #GameData::Status.get(pty[k].status).icon_position > 0
         pin = 1
       else
         pin = 0
