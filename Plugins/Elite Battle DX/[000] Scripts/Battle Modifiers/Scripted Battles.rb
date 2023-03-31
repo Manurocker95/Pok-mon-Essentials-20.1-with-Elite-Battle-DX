@@ -43,7 +43,7 @@ class Battle
   def pbMegaEvolve(index)
     return if !@battlers[index] || !@battlers[index].pokemon
     return if !(@battlers[index].hasMega? rescue false)
-    return if (@battlers[index].isMega? rescue true)
+    return if (@battlers[index].mega? rescue true)
     # displays trainer dialogue if applicable
     @scene.pbTrainerBattleSpeech(playerBattler?(@battlers[index]) ? "mega" : "megaOpp")
     return pbMegaEvolve_ebdx(index)
