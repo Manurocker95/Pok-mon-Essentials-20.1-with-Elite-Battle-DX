@@ -25,6 +25,9 @@ class Scene_Intro
     @cry = species.nil? ? nil : GameData::Species.cry_filename(species, ModularTitle::SPECIES_FORM)
     # Cycles through the intro pictures
     @skip = false
+    if ModularTitle::PLAY_MUSIC_ON_CREDITS
+      pbBGMPlay(ModularTitle::TITLE_CREDITS_THEME, 100, 100)
+    end
     self.cyclePics
     # loads the modular title screen
     @screen = ModularTitleScreen.new

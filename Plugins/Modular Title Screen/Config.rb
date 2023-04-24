@@ -88,6 +88,8 @@ module ModularTitle
   START_POS = [nil, nil]
 
   # set to true to show Title Screen even when running the game in Debug mode
-  SHOW_IN_DEBUG = false
+  SHOW_IN_DEBUG = true
 
+  PLAY_MUSIC_ON_CREDITS = false
+  TITLE_CREDITS_THEME = "Radio - Oak"
 end
