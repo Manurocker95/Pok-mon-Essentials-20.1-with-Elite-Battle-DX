@@ -55,7 +55,7 @@ module EliteBattle
   def self.checkEvoNuzlocke?(species)
     return false if !$PokemonGlobal || !$PokemonGlobal.nuzlockeData
     for poke in self.getEvolutionaryLine(species)
-      return true if $Trainer.owned?(poke)
+      return true if $player.owned?(poke)
     end
     return false
   end
@@ -235,11 +235,11 @@ class Battle
     # applies permadeath
     data = EliteBattle.get_data(:NUZLOCKE, :Metrics, :RULES); data = [] if data.nil?
     if EliteBattle.get(:nuzlocke) && data.include?(:PERMADEATH)
-      for i in 0...$Trainer.party.length
-        k = $Trainer.party.length - 1 - i
-        if $Trainer.party[k].hp <= 0
-          $PokemonBag.pbStoreItem($Trainer.party[k].item, 1) if $Trainer.party[k].item
-          $Trainer.party.delete_at(k)
+      for i in 0...$player.party.length
+        k = $player.party.length - 1 - i
+        if $player.party[k].hp <= 0
+          $PokemonBag.pbStoreItem($player.party[k].item, 1) if $player.party[k].item
+          $player.party.delete_at(k)
           $PokemonTemp.evolutionLevels.delete_at(k)
         end
       end

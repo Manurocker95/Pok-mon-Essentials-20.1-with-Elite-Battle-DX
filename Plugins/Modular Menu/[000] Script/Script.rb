@@ -243,7 +243,7 @@ class PokemonPauseMenu_Scene
         opac = j == 0 ? 155 : 255
         icon = pbBitmap(ModularMenu.icon(key))
         text = ModularMenu.name(key)
-        text.gsub!("\\PN", "#{$Trainer.name}")
+        text.gsub!("\\PN", "#{$player.name}")
         text.gsub!("\\CONTEST", pbInSafari? ? "Quit" : "Quit Contest")
         @sprites["#{i}"].bitmap.blt(18 + j*bmp.width/2, 6, icon, Rect.new(0, 0, 48, 48), opac)
         pbDrawOutlineText(@sprites["#{i}"].bitmap, 66 + j*bmp.width/2, 18, 136, 48, text, Color.new(255, 255, 255), Color.new(64, 64, 64), 1)

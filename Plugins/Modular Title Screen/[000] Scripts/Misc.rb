@@ -43,8 +43,8 @@ class MTS_Element_MX1
   end
   # get variable trainertype
   def getTrainer
-    type = $Trainer ? $Trainer.trainertype : 0
-    outfit = $Trainer ? $Trainer.outfit : 0
+    type = $player ? $player.trainertype : 0
+    outfit = $player ? $player.outfit : 0
     bitmapFileName = sprintf("Graphics/MODTS/Panorama/trainer%s_%d",
        getConstantName(PBTrainers,type),outfit) rescue nil
     if !pbResolveBitmap(bitmapFileName)

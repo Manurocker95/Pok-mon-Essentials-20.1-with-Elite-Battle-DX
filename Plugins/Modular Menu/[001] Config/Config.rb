@@ -24,8 +24,8 @@ ModularMenu.add_entry(:POKEDEX, _INTL("Pokédex"), "menuPokedex") do |menu|
       menu.refresh
     }
   else
-    if $Trainer.pokedex.accessible_dexes.length == 1
-      $PokemonGlobal.pokedexDex = $Trainer.pokedex.accessible_dexes[0]
+    if $player.pokedex.accessible_dexes.length == 1
+      $PokemonGlobal.pokedexDex = $player.pokedex.accessible_dexes[0]
       pbFadeOutIn(99999) {
         scene = PokemonPokedex_Scene.new
         screen = PokemonPokedexScreen.new(scene)
@@ -43,13 +43,13 @@ ModularMenu.add_entry(:POKEDEX, _INTL("Pokédex"), "menuPokedex") do |menu|
   end
 end
 # condition to satisfy
-ModularMenu.add_condition(:POKEDEX) { next $Trainer.pokedex && $Trainer.pokedex.accessible_dexes.length > 0 }
+ModularMenu.add_condition(:POKEDEX) { next $player.pokedex && $player.pokedex.accessible_dexes.length > 0 }
 #-------------------------------------------------------------------------------
 #  Party Screen
 #-------------------------------------------------------------------------------
 ModularMenu.add_entry(:POKEMON, _INTL("Pokémon"), "menuPokemon") do |menu|
   sscene = PokemonParty_Scene.new
-  sscreen = PokemonPartyScreen.new(sscene,$Trainer.party)
+  sscreen = PokemonPartyScreen.new(sscene,$player.party)
   hiddenmove = nil
   pbFadeOutIn(99999) {
     hiddenmove = sscreen.pbPokemonScreen
@@ -64,7 +64,7 @@ ModularMenu.add_entry(:POKEMON, _INTL("Pokémon"), "menuPokemon") do |menu|
   end
 end
 # condition to satisfy
-ModularMenu.add_condition(:POKEMON) { next $Trainer.party.length > 0 }
+ModularMenu.add_condition(:POKEMON) { next $player.party.length > 0 }
 #-------------------------------------------------------------------------------
 #  Bag Screen
 #-------------------------------------------------------------------------------
@@ -95,7 +95,7 @@ ModularMenu.add_entry(:POKEGEAR, _INTL("Pokégear"), "menuPokegear") do |menu|
   }
 end
 # condition to satisfy
-ModularMenu.add_condition(:POKEGEAR) { next $Trainer.has_pokegear }
+ModularMenu.add_condition(:POKEGEAR) { next $player.has_pokegear }
 #-------------------------------------------------------------------------------
 #  Trainer Card
 #-------------------------------------------------------------------------------

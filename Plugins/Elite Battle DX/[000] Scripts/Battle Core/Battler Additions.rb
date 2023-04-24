@@ -132,7 +132,7 @@ class Pokemon
   alias name_ebdx name unless self.method_defined?(:name_ebdx)
   def name
     return _INTL("Bidoof") if GameData::Species.exists?(:BIDOOF) && defined?(firstApr?) && firstApr?
-    hide = EliteBattle.get_data(self.species, :Species, :HIDENAME, (self.form rescue 0)) && !$Trainer.owned?(self.species)
+    hide = EliteBattle.get_data(self.species, :Species, :HIDENAME, (self.form rescue 0)) && !$player.owned?(self.species)
     return hide ? _INTL("???") : self.name_ebdx
   end
   #-----------------------------------------------------------------------------

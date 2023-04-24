@@ -61,8 +61,8 @@ module EliteBattle
     Events.onWildBattleOverride.trigger(genwildpoke, genwildpoke.species, genwildpoke.level, handled)
     return handled[0] if handled[0] != nil
     # Skip battle if the player has no able Pokémon, or if holding Ctrl in Debug mode
-    if $Trainer.able_pokemon_count == 0 || ($DEBUG && Input.press?(Input::CTRL))
-      pbMessage(_INTL("SKIPPING BATTLE...")) if $Trainer.pokemonCount>0
+    if $player.able_pokemon_count == 0 || ($DEBUG && Input.press?(Input::CTRL))
+      pbMessage(_INTL("SKIPPING BATTLE...")) if $player.pokemonCount>0
       pbSet(outcomeVar, 1)   # Treat it as a win
       $PokemonTemp.clearBattleRules
       $PokemonGlobal.nextBattleBGM       = nil
@@ -77,8 +77,8 @@ module EliteBattle
     # Generate wild Pokémon based on the species and level
     foeParty = [genwildpoke]
     # Calculate who the trainers and their party are
-    playerTrainers    = [$Trainer]
-    playerParty       = $Trainer.party
+    playerTrainers    = [$player]
+    playerParty       = $player.party
     playerPartyStarts = [0]
     room_for_partner = (foeParty.length > 1)
     if !room_for_partner && $game_temp.battle_rules["size"] && !["single", "1v1", "1v2", "1v3"].include?($game_temp.battle_rules["size"])
@@ -90,7 +90,7 @@ module EliteBattle
       ally.party = $PokemonGlobal.partner[3]
       playerTrainers.push(ally)
       playerParty = []
-      $Trainer.party.each { |pkmn| playerParty.push(pkmn) }
+      $player.party.each { |pkmn| playerParty.push(pkmn) }
       playerPartyStarts.push(playerParty.length)
       ally.party.each { |pkmn| playerParty.push(pkmn) }
       setBattleRule("double") if !$game_temp.battle_rules["size"]

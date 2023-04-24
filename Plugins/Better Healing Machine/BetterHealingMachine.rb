@@ -8,7 +8,7 @@ CENTRE = false #change to false if Pokéball tray is between two tiles
 #------------------
   def initialize
     balls=[]
-    for poke in $Trainer.party
+    for poke in $player.party
       balls.push(poke.poke_ball) if !poke.egg?
     end
     return false if balls.length==0

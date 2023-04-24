@@ -7,7 +7,7 @@
 ESSENTIALS_IV_TO_SHOWDOWN = { HP: 'HP', ATTACK: 'Atk', DEFENSE: 'Def', SPECIAL_ATTACK: 'SpA', SPECIAL_DEFENSE: 'SpD', SPEED: 'Spe' }
 
 def pbShowdown
-  party = $Trainer.party.compact.map do |pokemon|
+  party = $player.party.compact.map do |pokemon|
     next {
       name: pokemon.species.name.to_s.downcase,
       level: pokemon.level,
@@ -42,7 +42,7 @@ def importopponent
         # Create trainer object
         tr_name = "CPU Player"
         trainer = NPCTrainer.new(tr_name, :CPUPLAYER)
-        trainer.id        = $Trainer.make_foreign_ID
+        trainer.id        = $player.make_foreign_ID
         trainer.items     = nil
         trainer.lose_text = ""
         data_hash['teams'][0]['pokemon'].each do |pkmn_data|
@@ -204,7 +204,7 @@ def importteam
 			p.calc_stats
 			(0) rescue nil; pbAddPokemonSilent(p)
 		end
-		pbMessage(_INTL($Trainer.name + "\\se[] obtained some Pokémon!\\me[Pkmn get]\\wtnp[30]"))
+		pbMessage(_INTL($player.name + "\\se[] obtained some Pokémon!\\me[Pkmn get]\\wtnp[30]"))
 	rescue
 		pbMessage(_INTL("An error occurred. Check for JSON-specific errors in a JSON validator, or refer to \"showdowntoessentialsguide.txt\" for team-specific errors.")) 
 	end

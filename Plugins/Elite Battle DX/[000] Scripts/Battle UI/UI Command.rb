@@ -21,7 +21,7 @@ class Battle::Scene
     @ret = 0; @vector.reset; @inCMx = true
     @commandWindow.refreshCommands(idxBattler)
     # show command window
-    #name = (@safaribattle) ? $Trainer.name : @battle.battlers[idxBattler].name
+    #name = (@safaribattle) ? $player.name : @battle.battlers[idxBattler].name
     pbSEPlay("EBDX/SE_Zoom4", 50)
     @commandWindow.showPlay
     @sprites["dataBox_#{idxBattler}"].selected = true

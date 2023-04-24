@@ -77,7 +77,7 @@ end
 #  Def used for playing badge obtain animation
 #-------------------------------------------------------------------------------
 def renderBadgeAnimation(badge_number = 0)
-  $Trainer.badges[badge_number] = true
+  $player.badges[badge_number] = true
   height = Graphics.height
   screen = Graphics.snap_to_bitmap
   viewport = Viewport.new(0, 0, Graphics.width, height)

@@ -76,7 +76,7 @@ class EliteBattle_Pokedex
     region = -1
     if Settings::USE_CURRENT_REGION_DEX
       region = pbGetCurrentRegion
-      region = -1 if region >= $Trainer.pokedex.dexes_count - 1
+      region = -1 if region >= $player.pokedex.dexes_count - 1
     else
       region = $PokemonGlobal.pokedexDex   # National Dex -1, regional Dexes 0, 1, etc.
     end

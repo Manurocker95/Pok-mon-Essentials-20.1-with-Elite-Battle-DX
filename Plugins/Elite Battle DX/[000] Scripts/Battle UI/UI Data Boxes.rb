@@ -406,7 +406,7 @@ class DataBoxEBDX  <  SpriteWrapper
     @pokemon = @battler.displayPokemon
     # failsafe
     return if @pokemon.nil?
-    @hidden = EliteBattle.get_data(@pokemon.species, :Species, :HIDENAME, (@pokemon.form rescue 0)) && !$Trainer.owned?(@pokemon.species)
+    @hidden = EliteBattle.get_data(@pokemon.species, :Species, :HIDENAME, (@pokemon.form rescue 0)) && !$player.owned?(@pokemon.species)
     # exits the refresh if the databox isn't fully set up yet
     return if !@loaded
     # update for HP/EXP bars

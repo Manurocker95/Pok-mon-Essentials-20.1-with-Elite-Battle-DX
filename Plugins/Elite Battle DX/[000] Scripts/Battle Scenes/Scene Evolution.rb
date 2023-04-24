@@ -407,8 +407,8 @@ class PokemonEvolutionScene
     @pokemon.form    = 0 if @pokemon.isSpecies?(:MOTHIM)
     @pokemon.calc_stats
     # set species seen as true
-    $Trainer.pokedex.register(@pokemon.species, @pokemon.gender, @pokemon.form)
-    $Trainer.pokedex.set_owned(@pokemon.species)
+    $player.pokedex.register(@pokemon.species, @pokemon.gender, @pokemon.form)
+    $player.pokedex.set_owned(@pokemon.species)
     # learn moves upon evolution for evolved species
     # Learn moves upon evolution for evolved species
     movelist = @pokemon.getMoveList

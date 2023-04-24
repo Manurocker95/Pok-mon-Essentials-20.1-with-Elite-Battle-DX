@@ -22,7 +22,7 @@ class EliteBattle_BasicWildAnimations
       end
     end
     # animation selection processing for regular battles
-    if (!@level.nil? && @level > $Trainer.party[0].level)
+    if (!@level.nil? && @level > $player.party[0].level)
       return self.overlevel
     elsif ($PokemonGlobal && ($PokemonGlobal.surfing || $PokemonGlobal.diving || $PokemonGlobal.fishing))
       return self.water
