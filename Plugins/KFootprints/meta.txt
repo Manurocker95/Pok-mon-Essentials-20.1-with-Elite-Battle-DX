@@ -1,5 +1,0 @@
-Name         = Footprints Ex
-Version      = 1.0
-Essentials   = 20.1
-Website      = https://whackahack.com
-Credits      = Manurocker95, KleinStudio
