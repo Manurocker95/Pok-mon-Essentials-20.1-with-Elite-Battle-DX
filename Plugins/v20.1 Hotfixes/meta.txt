@@ -1,5 +1,5 @@
 ﻿Name       = v20.1 Hotfixes
-Version    = 1.0.6
+Version    = 1.0.7
 Essentials = 20.1
 Conflicts  = v19 Hotfixes
 Conflicts  = v19.1 Updates
@@ -106,5 +106,15 @@ Credits    = Maruno
 #   target's evasion.
 # - Fixed entering a map always restarting the BGM if that map's BGM
 #   has a night version, even if it ends up playing the same music.
+#
+# 1.0.7:
+#
+# - Fixed a scrolled screen snapping back to centre on the player as
+#   soon as they move.
+# - Fixed error in battle fight menu when not using graphics for it.
+# - Fixed Liquid Ooze not oozing drained HP if the bearer fainted
+#   from that draining.
+# - Fixed only one IV being inherited due to a held Power item if
+#   both parents are holding different Power items.
 #
 #====================================================================

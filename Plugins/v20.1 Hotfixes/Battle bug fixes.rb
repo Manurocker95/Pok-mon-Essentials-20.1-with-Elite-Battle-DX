@@ -431,3 +431,64 @@ class Battle::Move::IgnoreTargetDefSpDefEvaStatStages < Battle::Move
     modifiers[:evasion_stage] = 0
   end
 end
+
+#===============================================================================
+# Fixed error in battle fight menu when not using graphics for it.
+#===============================================================================
+class Battle::Scene::FightMenu < Battle::Scene::MenuBase
+  alias __hotfixes__refreshMoveData refreshMoveData
+  def refreshMoveData(move)
+    return if !USE_GRAPHICS && !move
+    __hotfixes__refreshMoveData(move)
+  end
+end
+
+#===============================================================================
+# Fixed Liquid Ooze not oozing drained HP if the bearer fainted from that
+# draining.
+#===============================================================================
+class Battle::Battler
+  def pbRecoverHPFromDrain(amt, target, msg = nil)
+    if target.hasActiveAbility?(:LIQUIDOOZE, true)
+      @battle.pbShowAbilitySplash(target)
+      pbReduceHP(amt)
+      @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
+      @battle.pbHideAbilitySplash(target)
+      pbItemHPHealCheck
+    else
+      msg = _INTL("{1} had its energy drained!", target.pbThis) if nil_or_empty?(msg)
+      @battle.pbDisplay(msg)
+      if canHeal?
+        amt = (amt * 1.3).floor if hasActiveItem?(:BIGROOT)
+        pbRecoverHP(amt)
+      end
+    end
+  end
+end
+
+class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
+  def pbEffectAgainstTarget(user, target)
+    # Calculate target's effective attack value
+    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
+    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+    atk      = target.attack
+    atkStage = target.stages[:ATTACK] + 6
+    healAmt = (atk.to_f * stageMul[atkStage] / stageDiv[atkStage]).floor
+    # Reduce target's Attack stat
+    if target.pbCanLowerStatStage?(:ATTACK, user, self)
+      target.pbLowerStatStage(:ATTACK, 1, user)
+    end
+    # Heal user
+    if target.hasActiveAbility?(:LIQUIDOOZE, true)
+      @battle.pbShowAbilitySplash(target)
+      user.pbReduceHP(healAmt)
+      @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", user.pbThis))
+      @battle.pbHideAbilitySplash(target)
+      user.pbItemHPHealCheck
+    elsif user.canHeal?
+      healAmt = (healAmt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
+      user.pbRecoverHP(healAmt)
+      @battle.pbDisplay(_INTL("{1}'s HP was restored.", user.pbThis))
+    end
+  end
+end
