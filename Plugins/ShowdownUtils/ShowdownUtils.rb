@@ -136,9 +136,9 @@ def pbCPUTrainerBattle(doubleBattle=false, canLose=false, outcomeVar=1)
 #
 #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
 # Get the JSON library from the folder of the below name
-$:.push File.join(Dir.pwd, "../Ruby Library 3.0.0")
+$:.push File.join(Dir.pwd, "Plugins/Ruby Library 3.1.0")
 # Import the library
-#require 'json'
+require 'json'
 def importteam
 	filename = @scene.pbEnterText(_INTL("Name? (Case insensitive)"),1,12)
 	begin
@@ -212,7 +212,8 @@ end
 
 def pbSaveJSON(save_data)
     pbShowdown
+    Dir.mkdir("Saves/") if !Dir.exists?("Saves/")
     fileJson = File.new("Saves/save.json", "w+")
     fileJson.write(save_data.to_json)
-  end  
+end  
   
