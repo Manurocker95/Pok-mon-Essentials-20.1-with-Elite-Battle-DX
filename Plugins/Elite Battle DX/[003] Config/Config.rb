@@ -55,7 +55,9 @@ module EliteBattle
   SHOW_DEBUG_FEATURES = false
 
   # 1 by default-> sets hp inside the HP bar
-  HP_TEXT_Y_OFFSET = 1
+  HP_TEXT_Y_OFFSET = 10
+  HP_TEXT_X_OFFSET = 0
+  HP_TEXT_Y_BITMAP = 20
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling

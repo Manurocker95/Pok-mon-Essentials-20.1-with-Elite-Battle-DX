@@ -248,6 +248,8 @@ class DataBoxEBDX  <  SpriteWrapper
     @loaded = false
     @showing = false
     @hpTextY = EliteBattle::HP_TEXT_Y_OFFSET
+    @hpTextX = EliteBattle::HP_TEXT_X_OFFSET
+    @hpTextYBitmap = EliteBattle::HP_TEXT_Y_BITMAP
     pbDisposeSpriteHash(@sprites)
     @sprites.clear
     # caches the bitmap used for coloring
@@ -305,7 +307,7 @@ class DataBoxEBDX  <  SpriteWrapper
     @sprites["caught"].ey = @sprites["container"].ey - 2
 
     @sprites["textHP"] = Sprite.new(@viewport)
-    @sprites["textHP"].bitmap = Bitmap.new(@sprites["container"].bitmap.width, @sprites["base"].bitmap.height + 8)
+    @sprites["textHP"].bitmap = Bitmap.new(@sprites["container"].bitmap.width, @sprites["base"].bitmap.height + 8 + @hpTextYBitmap)
     @sprites["textHP"].z = self.getMetric("hp", :z)
     @sprites["textHP"].ex = self.getMetric("hp", :x)
     @sprites["textHP"].ey = self.getMetric("hp", :y)
@@ -388,7 +390,8 @@ class DataBoxEBDX  <  SpriteWrapper
     # updates the HP text
     str = "#{self.hp}/#{@battler.totalhp}"
     @sprites["textHP"].bitmap.clear
-    textpos = [[str,@sprites["textHP"].bitmap.width,0,@hpTextY,Color.white,Color.new(0,0,0,125)]]
+
+    textpos = [[str, @sprites["textHP"].bitmap.width + @hpTextX, @hpTextY,1,Color.white,Color.new(0,0,0,125)]]
     pbDrawTextPositions(@sprites["textHP"].bitmap,textpos) if @showhp
   end
   #-----------------------------------------------------------------------------
