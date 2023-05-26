@@ -58,6 +58,7 @@ module EliteBattle
   HP_TEXT_Y_OFFSET = 10
   HP_TEXT_X_OFFSET = 0
   HP_TEXT_Y_BITMAP = 20
+  PLAYER_Y_OFFSET = -20
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling

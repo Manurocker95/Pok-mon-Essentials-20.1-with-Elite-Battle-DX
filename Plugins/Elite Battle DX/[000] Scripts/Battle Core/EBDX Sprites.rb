@@ -425,9 +425,10 @@ class DynamicPokemonSprite
     species = species.nil? ? @pokemon.species : species
     # sauce
     species = :BIDOOF if GameData::Species.exists?(:BIDOOF) && defined?(firstApr?) && firstApr?
-    if species
-      x = EliteBattle.get_data(species, :Species, (@index%2 == 0) ? :PX : :EX, (@pokemon.form rescue 0))
-      y = EliteBattle.get_data(species, :Species, (@index%2 == 0) ? :PY : :EY, (@pokemon.form rescue 0))
+    if species      
+      isPlayer = (@index%2 == 0)
+      x = EliteBattle.get_data(species, :Species, (isPlayer) ? :PX : :EX, (@pokemon.form rescue 0))
+      y = EliteBattle.get_data(species, :Species, (isPlayer) ? :PY : :EY, (@pokemon.form rescue 0)) 
       a = EliteBattle.get_data(species, :Species, :ALTITUDE, (@pokemon.form rescue 0))
       @sprite.ox -= x if !x.nil? && x.is_a?(Numeric)
       @sprite.oy -= y if !y.nil? && y.is_a?(Numeric)
