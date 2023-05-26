@@ -1,5 +1,4 @@
  module Compiler
- alias old_compile_pokemon_forms compile_pokemon_forms
  def compile_pokemon_forms(path = "PBS/pokemon_forms.txt")
     compile_pbs_file_message_start(path)
     species_names           = []
@@ -155,11 +154,12 @@
           :mega_move          => contents["MegaMove"],
           :unmega_form        => contents["UnmegaForm"],
           :mega_message       => contents["MegaMessage"],
-          :primal_stone         => contents["PrimalStone"],
-          :primal_move          => contents["PrimalMove"],
-          :unprimal_form        => contents["UnprimalForm"],
-          :primal_message       => contents["PrimalMessage"]
+          :primal_stone       => contents["PrimalStone"],
+          :primal_move        => contents["PrimalMove"],
+          :unprimal_form      => contents["UnprimalForm"],
+          :primal_message     => contents["PrimalMessage"]
         }
+        echoln "A"
         # If form has any wild items, ensure none are inherited from base species
         if (contents["WildItemCommon"] && !contents["WildItemCommon"].empty?) ||
            (contents["WildItemUncommon"] && !contents["WildItemUncommon"].empty?) ||
@@ -229,8 +229,7 @@
     MessageTypes.addMessagesAsHash(MessageTypes::Entries, species_pokedex_entries)
     process_pbs_file_message_end
   end
-
-  alias old_write_pokemon_forms write_pokemon_forms 
+  
   def write_pokemon_forms(path = "PBS/pokemon_forms.txt")
     write_pbs_file_message_start(path)
     File.open(path, "wb") { |f|
@@ -343,15 +342,17 @@
     attr_reader :unprimal_form
     attr_reader :primal_message
 
-
-    alias old_initialize initialize 
+    alias old_initialize initialize
     def initialize(hash)
-      @primal_stone         = hash[:primal_stone]
-      @primal_move          = hash[:primal_move]
-      @unprimal_form        = hash[:unprimal_form]        || 0
-      @primal_message       = hash[:primal_message]       || 0
       old_initialize(hash)
+      @primal_stone       = hash["PrimalStone"]
+      @primal_move        = hash[:primal_move]
+      @unprimal_form      = hash[:unprimal_form]        || 0
+      @primal_message     = hash[:primal_message]       || 0
+      echoln = @primal_stone if @primal_stone != nil
     end
+
+    def pbGetPrimalStone; return @primal_stone; end
 
     #=========
     def self.schema(compiling_forms = false)
@@ -409,10 +410,11 @@
         ret["MegaMove"]     = [0, "e", :Move]
         ret["UnmegaForm"]   = [0, "u"]
         ret["MegaMessage"]  = [0, "u"]
-        ret["PrimalStone"]    = [0, "e", :Item]
-        ret["PrimalMove"]     = [0, "e", :Move]
-        ret["UnprimalForm"]   = [0, "u"]
-        ret["PrimalMessage"]  = [0, "u"]
+        ret["PrimalStone"]  = [0, "e", :Item]
+        ret["PrimalMove"]   = [0, "e", :Move]
+        ret["UnprimalForm"] = [0, "u"]
+        ret["PrimalMessage"]= [0, "u"]
+        echoln "form"
       else
         ret["InternalName"] = [0, "n"]
         ret["Name"]         = [0, "s"]
@@ -436,13 +438,15 @@
 
   alias old_hasPrimalForm? hasPrimalForm? 
   def hasPrimalForm?
+    return true if old_hasPrimalForm?
+
     primalForm = self.getPrimalForm
     return primalForm > 0 && primalForm != form_simple
   end
 
   alias old_primal? primal? 
   def primal?
-    return (species_data.primal_stone || species_data.primal_move) ? true : false
+    return (species_data.pbGetPrimalStone || species_data.primal_move) ? true : false
   end
 
   alias old_makePrimal makePrimal 
@@ -465,11 +469,11 @@
     ret = 0
     GameData::Species.each do |data|
       next if data.species != @species || data.unprimal_form != form_simple
-      echoln _INTL("data.primal_stone {1},{2}",(data.primal_stone != nil),hasItem?(data.primal_stone))
-      if data.primal_stone && hasItem?(data.primal_stone)
+      echoln _INTL("{1} {2} {3} {4}",data.species, data.pbGetPrimalStone != nil,hasItem?(data.pbGetPrimalStone), data.form)
+      if data.pbGetPrimalStone && hasItem?(data.pbGetPrimalStone)
         ret = data.form
         break
-      elsif data.primal_move && hasMove?(data.primal_move)
+      elsif data.pbGetPrimalStone && hasMove?(data.primal_move)
         ret = data.form
         break
       end
