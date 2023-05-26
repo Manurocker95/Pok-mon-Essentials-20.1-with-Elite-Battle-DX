@@ -2729,3 +2729,14 @@ Weight = 0.1
 Pokedex = This Pokémon was born from passion that seeped into a coin. It wanders, apparently seeking to return to the treasure chest it once inhabited.
 CatchRate = 0
 Evolutions = GHOLDENGO,None,
+#-------------------------------
+[SALANDIT,1]
+FormName = Primal Salandit
+PrimalStone = VENUSAURITE
+BaseStats = 80,100,123,80,122,120
+BaseExp = 313
+Abilities = THICKFAT
+HiddenAbilities = THICKFAT
+Height = 2.4
+Weight = 155.5
+Pokedex = In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.
