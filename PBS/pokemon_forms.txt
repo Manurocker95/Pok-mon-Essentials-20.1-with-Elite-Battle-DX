@@ -2733,6 +2733,7 @@ Evolutions = GHOLDENGO,None,
 [SALANDIT,1]
 FormName = Primal Salandit
 PrimalStone = VENUSAURITE
+PrimalMessage = {1} reversed to custom Primal Form!!!!
 BaseStats = 80,100,123,80,122,120
 BaseExp = 313
 Abilities = THICKFAT

@@ -1,5 +1,11 @@
- module Compiler
- def compile_pokemon_forms(path = "PBS/pokemon_forms.txt")
+module Compiler
+  #-----------------------------------------------------------------------------
+  class << Compiler
+    alias old_compile_pokemon_forms compile_pokemon_forms
+    alias old_write_pokemon_forms write_pokemon_forms
+  end
+
+ def self.compile_pokemon_forms(path = "PBS/pokemon_forms.txt")
     compile_pbs_file_message_start(path)
     species_names           = []
     species_form_names      = []
@@ -157,9 +163,9 @@
           :primal_stone       => contents["PrimalStone"],
           :primal_move        => contents["PrimalMove"],
           :unprimal_form      => contents["UnprimalForm"],
-          :primal_message     => contents["PrimalMessage"]
+          :primal_message     => contents["PrimalMessage"],
+          :primal_common_animation     => contents["PrimalCommonAnimation"]
         }
-        echoln "A"
         # If form has any wild items, ensure none are inherited from base species
         if (contents["WildItemCommon"] && !contents["WildItemCommon"].empty?) ||
            (contents["WildItemUncommon"] && !contents["WildItemUncommon"].empty?) ||
@@ -230,7 +236,7 @@
     process_pbs_file_message_end
   end
   
-  def write_pokemon_forms(path = "PBS/pokemon_forms.txt")
+  def self.write_pokemon_forms(path = "PBS/pokemon_forms.txt")
     write_pbs_file_message_start(path)
     File.open(path, "wb") { |f|
       idx = 0
@@ -252,7 +258,8 @@
         f.write(sprintf("PrimalStone = %s\r\n", species.primal_stone)) if species.primal_stone
         f.write(sprintf("PrimalMove = %s\r\n", species.primal_move)) if species.primal_move
         f.write(sprintf("UnprimalForm = %d\r\n", species.unprimal_form)) if species.unprimal_form != 0
-        f.write(sprintf("PrimalMessage = %d\r\n", species.primal_message)) if species.primal_message != 0
+        f.write(sprintf("PrimalMessage = %d\r\n", species.primal_message)) if species.primal_message && species.primal_message != ""
+        f.write(sprintf("PrimalCommonAnimation = %d\r\n", species.primal_common_animation)) if species.primal_common_animation && species.primal_common_animation != ""
         if species.types.uniq.compact != base_species.types.uniq.compact
           f.write(sprintf("Types = %s\r\n", species.types.uniq.compact.join(",")))
         end
@@ -341,18 +348,17 @@
     attr_reader :primal_move
     attr_reader :unprimal_form
     attr_reader :primal_message
+    attr_reader :primal_common_animation
 
     alias old_initialize initialize
     def initialize(hash)
       old_initialize(hash)
-      @primal_stone       = hash["PrimalStone"]
-      @primal_move        = hash[:primal_move]
-      @unprimal_form      = hash[:unprimal_form]        || 0
-      @primal_message     = hash[:primal_message]       || 0
-      echoln = @primal_stone if @primal_stone != nil
+      @primal_stone                = hash[:primal_stone]
+      @primal_move                 = hash[:primal_move]
+      @unprimal_form               = hash[:unprimal_form]        || 0
+      @primal_message              = hash[:primal_message]       || ""
+      @primal_common_animation     = hash[:primal_common_animation] || ""
     end
-
-    def pbGetPrimalStone; return @primal_stone; end
 
     #=========
     def self.schema(compiling_forms = false)
@@ -413,8 +419,8 @@
         ret["PrimalStone"]  = [0, "e", :Item]
         ret["PrimalMove"]   = [0, "e", :Move]
         ret["UnprimalForm"] = [0, "u"]
-        ret["PrimalMessage"]= [0, "u"]
-        echoln "form"
+        ret["PrimalMessage"]= [0, "s"]
+        ret["PrimalCommonAnimation"]= [0, "s"]
       else
         ret["InternalName"] = [0, "n"]
         ret["Name"]         = [0, "s"]
@@ -434,46 +440,81 @@
   end
   end
 
+  class Battle::Battler
+    def primalCommonAnimation
+      return "" if @effects[PBEffects::Transform]
+      return @pokemon.primalCommonAnimation
+    end
+  
+    def hasCustomPrimalAnimation?
+      return false if @effects[PBEffects::Transform]
+      return @pokemon.hasCustomPrimalAnimation?
+    end 
+
+    def primalCustomMessage
+      return "" if @effects[PBEffects::Transform]
+      return @pokemon.primalCustomMessage
+    end
+
+    def hasCustomPrimalMessage?
+      return false if @effects[PBEffects::Transform]
+      return @pokemon.hasCustomPrimalMessage?
+    end 
+  end  
+
   class Pokemon
 
   alias old_hasPrimalForm? hasPrimalForm? 
   def hasPrimalForm?
     return true if old_hasPrimalForm?
-
     primalForm = self.getPrimalForm
     return primalForm > 0 && primalForm != form_simple
   end
 
   alias old_primal? primal? 
   def primal?
-    return (species_data.pbGetPrimalStone || species_data.primal_move) ? true : false
+    return true if old_primal?
+    return (species_data.primal_stone || species_data.primal_move) ? true : false
   end
 
   alias old_makePrimal makePrimal 
   def makePrimal
-    primalForm = self.getPrimalForm
-    self.form = primalForm if primalForm > 0
+    v = MultipleForms.call("getPrimalForm", self)
+    if !v.nil?
+      self.form = v 
+    else  
+      primalForm = self.getPrimalForm
+      self.form = primalForm if primalForm > 0
+    end  
   end
 
   alias old_makeUnprimal makeUnprimal 
   def makeUnprimal
-    unprimalForm = self.getUnprimalForm
-    if unprimalForm >= 0
-      self.form = unprimalForm
-    else
-      self.form = 0
+    v = MultipleForms.call("getUnprimalForm", self)
+    if !v.nil?
+      self.form = v
+    elsif primal?
+      unprimalForm = self.getUnprimalForm
+      if unprimalForm >= 0
+        self.form = unprimalForm
+      else
+        self.form = 0
+      end
     end
+  end
+
+  def getUnprimalForm
+    return (primal?) ? species_data.unprimal_form : -1
   end
 
   def getPrimalForm
     ret = 0
     GameData::Species.each do |data|
       next if data.species != @species || data.unprimal_form != form_simple
-      echoln _INTL("{1} {2} {3} {4}",data.species, data.pbGetPrimalStone != nil,hasItem?(data.pbGetPrimalStone), data.form)
-      if data.pbGetPrimalStone && hasItem?(data.pbGetPrimalStone)
+      if data.primal_stone && hasItem?(data.primal_stone)
         ret = data.form
         break
-      elsif data.pbGetPrimalStone && hasMove?(data.primal_move)
+      elsif data.primal_stone && hasMove?(data.primal_move)
         ret = data.form
         break
       end
@@ -481,17 +522,31 @@
     return ret   # form number, or 0 if no accessible Primal form
   end
 
+  def primalCommonAnimation
+    primalForm = self.getPrimalForm
+    return GameData::Species.get_species_form(@species, primalForm)&.primal_common_animation
+  end
+
+  def primalCustomMessage
+    primalForm = self.getPrimalForm
+    return GameData::Species.get_species_form(@species, primalForm)&.primal_message
+  end
+
+  def hasCustomPrimalAnimation?
+    animation = primalCommonAnimation
+    return animation.nil? ? false : animation != ""
+  end 
+
+  def hasCustomPrimalMessage?
+    msg = primalCustomMessage
+    echoln _INTL("{1} has {2}", @species, msg)
+    return msg.nil? ? false : msg != ""
+  end 
+
   def primalName
     formName = species_data.form_name
     return (formName && !formName.empty?) ? formName : _INTL("Primal {1}", species_data.name)
   end
-
-  def primalMessage   # 0=default message, 1=Custom message
-    primalForm = self.getPrimalForm
-    message_number = GameData::Species.get_species_form(@species, primalForm)&.primal_message
-    return message_number || 0
-  end
-
   end
 
   module GameData
@@ -505,12 +560,13 @@
     def pbPrimalReversion(idxBattler)
       battler = @battlers[idxBattler]
       return if !battler || !battler.pokemon || battler.fainted?
-      pbDisplay(_INTL("{1} has Primal {2} - {3}",battler.pbThis, battler.hasPrimal?, battler.primal?))
       return if !battler.hasPrimal? || battler.primal?
       if battler.isSpecies?(:KYOGRE)
         pbCommonAnimation("PrimalKyogre", battler)
       elsif battler.isSpecies?(:GROUDON)
         pbCommonAnimation("PrimalGroudon", battler)
+      elsif battler.hasCustomPrimalAnimation?
+          pbCommonAnimation(battler.primalCommonAnimation, battler)
       end
       battler.pokemon.makePrimal
       battler.form = battler.pokemon.form
@@ -521,7 +577,13 @@
         pbCommonAnimation("PrimalKyogre2", battler)
       elsif battler.isSpecies?(:GROUDON)
         pbCommonAnimation("PrimalGroudon2", battler)
+      elsif battler.hasCustomPrimalAnimation?
+        pbCommonAnimation(_INTL("{1}2",battler.primalCommonAnimation), battler)
       end
-      pbDisplay(_INTL("{1}'s Primal Reversion to {2}!\nIt reverted to its primal form!", battler.pbThis, battler.pokemon.primalName))
+      if (battler.hasCustomPrimalMessage?)
+        pbDisplay(_INTL(battler.primalCustomMessage, battler.pbThis))
+      else
+        pbDisplay(_INTL("{1}'s Primal Reversion!\nIt reverted to its primal form!", battler.pbThis))
+      end  
     end
   end
