@@ -426,9 +426,10 @@ class DynamicPokemonSprite
     # sauce
     species = :BIDOOF if GameData::Species.exists?(:BIDOOF) && defined?(firstApr?) && firstApr?
     if species      
-      isPlayer = (@index%2 == 0)
+      isPlayer = (@index%2 == 0) 
       x = EliteBattle.get_data(species, :Species, (isPlayer) ? :PX : :EX, (@pokemon.form rescue 0))
       y = EliteBattle.get_data(species, :Species, (isPlayer) ? :PY : :EY, (@pokemon.form rescue 0)) 
+      y = y + (isPlayer ? EliteBattle::PLAYER_BACKSPRITE_Y_OFFSET : EliteBattle::ENEMY_FRONT_Y_OFFSET) 
       a = EliteBattle.get_data(species, :Species, :ALTITUDE, (@pokemon.form rescue 0))
       @sprite.ox -= x if !x.nil? && x.is_a?(Numeric)
       @sprite.oy -= y if !y.nil? && y.is_a?(Numeric)
