@@ -1,5 +1,5 @@
 ﻿Name       = Elite Battle: DX
-Version    = 1.3.3
+Version    = 1.3.4
 Essentials = 20.1
 Conflicts  = Elite Battle System
 Requires   = Luka's Scripting Utilities,3.3
@@ -8,6 +8,9 @@ Credits    = Luka S.J.,Maruno,Marin,Pokecheck.org,PinkCatDragon,Tebited15,BadSam
 #====================================================================
 # Change log
 #====================================================================
+#
+# 1.0.7 - Considered as 1.3.4
+# - Configuration to priorize animated sprites in battle to use them while keeping the static ones for party
 #
 # 1.0.6 - Considered as 1.3.3
 # - "Fix" of the HP text that was inside the HP bar
