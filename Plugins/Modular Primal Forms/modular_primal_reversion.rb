@@ -539,8 +539,9 @@ module Compiler
 
   def hasCustomPrimalMessage?
     msg = primalCustomMessage
-    echoln _INTL("{1} has {2}", @species, msg)
-    return msg.nil? ? false : msg != ""
+    ret =  msg.nil? ? false : msg != ""
+    echoln _INTL("{1} has primal message {2}", @species, msg) if ret
+    return ret
   end 
 
   def primalName
