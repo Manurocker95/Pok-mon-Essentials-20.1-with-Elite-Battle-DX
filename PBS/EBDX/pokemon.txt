@@ -192,12 +192,12 @@ BattlerPlayerY          = 47
 BattlerEnemyX           = 2
 #-------------------------------
 [PIKACHU]
-BattlerEnemyY           = 61
+BattlerEnemyY           = 18
 InternalName            = PIKACHU
 BattlerAltitude         = 0
-BattlerPlayerX          = -6
-BattlerPlayerY          = 67
-BattlerEnemyX           = 1
+BattlerPlayerX          = -26
+BattlerPlayerY          = 4
+BattlerEnemyX           = 9
 #-------------------------------
 [RAICHU]
 BattlerEnemyY           = 53
@@ -506,12 +506,12 @@ BattlerPlayerY          = 57
 BattlerEnemyX           = 0
 #-------------------------------
 [KADABRA]
-BattlerEnemyY           = 48
+BattlerEnemyY           = 44
 InternalName            = KADABRA
 BattlerAltitude         = 0
-BattlerPlayerX          = 12
-BattlerPlayerY          = 46
-BattlerEnemyX           = 1
+BattlerPlayerX          = -13
+BattlerPlayerY          = 37
+BattlerEnemyX           = -16
 #-------------------------------
 [ALAKAZAM]
 BattlerEnemyY           = 45
@@ -898,12 +898,12 @@ BattlerPlayerY          = 56
 BattlerEnemyX           = 1
 #-------------------------------
 [CHANSEY]
-BattlerEnemyY           = 60
+BattlerEnemyY           = 31
 InternalName            = CHANSEY
 BattlerAltitude         = 0
-BattlerPlayerX          = 14
-BattlerPlayerY          = 68
-BattlerEnemyX           = 7
+BattlerPlayerX          = 16
+BattlerPlayerY          = 32
+BattlerEnemyX           = -1
 #-------------------------------
 [TANGELA]
 BattlerEnemyY           = 65
@@ -1037,8 +1037,8 @@ BattlerEnemyX           = -2
 BattlerEnemyY           = 43
 InternalName            = GYARADOS
 BattlerAltitude         = 0
-BattlerPlayerX          = 3
-BattlerPlayerY          = 45
+BattlerPlayerX          = -72
+BattlerPlayerY          = 55
 BattlerEnemyX           = -5
 #-------------------------------
 [LAPRAS]

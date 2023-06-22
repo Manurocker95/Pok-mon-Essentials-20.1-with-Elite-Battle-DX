@@ -62,9 +62,11 @@ module EliteBattle
   HP_TEXT_Y_BITMAP = 20
 
   # Offset to adjust the "origin" of the player backsprite. Take into account, if you use Sprite Positioner this won't move the sprite.
-  PLAYER_BACKSPRITE_Y_OFFSET = 0
+  PLAYER_BACKSPRITE_X_OFFSET = 0
+  PLAYER_BACKSPRITE_Y_OFFSET = -20
 
   # Offset to adjust the "origin" of the foe frontsprite. Take into account, if you use Sprite Positioner this won't move the sprite.
+  ENEMY_FRONT_X_OFFSET = 0
   ENEMY_FRONT_Y_OFFSET = 0
 
   # if True, animated sprites are checked first in battle. If false, static sprites are checked first.
