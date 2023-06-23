@@ -112,6 +112,32 @@ PLA Sprites from Smogon Gen8 Sprite Project :
 (https://www.smogon.com/forums/threads/smogon-sprite-project.3647722/)
 -Blaquaza, KingOfThe-X-Roads, KattenK, Travis, G.E.Z., SpheX, Hematite
 
+Animated gen 6 and Megas:
+
+Diegotoon20
+Snivy101
+Typhlito
+Legitimate Username
+Ayanocloud
+N-Kin
+Turtleye
+Siiilver
+Wyverii
+Branflakes325
+princessofmusic
+Layell
+branflakes
+Falgaia
+aXl
+Wobblebuns
+N-Kin
+zerudez
+Brylark
+princess-phoenix
+TrainerSplash
+Gnomowladny
+Gardow
+RockAdam
 
 Vanilla Style Version
 Pokémon sprites:
@@ -138,3 +164,4 @@ Full Sprites Credit List:
 https://docs.google.com/spreadsheets/d/1T-KC-4XDOeFKq0Z6tfN6Sz4JIlpaK7B8A0lbmBg9fNY/edit?usp=sharing
 
 And let me know if there is someone that I forget to mentions here.
+
