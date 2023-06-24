@@ -7027,3 +7027,9 @@ BackSprite = 0,35
 FrontSprite = 0,0
 ShadowX = 0
 ShadowSize = 2
+#-------------------------------
+[GRAVELER_LEADER]
+BackSprite = 0,35
+FrontSprite = 0,0
+ShadowX = 0
+ShadowSize = 2
