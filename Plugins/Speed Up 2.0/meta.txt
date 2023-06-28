@@ -1,5 +1,6 @@
 Name         = Better Speed Up
 Version      = 2.0
+Essentials   = 20.1
 Website      = [coming soon]
 Credits      = Marin for the original script, Phantombass for updating to 19.1
 

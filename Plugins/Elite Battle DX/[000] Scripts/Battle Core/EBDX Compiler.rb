@@ -70,16 +70,21 @@ module CompilerEBDX
   # interpret all the data from cache
   #-----------------------------------------------------------------------------
   def self.addFromCached
-    return if !$DEBUG
+    return if !$DEBUG || EliteBattle::SKIP_CACHED_DATA
     # get cache
     cache = EliteBattle.get(:cachedData)
-    for ch in cache
+    return if cache.nil?
+
+    for idx in 0..cache.length # for ch in cache
+      ch = cache[idx] 
       # run each from cache
       EliteBattle.add_data(*ch)
     end
+
     # clear cache
     cache.clear
     EliteBattle.set(:cachedData, [])
+
     # force start garbage collector
     GC.start
   end

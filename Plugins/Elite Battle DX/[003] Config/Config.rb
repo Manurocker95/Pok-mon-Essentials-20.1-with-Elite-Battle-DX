@@ -71,6 +71,9 @@ module EliteBattle
 
   # if True, animated sprites are checked first in battle. If false, static sprites are checked first.
   PRIORIZE_ANIMATED_SPRITES = true
+
+  # ZUD plugins clear cached data so EBDX gets stuck. Setting this to true skips the cache and directly loads the game.
+  SKIP_CACHED_DATA = false
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling

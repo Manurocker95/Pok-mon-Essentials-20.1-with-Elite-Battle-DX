@@ -98,6 +98,7 @@ module Game
     Essentials::ERROR_TEXT += "[EBDX v#{version}]\r\n"
     # run compiled data
     EliteBattle.setupData
+    echoln "\r\nRunning data from cache...\r\n"
     # run any data temporarily cached
     CompilerEBDX.addFromCached
     echoln "\r\nSuccessfully loaded all Elite Battle: DX data.\r\n"
