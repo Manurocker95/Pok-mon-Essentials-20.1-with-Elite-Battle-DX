@@ -3690,8 +3690,8 @@ NamePlural = TM001s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = TAKEDOWN
 Flags = Fling_90
+Move = TAKEDOWN
 Description = A reckless, full-body charge attack for slamming into the foe. It also damages the user a little.
 #-------------------------------
 [TM002]
@@ -3700,8 +3700,8 @@ NamePlural = TM002s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = CHARM
 Flags = Fling_10
+Move = CHARM
 Description = The user charmingly gazes at the foe, making it less wary. The target's Attack is harshly lowered.
 #-------------------------------
 [TM003]
@@ -3710,8 +3710,8 @@ NamePlural = TM003s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = FAKETEARS
 Flags = Fling_10
+Move = FAKETEARS
 Description = The user feigns crying to fluster the target, harshly lowering its Sp. Def stat.
 #-------------------------------
 [TM004]
@@ -3720,8 +3720,8 @@ NamePlural = TM004s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = AGILITY
 Flags = Fling_10
+Move = AGILITY
 Description = The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
 #-------------------------------
 [TM005]
@@ -3730,8 +3730,8 @@ NamePlural = TM005s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = MUDSLAP
 Flags = Fling_20
+Move = MUDSLAP
 Description = The user hurls mud in the target's face to inflict damage and lower its accuracy.
 #-------------------------------
 [TM006]
@@ -3740,8 +3740,8 @@ NamePlural = TM006s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = SCARYFACE
 Flags = Fling_10
+Move = SCARYFACE
 Description = The user frightens the target with a scary face to harshly reduce its Speed stat.
 #-------------------------------
 [TM007]
@@ -3750,8 +3750,8 @@ NamePlural = TM007s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = PROTECT
 Flags = Fling_10
+Move = PROTECT
 Description = It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
 #-------------------------------
 [TM008]
@@ -3760,8 +3760,8 @@ NamePlural = TM008s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = FIREFANG
 Flags = Fling_65
+Move = FIREFANG
 Description = The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned.
 #-------------------------------
 [TM009]
@@ -3770,8 +3770,8 @@ NamePlural = TM009s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = THUNDERFANG
 Flags = Fling_65
+Move = THUNDERFANG
 Description = The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.
 #-------------------------------
 [TM010]
@@ -3780,8 +3780,8 @@ NamePlural = TM010s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = ICEFANG
 Flags = Fling_65
+Move = ICEFANG
 Description = The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.
 #-------------------------------
 [TM011]
@@ -3790,8 +3790,8 @@ NamePlural = TM011s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = WATERPULSE
 Flags = Fling_60
+Move = WATERPULSE
 Description = The user attacks the target with a pulsing blast of water. It may also confuse the target.
 #-------------------------------
 [TM012]
@@ -3800,8 +3800,8 @@ NamePlural = TM012s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = LOWKICK
 Flags = Fling_10
+Move = LOWKICK
 Description = A powerful low kick that makes the foe fall over. It inflicts greater damage on heavier foes.
 #-------------------------------
 [TM013]
@@ -3810,8 +3810,8 @@ NamePlural = TM013s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = ACIDSPRAY
 Flags = Fling_40
+Move = ACIDSPRAY
 Description = The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.
 #-------------------------------
 [TM014]
@@ -3820,8 +3820,8 @@ NamePlural = TM014s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = ACROBATICS
 Flags = Fling_55
+Move = ACROBATICS
 Description = The user nimbly strikes the foe. This attack does more damage if the user is not holding an item.
 #-------------------------------
 [TM015]
@@ -3830,8 +3830,8 @@ NamePlural = TM015s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = STRUGGLEBUG
 Flags = Fling_50
+Move = STRUGGLEBUG
 Description = While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
 #-------------------------------
 [TM016]
@@ -3840,8 +3840,8 @@ NamePlural = TM016s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = PSYBEAM
 Flags = Fling_65
+Move = PSYBEAM
 Description = The target is attacked with a peculiar ray. It may also cause confusion.
 #-------------------------------
 [TM017]
@@ -3850,8 +3850,8 @@ NamePlural = TM017s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = CONFUSERAY
 Flags = Fling_10
+Move = CONFUSERAY
 Description = The target is exposed to a sinister ray that triggers confusion.
 #-------------------------------
 [TM018]
@@ -3860,8 +3860,8 @@ NamePlural = TM018s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = THIEF
 Flags = Fling_60
+Move = THIEF
 Description = The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.
 #-------------------------------
 [TM019]
@@ -3870,8 +3870,8 @@ NamePlural = TM019s
 Pocket = 4
 Price = 200
 FieldUse = TR
-Move = DISARMINGVOICE
 Flags = Fling_40
+Move = DISARMINGVOICE
 Description = Letting out a charming cry, the user does emotional damage to foes. This attack never misses.
 #-------------------------------
 [TM020]
@@ -3880,8 +3880,8 @@ NamePlural = TM020s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = TRAILBLAZE
 Flags = Fling_50
+Move = TRAILBLAZE
 Description = The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.
 #-------------------------------
 [TM021]
@@ -3890,8 +3890,8 @@ NamePlural = TM021s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = POUNCE
 Flags = Fling_50
+Move = POUNCE
 Description = The user attacks by pouncing on the target. This also lowers the target's Speed stat.
 #-------------------------------
 [TM022]
@@ -3900,8 +3900,8 @@ NamePlural = TM022s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = CHILLINGWATER
 Flags = Fling_50
+Move = CHILLINGWATER
 Description = The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.
 #-------------------------------
 [TM023]
@@ -3910,8 +3910,8 @@ NamePlural = TM023s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = CHARGEBEAM
 Flags = Fling_50
+Move = CHARGEBEAM
 Description = The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.
 #-------------------------------
 [TM024]
@@ -3920,8 +3920,8 @@ NamePlural = TM024s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = FIRESPIN
 Flags = Fling_35
+Move = FIRESPIN
 Description = The target becomes trapped within a fierce vortex of fire that rages for four to five turns.
 #-------------------------------
 [TM025]
@@ -3930,8 +3930,8 @@ NamePlural = TM025s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = FACADE
 Flags = Fling_70
+Move = FACADE
 Description = An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
 #-------------------------------
 [TM026]
@@ -3940,8 +3940,8 @@ NamePlural = TM026s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = POISONTAIL
 Flags = Fling_50
+Move = POISONTAIL
 Description = The user hits the target with its tail. It may also poison the target. Critical hits land more easily.
 #-------------------------------
 [TM027]
@@ -3950,8 +3950,8 @@ NamePlural = TM027s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = AERIALACE
 Flags = Fling_60
+Move = AERIALACE
 Description = The user confounds the foe with speed, then slashes. The attack lands without fail.
 #-------------------------------
 [TM028]
@@ -3960,8 +3960,8 @@ NamePlural = TM028s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = BULLDOZE
 Flags = Fling_60
+Move = BULLDOZE
 Description = The user strikes everything around it by stomping on the ground. It reduces hit Pokémon's Speed.
 #-------------------------------
 [TM029]
@@ -3970,8 +3970,8 @@ NamePlural = TM029s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = HEX
 Flags = Fling_65
+Move = HEX
 Description = This relentless attack does massive damage to a target affected by status problems.
 #-------------------------------
 [TM030]
@@ -3980,8 +3980,8 @@ NamePlural = TM030s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = SNARL
 Flags = Fling_55
+Move = SNARL
 Description = The user yells as if it is ranting about something, making the target's Sp. Atk stat decrease.
 #-------------------------------
 [TM031]
@@ -3990,8 +3990,8 @@ NamePlural = TM031s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = METALCLAW
 Flags = Fling_50
+Move = METALCLAW
 Description = The target is raked with steel claws. It may also raise the user's Attack stat.
 #-------------------------------
 [TM032]
@@ -4000,8 +4000,8 @@ NamePlural = TM032s
 Pocket = 4
 Price = 200
 FieldUse = TR
-Move = SWIFT
 Flags = Fling_60
+Move = SWIFT
 Description = Star-shaped rays are shot at the opposing team. This attack never misses.
 #-------------------------------
 [TM033]
@@ -4010,8 +4010,8 @@ NamePlural = TM033s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = MAGICALLEAF
 Flags = Fling_60
+Move = MAGICALLEAF
 Description = The user scatters curious leaves that chase the target. This attack will not miss.
 #-------------------------------
 [TM034]
@@ -4020,8 +4020,8 @@ NamePlural = TM034s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = ICYWIND
 Flags = Fling_55
+Move = ICYWIND
 Description = The user attacks with a gust of chilled air. It also lowers the targets' Speed stat.
 #-------------------------------
 [TM035]
@@ -4030,8 +4030,8 @@ NamePlural = TM035s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = MUDSHOT
 Flags = Fling_55
+Move = MUDSHOT
 Description = The user attacks by hurling a blob of mud at the target. It also reduces the target's Speed.
 #-------------------------------
 [TM036]
@@ -4040,8 +4040,8 @@ NamePlural = TM036s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = ROCKTOMB
 Flags = Fling_60
+Move = ROCKTOMB
 Description = Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.
 #-------------------------------
 [TM037]
@@ -4050,8 +4050,8 @@ NamePlural = TM037s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = DRAININGKISS
 Flags = Fling_50
+Move = DRAININGKISS
 Description = The user steals the target's HP with a kiss. The user's HP is restored by over half of the damage dealt.
 #-------------------------------
 [TM038]
@@ -4060,8 +4060,8 @@ NamePlural = TM038s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = FLAMECHARGE
 Flags = Fling_50
+Move = FLAMECHARGE
 Description = The user cloaks itself in flame and attacks. Building up more power, it raises the user's Speed stat.
 #-------------------------------
 [TM039]
@@ -4070,8 +4070,8 @@ NamePlural = TM039s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = LOWSWEEP
 Flags = Fling_65
+Move = LOWSWEEP
 Description = The user attacks the target's legs swiftly, reducing the target's Speed stat.
 #-------------------------------
 [TM040]
@@ -4080,8 +4080,8 @@ NamePlural = TM040s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = AIRCUTTER
 Flags = Fling_60
+Move = AIRCUTTER
 Description = The user launches razor-like wind to slash the opposing team. Critical hits land more easily.
 #-------------------------------
 [TM041]
@@ -4090,8 +4090,8 @@ NamePlural = TM041s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = STOREDPOWER
 Flags = Fling_20
+Move = STOREDPOWER
 Description = The user attacks with stored power. The more the user's stats are raised, the greater the damage.
 #-------------------------------
 [TM042]
@@ -4100,8 +4100,8 @@ NamePlural = TM042s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = NIGHTSHADE
 Flags = Fling_10
+Move = NIGHTSHADE
 Description = The user makes the foe see a frightening mirage. It inflicts damage matching the user's level.
 #-------------------------------
 [TM043]
@@ -4110,8 +4110,8 @@ NamePlural = TM043s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = FLING
 Flags = Fling_10
+Move = FLING
 Description = The user flings its held item at the target to attack. Its power and effects depend on the item.
 #-------------------------------
 [TM044]
@@ -4120,8 +4120,8 @@ NamePlural = TM044s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = DRAGONTAIL
 Flags = Fling_60
+Move = DRAGONTAIL
 Description = The user knocks away the target and drags out another Pokémon in its party. In the wild, the battle ends.
 #-------------------------------
 [TM045]
@@ -4130,8 +4130,8 @@ NamePlural = TM045s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = VENOSHOCK
 Flags = Fling_65
+Move = VENOSHOCK
 Description = The user drenches the foe in a special poisonous liquid. Its power doubles if the target is poisoned.
 #-------------------------------
 [TM046]
@@ -4140,8 +4140,8 @@ NamePlural = TM046s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = AVALANCHE
 Flags = Fling_60
+Move = AVALANCHE
 Description = An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.
 #-------------------------------
 [TM047]
@@ -4150,8 +4150,8 @@ NamePlural = TM047s
 Pocket = 4
 Price = 200
 FieldUse = TR
-Move = ENDURE
 Flags = Fling_10
+Move = ENDURE
 Description = The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
 #-------------------------------
 [TM048]
@@ -4160,8 +4160,8 @@ NamePlural = TM048s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = VOLTSWITCH
 Flags = Fling_70
+Move = VOLTSWITCH
 Description = After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
 #-------------------------------
 [TM049]
@@ -4170,8 +4170,8 @@ NamePlural = TM049s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SUNNYDAY
 Flags = Fling_10
+Move = SUNNYDAY
 Description = The user intensifies the sun for five turns, powering up Fire-type moves.
 #-------------------------------
 [TM050]
@@ -4180,8 +4180,8 @@ NamePlural = TM050s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = RAINDANCE
 Flags = Fling_10
+Move = RAINDANCE
 Description = The user summons a heavy rain that falls for five turns, powering up Water-type moves.
 #-------------------------------
 [TM051]
@@ -4190,8 +4190,8 @@ NamePlural = TM051s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SANDSTORM
 Flags = Fling_10
+Move = SANDSTORM
 Description = Summons a five-turn sandstorm to hurt all combatants except the Rock, Ground, and Steel types.
 #-------------------------------
 [TM052]
@@ -4200,8 +4200,8 @@ NamePlural = TM052s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SNOWSCAPE
 Flags = Fling_10
+Move = SNOWSCAPE
 Description = The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.
 #-------------------------------
 [TM053]
@@ -4210,8 +4210,8 @@ NamePlural = TM053s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SMARTSTRIKE
 Flags = Fling_70
+Move = SMARTSTRIKE
 Description = The user stabs the target with a sharp horn. This attack never misses.
 #-------------------------------
 [TM054]
@@ -4220,8 +4220,8 @@ NamePlural = TM054s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = PSYSHOCK
 Flags = Fling_80
+Move = PSYSHOCK
 Description = The user materializes an odd psychic wave to attack the target. This attack does physical damage.
 #-------------------------------
 [TM055]
@@ -4230,8 +4230,8 @@ NamePlural = TM055s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = DIG
 Flags = Fling_80
+Move = DIG
 Description = The user burrows, then attacks on the second turn. It can also be used to exit dungeons.
 #-------------------------------
 [TM056]
@@ -4240,8 +4240,8 @@ NamePlural = TM056s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = BULLETSEED
 Flags = Fling_25
+Move = BULLETSEED
 Description = The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
 #-------------------------------
 [TM057]
@@ -4250,8 +4250,8 @@ NamePlural = TM057s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = FALSESWIPE
 Flags = Fling_40
+Move = FALSESWIPE
 Description = A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.
 #-------------------------------
 [TM058]
@@ -4260,8 +4260,8 @@ NamePlural = TM058s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = BRICKBREAK
 Flags = Fling_75
+Move = BRICKBREAK
 Description = The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect.
 #-------------------------------
 [TM059]
@@ -4270,8 +4270,8 @@ NamePlural = TM059s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = ZENHEADBUTT
 Flags = Fling_80
+Move = ZENHEADBUTT
 Description = The user focuses its willpower to its head and attacks the foe. It may also make the target flinch.
 #-------------------------------
 [TM060]
@@ -4280,8 +4280,8 @@ NamePlural = TM060s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = UTURN
 Flags = Fling_70
+Move = UTURN
 Description = After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
 #-------------------------------
 [TM061]
@@ -4290,8 +4290,8 @@ NamePlural = TM061s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SHADOWCLAW
 Flags = Fling_70
+Move = SHADOWCLAW
 Description = The user slashes with a sharp claw made from shadows. Critical hits land more easily.
 #-------------------------------
 [TM062]
@@ -4300,8 +4300,8 @@ NamePlural = TM062s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = FOULPLAY
 Flags = Fling_95
+Move = FOULPLAY
 Description = The user turns the foe's power against it. It does more damage the higher the target's Attack stat.
 #-------------------------------
 [TM063]
@@ -4310,8 +4310,8 @@ NamePlural = TM063s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = PSYCHICFANGS
 Flags = Fling_85
+Move = PSYCHICFANGS
 Description = The user bites the target using psychic capabilities. This can also destroy Light Screen and Reflect.
 #-------------------------------
 [TM064]
@@ -4320,8 +4320,8 @@ NamePlural = TM064s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = BULKUP
 Flags = Fling_10
+Move = BULKUP
 Description = The user tenses its muscles to bulk up its body, boosting both its Attack and Defense stats.
 #-------------------------------
 [TM065]
@@ -4330,8 +4330,8 @@ NamePlural = TM065s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = AIRSLASH
 Flags = Fling_75
+Move = AIRSLASH
 Description = The user attacks with a blade of air that slices even the sky. It may also make the target flinch.
 #-------------------------------
 [TM066]
@@ -4340,8 +4340,8 @@ NamePlural = TM066s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = BODYSLAM
 Flags = Fling_85
+Move = BODYSLAM
 Description = The user drops onto the target with its full body weight. It may leave the target with paralysis.
 #-------------------------------
 [TM067]
@@ -4350,8 +4350,8 @@ NamePlural = TM067s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = FIREPUNCH
 Flags = Fling_75
+Move = FIREPUNCH
 Description = The target is punched with a fiery fist. It may leave the target with a burn.
 #-------------------------------
 [TM068]
@@ -4360,8 +4360,8 @@ NamePlural = TM068s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = THUNDERPUNCH
 Flags = Fling_75
+Move = THUNDERPUNCH
 Description = The target is punched with an electrified fist. It may also leave the target with paralysis.
 #-------------------------------
 [TM069]
@@ -4370,8 +4370,8 @@ NamePlural = TM069s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = ICEPUNCH
 Flags = Fling_75
+Move = ICEPUNCH
 Description = The target is punched with an icy fist. It may also leave the target frozen.
 #-------------------------------
 [TM070]
@@ -4380,8 +4380,8 @@ NamePlural = TM070s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = SLEEPTALK
 Flags = Fling_10
+Move = SLEEPTALK
 Description = While it is asleep, the user randomly uses one of the moves it knows.
 #-------------------------------
 [TM071]
@@ -4390,8 +4390,8 @@ NamePlural = TM071s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = SEEDBOMB
 Flags = Fling_80
+Move = SEEDBOMB
 Description = The user slams a barrage of hard-shelled seeds down on the target from above.
 #-------------------------------
 [TM072]
@@ -4400,8 +4400,8 @@ NamePlural = TM072s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = ELECTROBALL
 Flags = Fling_10
+Move = ELECTROBALL
 Description = The user hurls an electric orb at the foe. It does more damage the faster the user is.
 #-------------------------------
 [TM073]
@@ -4410,8 +4410,8 @@ NamePlural = TM073s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DRAINPUNCH
 Flags = Fling_75
+Move = DRAINPUNCH
 Description = An energy-draining punch. The user's HP is restored by half the damage taken by the target.
 #-------------------------------
 [TM074]
@@ -4420,8 +4420,8 @@ NamePlural = TM074s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = REFLECT
 Flags = Fling_10
+Move = REFLECT
 Description = A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
 #-------------------------------
 [TM075]
@@ -4430,8 +4430,8 @@ NamePlural = TM075s
 Pocket = 4
 Price = 800
 FieldUse = TR
-Move = LIGHTSCREEN
 Flags = Fling_10
+Move = LIGHTSCREEN
 Description = A wondrous wall of light is put up to suppress damage from special attacks for five turns.
 #-------------------------------
 [TM076]
@@ -4440,8 +4440,8 @@ NamePlural = TM076s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = ROCKBLAST
 Flags = Fling_25
+Move = ROCKBLAST
 Description = The user hurls hard rocks at the target. Two to five rocks are launched in quick succession.
 #-------------------------------
 [TM077]
@@ -4450,8 +4450,8 @@ NamePlural = TM077s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = WATERFALL
 Flags = Fling_80
+Move = WATERFALL
 Description = The user charges at the target and may make it flinch. It can also be used to climb a waterfall.
 #-------------------------------
 [TM078]
@@ -4460,8 +4460,8 @@ NamePlural = TM078s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DRAGONCLAW
 Flags = Fling_80
+Move = DRAGONCLAW
 Description = The user slashes the target with huge, sharp claws.
 #-------------------------------
 [TM079]
@@ -4470,8 +4470,8 @@ NamePlural = TM079s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DAZZLINGGLEAM
 Flags = Fling_80
+Move = DAZZLINGGLEAM
 Description = The user damages opposing Pokémon by emitting a powerful flash.
 #-------------------------------
 [TM080]
@@ -4480,8 +4480,8 @@ NamePlural = TM080s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = METRONOME
 Flags = Fling_10
+Move = METRONOME
 Description = The user waggles a finger and stimulates its brain into randomly using nearly any move.
 #-------------------------------
 [TM081]
@@ -4490,8 +4490,8 @@ NamePlural = TM081s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = GRASSKNOT
 Flags = Fling_10
+Move = GRASSKNOT
 Description = The user snares the target with grass and trips it. The heavier the target, the greater the damage.
 #-------------------------------
 [TM082]
@@ -4500,8 +4500,8 @@ NamePlural = TM082s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = THUNDERWAVE
 Flags = Fling_10
+Move = THUNDERWAVE
 Description = A weak electric charge is launched at the target. It causes paralysis if it hits.
 #-------------------------------
 [TM083]
@@ -4510,8 +4510,8 @@ NamePlural = TM083s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = POISONJAB
 Flags = Fling_80
+Move = POISONJAB
 Description = The target is stabbed with a tentacle or arm seeped with poison. It may also poison the target.
 #-------------------------------
 [TM084]
@@ -4520,8 +4520,8 @@ NamePlural = TM084s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = STOMPINGTANTRUM
 Flags = Fling_75
+Move = STOMPINGTANTRUM
 Description = The user attacks driven by frustration. Power increases if the user's previous move failed.
 #-------------------------------
 [TM085]
@@ -4530,8 +4530,8 @@ NamePlural = TM085s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = REST
 Flags = Fling_10
+Move = REST
 Description = The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
 #-------------------------------
 [TM086]
@@ -4540,8 +4540,8 @@ NamePlural = TM086s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = ROCKSLIDE
 Flags = Fling_75
+Move = ROCKSLIDE
 Description = Large boulders are hurled at the foes to inflict damage. It may also make the targets flinch.
 #-------------------------------
 [TM087]
@@ -4550,8 +4550,8 @@ NamePlural = TM087s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = TAUNT
 Flags = Fling_10
+Move = TAUNT
 Description = The target is taunted into a rage that allows it to use only attack moves for three turns.
 #-------------------------------
 [TM088]
@@ -4560,8 +4560,8 @@ NamePlural = TM088s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = SWORDSDANCE
 Flags = Fling_10
+Move = SWORDSDANCE
 Description = A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
 #-------------------------------
 [TM089]
@@ -4570,8 +4570,8 @@ NamePlural = TM089s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = BODYPRESS
 Flags = Fling_80
+Move = BODYPRESS
 Description = The user attacks by slamming its body into the target. Power increases the higher the user's Defense is.
 #-------------------------------
 [TM090]
@@ -4580,8 +4580,8 @@ NamePlural = TM090s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SPIKES
 Flags = Fling_10
+Move = SPIKES
 Description = The user lays a trap of spikes at the foe's feet. The trap hurts foes that switch into battle.
 #-------------------------------
 [TM091]
@@ -4590,8 +4590,8 @@ NamePlural = TM091s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = TOXICSPIKES
 Flags = Fling_10
+Move = TOXICSPIKES
 Description = The user lays a trap of poison spikes at the foe's feet. They poison foes that switch into battle.
 #-------------------------------
 [TM092]
@@ -4600,8 +4600,8 @@ NamePlural = TM092s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = IMPRISON
 Flags = Fling_10
+Move = IMPRISON
 Description = If the foe knows any move also known by the user, the foe is prevented from using it.
 #-------------------------------
 [TM093]
@@ -4610,8 +4610,8 @@ NamePlural = TM093s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = FLASHCANNON
 Flags = Fling_80
+Move = FLASHCANNON
 Description = The user gathers all its light energy and releases it at once. It may also lower the target's Sp. Def stat.
 #-------------------------------
 [TM094]
@@ -4620,8 +4620,8 @@ NamePlural = TM094s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DARKPULSE
 Flags = Fling_80
+Move = DARKPULSE
 Description = The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
 #-------------------------------
 [TM095]
@@ -4630,8 +4630,8 @@ NamePlural = TM095s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = LEECHLIFE
 Flags = Fling_80
+Move = LEECHLIFE
 Description = The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
 #-------------------------------
 [TM096]
@@ -4640,8 +4640,8 @@ NamePlural = TM096s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = EERIEIMPULSE
 Flags = Fling_10
+Move = EERIEIMPULSE
 Description = The user's body generates an eerie impulse. Harshly lowers the target's Sp. Atk stat.
 #-------------------------------
 [TM097]
@@ -4650,8 +4650,8 @@ NamePlural = TM097s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = FLY
 Flags = Fling_90
+Move = FLY
 Description = The user soars, then strikes on the second turn. It can also be used for flying to any familiar town.
 #-------------------------------
 [TM098]
@@ -4660,8 +4660,8 @@ NamePlural = TM098s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = SKILLSWAP
 Flags = Fling_10
+Move = SKILLSWAP
 Description = The user employs its psychic power to exchange Abilities with the target.
 #-------------------------------
 [TM099]
@@ -4670,8 +4670,8 @@ NamePlural = TM099s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = IRONHEAD
 Flags = Fling_80
+Move = IRONHEAD
 Description = The foe slams the target with its steel-hard head. It may also make the target flinch.
 #-------------------------------
 [TM100]
@@ -4680,8 +4680,8 @@ NamePlural = TM100s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = DRAGONDANCE
 Flags = Fling_10
+Move = DRAGONDANCE
 Description = The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats.
 #-------------------------------
 [TM101]
@@ -4690,8 +4690,8 @@ NamePlural = TM101s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = POWERGEM
 Flags = Fling_80
+Move = POWERGEM
 Description = The user attacks with a ray of light that sparkles as if it were made of gemstones.
 #-------------------------------
 [TM102]
@@ -4700,8 +4700,8 @@ NamePlural = TM102s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = GUNKSHOT
 Flags = Fling_120
+Move = GUNKSHOT
 Description = The user shoots filthy garbage at the target to attack. It may also poison the target.
 #-------------------------------
 [TM103]
@@ -4710,8 +4710,8 @@ NamePlural = TM103s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = SUBSTITUTE
 Flags = Fling_10
+Move = SUBSTITUTE
 Description = The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
 #-------------------------------
 [TM104]
@@ -4720,8 +4720,8 @@ NamePlural = TM104s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = IRONDEFENSE
 Flags = Fling_10
+Move = IRONDEFENSE
 Description = The user hardens its body's surface like iron, sharply raising its Defense stat.
 #-------------------------------
 [TM105]
@@ -4730,8 +4730,8 @@ NamePlural = TM105s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = XSCISSOR
 Flags = Fling_80
+Move = XSCISSOR
 Description = The user slashes at the foe by crossing its scythes or claws as if they were a pair of scissors.
 #-------------------------------
 [TM106]
@@ -4740,8 +4740,8 @@ NamePlural = TM106s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DRILLRUN
 Flags = Fling_80
+Move = DRILLRUN
 Description = The user crashes into its target while rotating its body like a drill. Critical hits land more easily.
 #-------------------------------
 [TM107]
@@ -4750,8 +4750,8 @@ NamePlural = TM107s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = WILLOWISP
 Flags = Fling_10
+Move = WILLOWISP
 Description = The user shoots a sinister, bluish-white flame at the target to inflict a burn.
 #-------------------------------
 [TM108]
@@ -4760,8 +4760,8 @@ NamePlural = TM108s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = CRUNCH
 Flags = Fling_80
+Move = CRUNCH
 Description = The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.
 #-------------------------------
 [TM109]
@@ -4770,8 +4770,8 @@ NamePlural = TM109s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = TRICK
 Flags = Fling_10
+Move = TRICK
 Description = The user catches the target off guard and swaps its held item with its own.
 #-------------------------------
 [TM110]
@@ -4780,8 +4780,8 @@ NamePlural = TM110s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = LIQUIDATION
 Flags = Fling_85
+Move = LIQUIDATION
 Description = The user slams into the target using a full-force blast of water. May lower the target's Defense.
 #-------------------------------
 [TM111]
@@ -4790,8 +4790,8 @@ NamePlural = TM111s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = GIGADRAIN
 Flags = Fling_75
+Move = GIGADRAIN
 Description = A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
 #-------------------------------
 [TM112]
@@ -4800,8 +4800,8 @@ NamePlural = TM112s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = AURASPHERE
 Flags = Fling_80
+Move = AURASPHERE
 Description = The user looses a blast of aura power from deep within its body. This move is certain to hit.
 #-------------------------------
 [TM113]
@@ -4810,8 +4810,8 @@ NamePlural = TM113s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = TAILWIND
 Flags = Fling_10
+Move = TAILWIND
 Description = The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns.
 #-------------------------------
 [TM114]
@@ -4820,8 +4820,8 @@ NamePlural = TM114s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = SHADOWBALL
 Flags = Fling_80
+Move = SHADOWBALL
 Description = The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.
 #-------------------------------
 [TM115]
@@ -4830,8 +4830,8 @@ NamePlural = TM115s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = DRAGONPULSE
 Flags = Fling_85
+Move = DRAGONPULSE
 Description = The target is attacked with a shock wave generated by the user's gaping mouth.
 #-------------------------------
 [TM116]
@@ -4840,8 +4840,8 @@ NamePlural = TM116s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = STEALTHROCK
 Flags = Fling_10
+Move = STEALTHROCK
 Description = The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.
 #-------------------------------
 [TM117]
@@ -4850,8 +4850,8 @@ NamePlural = TM117s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = HYPERVOICE
 Flags = Fling_90
+Move = HYPERVOICE
 Description = The user lets loose a horribly echoing shout with the power to inflict damage.
 #-------------------------------
 [TM118]
@@ -4860,8 +4860,8 @@ NamePlural = TM118s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = HEATWAVE
 Flags = Fling_95
+Move = HEATWAVE
 Description = The user attacks by exhaling hot breath on the opposing team. It may also leave targets with a burn.
 #-------------------------------
 [TM119]
@@ -4870,8 +4870,8 @@ NamePlural = TM119s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = ENERGYBALL
 Flags = Fling_90
+Move = ENERGYBALL
 Description = The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
 #-------------------------------
 [TM120]
@@ -4880,8 +4880,8 @@ NamePlural = TM120s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = PSYCHIC
 Flags = Fling_90
+Move = PSYCHIC
 Description = The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
 #-------------------------------
 [TM121]
@@ -4890,8 +4890,8 @@ NamePlural = TM121s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = HEAVYSLAM
 Flags = Fling_10
+Move = HEAVYSLAM
 Description = The user slams into the foe with its heavy body. The heavier the user, the greater the damage.
 #-------------------------------
 [TM122]
@@ -4900,8 +4900,8 @@ NamePlural = TM122s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = ENCORE
 Flags = Fling_10
+Move = ENCORE
 Description = The user compels the target to keep using only the move it last used for three turns.
 #-------------------------------
 [TM123]
@@ -4910,8 +4910,8 @@ NamePlural = TM123s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = SURF
 Flags = Fling_90
+Move = SURF
 Description = It swamps the area around the user with a giant wave. It can also be used for crossing water.
 #-------------------------------
 [TM124]
@@ -4920,8 +4920,8 @@ NamePlural = TM124s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = ICESPINNER
 Flags = Fling_80
+Move = ICESPINNER
 Description = The user covers its feet in thin ice and twirls around, slamming into the target. This move's spinning motion also destroys the terrain.
 #-------------------------------
 [TM125]
@@ -4930,8 +4930,8 @@ NamePlural = TM125s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = FLAMETHROWER
 Flags = Fling_90
+Move = FLAMETHROWER
 Description = The target is scorched with an intense blast of fire. It may also leave the target with a burn.
 #-------------------------------
 [TM126]
@@ -4940,8 +4940,8 @@ NamePlural = TM126s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = THUNDERBOLT
 Flags = Fling_90
+Move = THUNDERBOLT
 Description = A strong electric blast is loosed at the target. It may also leave the target with paralysis.
 #-------------------------------
 [TM127]
@@ -4950,8 +4950,8 @@ NamePlural = TM127s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = PLAYROUGH
 Flags = Fling_90
+Move = PLAYROUGH
 Description = The user plays rough with the target and attacks it. This may also lower the target's Attack stat.
 #-------------------------------
 [TM128]
@@ -4960,8 +4960,8 @@ NamePlural = TM128s
 Pocket = 4
 Price = 1500
 FieldUse = TR
-Move = AMNESIA
 Flags = Fling_10
+Move = AMNESIA
 Description = The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.
 #-------------------------------
 [TM129]
@@ -4970,8 +4970,8 @@ NamePlural = TM129s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = CALMMIND
 Flags = Fling_10
+Move = CALMMIND
 Description = The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.
 #-------------------------------
 [TM130]
@@ -4980,8 +4980,8 @@ NamePlural = TM130s
 Pocket = 4
 Price = 400
 FieldUse = TR
-Move = HELPINGHAND
 Flags = Fling_10
+Move = HELPINGHAND
 Description = The user assists an ally by boosting the power of its attack.
 #-------------------------------
 [TM131]
@@ -4990,8 +4990,8 @@ NamePlural = TM131s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = POLLENPUFF
 Flags = Fling_90
+Move = POLLENPUFF
 Description = Fires an exploding pollen puff at enemies, or a HP-restoring one at allies.
 #-------------------------------
 [TM132]
@@ -5000,8 +5000,8 @@ NamePlural = TM132s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = BATONPASS
 Flags = Fling_10
+Move = BATONPASS
 Description = The user switches places with a party Pokémon in waiting, passing along any stat changes.
 #-------------------------------
 [TM133]
@@ -5010,8 +5010,8 @@ NamePlural = TM133s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = EARTHPOWER
 Flags = Fling_90
+Move = EARTHPOWER
 Description = The user makes the ground under the foe erupt with power. It may also lower the target's Sp. Def.
 #-------------------------------
 [TM134]
@@ -5020,8 +5020,8 @@ NamePlural = TM134s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = REVERSAL
 Flags = Fling_10
+Move = REVERSAL
 Description = An all-out attack that becomes more powerful the less HP the user has.
 #-------------------------------
 [TM135]
@@ -5030,8 +5030,8 @@ NamePlural = TM135s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = ICEBEAM
 Flags = Fling_90
+Move = ICEBEAM
 Description = The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
 #-------------------------------
 [TM136]
@@ -5040,8 +5040,8 @@ NamePlural = TM136s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = ELECTRICTERRAIN
 Flags = Fling_10
+Move = ELECTRICTERRAIN
 Description = The user electrifies the ground for five turns. Pokémon on the ground no longer fall asleep.
 #-------------------------------
 [TM137]
@@ -5050,8 +5050,8 @@ NamePlural = TM137s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = GRASSYTERRAIN
 Flags = Fling_10
+Move = GRASSYTERRAIN
 Description = The user turns the ground to grass for five turns. Grounded Pokémon restore a little HP every turn.
 #-------------------------------
 [TM138]
@@ -5060,8 +5060,8 @@ NamePlural = TM138s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = PSYCHICTERRAIN
 Flags = Fling_10
+Move = PSYCHICTERRAIN
 Description = Protects grounded Pokémon from priority moves and powers up Psychic-type moves for five turns.
 #-------------------------------
 [TM139]
@@ -5070,8 +5070,8 @@ NamePlural = TM139s
 Pocket = 4
 Price = 3000
 FieldUse = TR
-Move = MISTYTERRAIN
 Flags = Fling_10
+Move = MISTYTERRAIN
 Description = The user covers the ground with mist for five turns. Grounded Pokémon can't gain status conditions.
 #-------------------------------
 [TM140]
@@ -5080,8 +5080,8 @@ NamePlural = TM140s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = NASTYPLOT
 Flags = Fling_10
+Move = NASTYPLOT
 Description = The user stimulates its brain by thinking bad thoughts. It sharply raises the user's Sp. Atk.
 #-------------------------------
 [TM141]
@@ -5090,8 +5090,8 @@ NamePlural = TM141s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = FIREBLAST
 Flags = Fling_110
+Move = FIREBLAST
 Description = The foe is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn.
 #-------------------------------
 [TM142]
@@ -5100,8 +5100,8 @@ NamePlural = TM142s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = HYDROPUMP
 Flags = Fling_110
+Move = HYDROPUMP
 Description = The target is blasted by a huge volume of water launched under great pressure.
 #-------------------------------
 [TM143]
@@ -5110,8 +5110,8 @@ NamePlural = TM143s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = BLIZZARD
 Flags = Fling_110
+Move = BLIZZARD
 Description = A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
 #-------------------------------
 [TM144]
@@ -5120,8 +5120,8 @@ NamePlural = TM144s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = FIREPLEDGE
 Flags = Fling_80
+Move = FIREPLEDGE
 Description = A column of fire hits opposing Pokémon. When used with its Grass equivalent, it makes a sea of fire.
 #-------------------------------
 [TM145]
@@ -5130,8 +5130,8 @@ NamePlural = TM145s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = WATERPLEDGE
 Flags = Fling_80
+Move = WATERPLEDGE
 Description = A column of water strikes the target. When combined with its fire equivalent, it makes a rainbow.
 #-------------------------------
 [TM146]
@@ -5140,8 +5140,8 @@ NamePlural = TM146s
 Pocket = 4
 Price = 8000
 FieldUse = TR
-Move = GRASSPLEDGE
 Flags = Fling_80
+Move = GRASSPLEDGE
 Description = A column of grass hits the foes. When used with its water equivalent, it creates a vast swamp.
 #-------------------------------
 [TM147]
@@ -5150,8 +5150,8 @@ NamePlural = TM147s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = WILDCHARGE
 Flags = Fling_90
+Move = WILDCHARGE
 Description = The user shrouds itself in electricity and smashes into its foe. It also damages the user a little.
 #-------------------------------
 [TM148]
@@ -5160,8 +5160,8 @@ NamePlural = TM148s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = SLUDGEBOMB
 Flags = Fling_90
+Move = SLUDGEBOMB
 Description = Unsanitary sludge is hurled at the target. It may also poison the target.
 #-------------------------------
 [TM149]
@@ -5170,8 +5170,8 @@ NamePlural = TM149s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = EARTHQUAKE
 Flags = Fling_100
+Move = EARTHQUAKE
 Description = The user sets off an earthquake that strikes every Pokémon around it.
 #-------------------------------
 [TM150]
@@ -5180,8 +5180,8 @@ NamePlural = TM150s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = STONEEDGE
 Flags = Fling_100
+Move = STONEEDGE
 Description = The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio.
 #-------------------------------
 [TM151]
@@ -5190,8 +5190,8 @@ NamePlural = TM151s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = PHANTOMFORCE
 Flags = Fling_90
+Move = PHANTOMFORCE
 Description = The user vanishes somewhere, then strikes on the next turn. Hits through protections.
 #-------------------------------
 [TM152]
@@ -5200,8 +5200,8 @@ NamePlural = TM152s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = GIGAIMPACT
 Flags = Fling_150
+Move = GIGAIMPACT
 Description = The user charges at the target using every bit of its power. The user must rest on the next turn.
 #-------------------------------
 [TM153]
@@ -5210,8 +5210,8 @@ NamePlural = TM153s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = BLASTBURN
 Flags = Fling_150
+Move = BLASTBURN
 Description = The target is razed by a fiery explosion. The user must rest on the next turn, however.
 #-------------------------------
 [TM154]
@@ -5220,8 +5220,8 @@ NamePlural = TM154s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = HYDROCANNON
 Flags = Fling_150
+Move = HYDROCANNON
 Description = The target is hit with a watery blast. The user must rest on the next turn, however.
 #-------------------------------
 [TM155]
@@ -5230,8 +5230,8 @@ NamePlural = TM155s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = FRENZYPLANT
 Flags = Fling_150
+Move = FRENZYPLANT
 Description = The user slams the target with an enormous tree. The user can't move on the next turn.
 #-------------------------------
 [TM156]
@@ -5240,8 +5240,8 @@ NamePlural = TM156s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = OUTRAGE
 Flags = Fling_120
+Move = OUTRAGE
 Description = The user rampages and attacks for two to three turns. It then becomes confused, however.
 #-------------------------------
 [TM157]
@@ -5250,8 +5250,8 @@ NamePlural = TM157s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = OVERHEAT
 Flags = Fling_130
+Move = OVERHEAT
 Description = The user attacks the target at full power. The attack's recoil sharply reduces the user's Sp. Atk stat.
 #-------------------------------
 [TM158]
@@ -5260,8 +5260,8 @@ NamePlural = TM158s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = FOCUSBLAST
 Flags = Fling_120
+Move = FOCUSBLAST
 Description = The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.
 #-------------------------------
 [TM159]
@@ -5270,8 +5270,8 @@ NamePlural = TM159s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = LEAFSTORM
 Flags = Fling_130
+Move = LEAFSTORM
 Description = A storm of sharp is whipped up. The attack's recoil harshly reduces the user's Sp. Atk stat.
 #-------------------------------
 [TM160]
@@ -5280,8 +5280,8 @@ NamePlural = TM160s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = HURRICANE
 Flags = Fling_110
+Move = HURRICANE
 Description = The user wraps its foe in a fierce wind that flies up into the sky. It may also confuse the foe.
 #-------------------------------
 [TM161]
@@ -5290,8 +5290,8 @@ NamePlural = TM161s
 Pocket = 4
 Price = 5000
 FieldUse = TR
-Move = TRICKROOM
 Flags = Fling_10
+Move = TRICKROOM
 Description = The user creates a bizarre area in which slower Pokémon get to move first for five turns.
 #-------------------------------
 [TM162]
@@ -5300,8 +5300,8 @@ NamePlural = TM162s
 Pocket = 4
 Price = 10000
 FieldUse = TR
-Move = BUGBUZZ
 Flags = Fling_90
+Move = BUGBUZZ
 Description = The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
 #-------------------------------
 [TM163]
@@ -5310,8 +5310,8 @@ NamePlural = TM163s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = HYPERBEAM
 Flags = Fling_150
+Move = HYPERBEAM
 Description = The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
 #-------------------------------
 [TM164]
@@ -5320,8 +5320,8 @@ NamePlural = TM164s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = BRAVEBIRD
 Flags = Fling_120
+Move = BRAVEBIRD
 Description = The user tucks in its wings and charges from a low altitude. The user also takes serious damage.
 #-------------------------------
 [TM165]
@@ -5330,8 +5330,8 @@ NamePlural = TM165s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = FLAREBLITZ
 Flags = Fling_120
+Move = FLAREBLITZ
 Description = The user cloaks itself in fire and charges at the foe. The user also takes damage and may burn the target.
 #-------------------------------
 [TM166]
@@ -5340,8 +5340,8 @@ NamePlural = TM166s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = THUNDER
 Flags = Fling_110
+Move = THUNDER
 Description = A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.
 #-------------------------------
 [TM167]
@@ -5350,8 +5350,8 @@ NamePlural = TM167s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = CLOSECOMBAT
 Flags = Fling_120
+Move = CLOSECOMBAT
 Description = The user fights the foe up close without guarding itself. It also cuts the user's Defense and Sp. Def.
 #-------------------------------
 [TM168]
@@ -5360,8 +5360,8 @@ NamePlural = TM168s
 Pocket = 4
 Price = 12000
 FieldUse = TR
-Move = SOLARBEAM
 Flags = Fling_120
+Move = SOLARBEAM
 Description = A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
 #-------------------------------
 [TM169]
@@ -5370,8 +5370,8 @@ NamePlural = TM169s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = DRACOMETEOR
 Flags = Fling_130
+Move = DRACOMETEOR
 Description = Comets are summoned down from the sky. The attack's recoil harshly reduces the user's Sp. Atk stat.
 #-------------------------------
 [TM170]
@@ -5380,28 +5380,28 @@ NamePlural = TM170s
 Pocket = 4
 Price = 14000
 FieldUse = TR
-Move = STEELBEAM
 Flags = Fling_140
+Move = STEELBEAM
 Description = The user fires a beam of steel that it collected from its entire body. This also damages the user.
 #-------------------------------
 [TM171]
 Name = TM171
 NamePlural = TM171s
 Pocket = 4
-Price = 8000 
+Price = 8000
 FieldUse = TR
-Move = TERABLAST
 Flags = Fling_80
+Move = TERABLAST
 Description = If the user has Terastallized, it unleashes energy of its Tera Type. This move uses the higher of the user's Attack or Sp. Atk stat.
 #-------------------------------
 [TM172]
 Name = TM172
 NamePlural = TM172s
 Pocket = 4
-Price = 8000 
+Price = 8000
 FieldUse = TR
-Move = PSYSHIELDBASH
 Flags = Fling_70
+Move = PSYSHIELDBASH
 Description = Cloaking itself in psychic energy, the user slams into the target. This also boosts the user's Defense stat.
 #-------------------------------
 [HM01]
@@ -6809,7 +6809,7 @@ NamePlural = Black Augurites
 Pocket = 1
 Price = 2100
 FieldUse = OnPokemon
-Flags = Fling_30, EvolutionStone
+Flags = Fling_30,EvolutionStone
 Description = A glassy black stone that produces a sharp cutting edge when split. It’s loved by a certain Pokémon.
 #-------------------------------
 [PEATBLOCK]
@@ -6818,7 +6818,7 @@ NamePlural = Peat Blocks
 Pocket = 1
 Price = 2100
 FieldUse = OnPokemon
-Flags = Fling_30, EvolutionStone
+Flags = Fling_30,EvolutionStone
 Description = A block of muddy material that is for fuel. It’s loved by a certain Pokémon.
 #-------------------------------
 [LINKINGCORD]
@@ -6827,7 +6827,7 @@ NamePlural = Linking Cords
 Pocket = 1
 Price = 2100
 FieldUse = OnPokemon
-Flags = Fling_30, EvolutionStone
+Flags = Fling_30,EvolutionStone
 Description = A string exuding a mysterious energy of connection. It’s loved by certain Pokémon.
 #-------------------------------
 [ADAMANTCRYSTAL]
@@ -6969,7 +6969,6 @@ Name = Origin Ball
 NamePlural = Origin Balls
 Pocket = 3
 Price = 0
-SellPrice = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = An irreplicable Poké Ball that was once used to catch the frenzied Pokémon raging at the Temple of Sinnoh.
@@ -6979,7 +6978,6 @@ Name = Strange Ball
 NamePlural = Strange Balls
 Pocket = 3
 Price = 0
-SellPrice = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = A strange looking Poke Ball that arrived from the past Sinnoh.
@@ -7262,3 +7260,481 @@ NamePlural = Fairy Tera Shards
 Pocket = 1
 Price = 2000
 Description = On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[ZRING]
+Name = Z-Ring
+NamePlural = Z-Rings
+Pocket = 8
+Price = 0
+Flags = ZRing,KeyItem
+Description = A mysterious ring that enables Pokémon to use Z-Power if they are holding a compatible Z-Crystal.
+#-------------------------------
+[ZPOWERRING]
+Name = Z-Power Ring
+NamePlural = Z-Power Rings
+Pocket = 8
+Price = 0
+Flags = ZRing,KeyItem
+Description = A mysterious ring that enables Pokémon to use Z-Power if they are holding a compatible Z-Crystal.
+#-------------------------------
+[NORMALIUMZ]
+Name = Normalium Z
+NamePlural = Normalium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Normal-type moves to Normal-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Normal-type moves to Z-Moves.
+#-------------------------------
+[FIGHTINIUMZ]
+Name = Fightinium Z
+NamePlural = Fightinium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Fighting-type moves to Fighting-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Fighting-type moves to Z-Moves.
+#-------------------------------
+[FLYINIUMZ]
+Name = Flyinium Z
+NamePlural = Flyinium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Flying-type moves to Flying-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Flying-type moves to Z-Moves.
+#-------------------------------
+[POISONIUMZ]
+Name = Poisonium Z
+NamePlural = Poisonium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Poison-type moves to Poison-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Poison-type moves to Z-Moves.
+#-------------------------------
+[GROUNDIUMZ]
+Name = Groundium Z
+NamePlural = Groundium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Ground-type moves to Ground-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Ground-type moves to Z-Moves.
+#-------------------------------
+[ROCKIUMZ]
+Name = Rockium Z
+NamePlural = Rockium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Rock-type moves to Rock-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Rock-type moves to Z-Moves.
+#-------------------------------
+[BUGINIUMZ]
+Name = Buginium Z
+NamePlural = Buginium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Bug-type moves to Bug-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Bug-type moves to Z-Moves.
+#-------------------------------
+[GHOSTIUMZ]
+Name = Ghostium Z
+NamePlural = Ghostium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Ghost-type moves to Ghost-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Ghost-type moves to Z-Moves.
+#-------------------------------
+[STEELIUMZ]
+Name = Steelium Z
+NamePlural = Steelium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Steel-type moves to Steel-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Steel-type moves to Z-Moves.
+#-------------------------------
+[FIRIUMZ]
+Name = Firium Z
+NamePlural = Firium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Fire-type moves to Fire-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Fire-type moves to Z-Moves.
+#-------------------------------
+[WATERIUMZ]
+Name = Waterium Z
+NamePlural = Waterium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Water-type moves to Water-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Water-type moves to Z-Moves.
+#-------------------------------
+[GRASSIUMZ]
+Name = Grassium Z
+NamePlural = Grassium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Grass-type moves to Grass-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Grass-type moves to Z-Moves.
+#-------------------------------
+[ELECTRIUMZ]
+Name = Electrium Z
+NamePlural = Electrium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Electric-type moves to Electric-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Electric-type moves to Z-Moves.
+#-------------------------------
+[PSYCHIUMZ]
+Name = Psychium Z
+NamePlural = Psychium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Psychic-type moves to Psychic-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Psychic-type moves to Z-Moves.
+#-------------------------------
+[ICIUMZ]
+Name = Icium Z
+NamePlural = Icium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Ice-type moves to Ice-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Ice-type moves to Z-Moves.
+#-------------------------------
+[DRAGONIUMZ]
+Name = Dragonium Z
+NamePlural = Dragonium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Dragon-type moves to Dragon-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Dragon-type moves to Z-Moves.
+#-------------------------------
+[DARKINIUMZ]
+Name = Darkinium Z
+NamePlural = Darkinium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Dark-type moves to Dark-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Dark-type moves to Z-Moves.
+#-------------------------------
+[FAIRIUMZ]
+Name = Fairium Z
+NamePlural = Fairium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Fairy-type moves to Fairy-type Z-Moves.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Fairy-type moves to Z-Moves.
+#-------------------------------
+[PIKANIUMZ]
+Name = Pikanium Z
+NamePlural = Pikanium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Pikachu's Volt Tackle to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Pikachu's Volt Tackle to a Z-Move.
+#-------------------------------
+[PIKASHUNIUMZ]
+Name = Pikashunium Z
+NamePlural = Pikashunium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade a capped Pikachu's Thunderbolt to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades a capped Pikachu's Thunderbolt to a Z-Move.
+#-------------------------------
+[ALORAICHIUMZ]
+Name = Aloraichium Z
+NamePlural = Aloraichium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Alolan Raichu's Thunderbolt to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Alolan Raichu's Thunderbolt to a Z-Move.
+#-------------------------------
+[EEVIUMZ]
+Name = Eevium Z
+NamePlural = Eevium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Eevee's Last Resort to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Eevee's Last Resort to a Z-Move.
+#-------------------------------
+[SNORLIUMZ]
+Name = Snorlium Z
+NamePlural = Snorlium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Snorlax's Giga Impact to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Snorlax's Giga Impact to a Z-Move.
+#-------------------------------
+[MEWNIUMZ]
+Name = Mewnium Z
+NamePlural = Mewnium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Mew's Psychic to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Mew's Psychic to a Z-Move.
+#-------------------------------
+[DECIDIUMZ]
+Name = Decidium Z
+NamePlural = Decidium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Decidueye's Spirit Shackle to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Decidueye's Spirit Shackle to a Z-Move.
+#-------------------------------
+[INCINIUMZ]
+Name = Incinium Z
+NamePlural = Incinium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Incineroar's Darkest Lariat to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Incineroar's Darkest Lariat to a Z-Move.
+#-------------------------------
+[PRIMARIUMZ]
+Name = Primarium Z
+NamePlural = Primarium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Primarina's Sparkling Aria to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Primarina's Sparkling Aria to a Z-Move.
+#-------------------------------
+[LYCANIUMZ]
+Name = Lycanium Z
+NamePlural = Lycanium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Lycanroc's Stone Edge to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Lycanroc's Stone Edge to a Z-Move.
+#-------------------------------
+[MIMIKIUMZ]
+Name = Mimikium Z
+NamePlural = Mimikium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Mimikyu's Play Rough to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Mimikyu's Play Rough to a Z-Move.
+#-------------------------------
+[KOMMONIUMZ]
+Name = Kommonium Z
+NamePlural = Kommonium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Kommo-o's Clanging Scales to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Kommo-o's Clanging Scales to a Z-Move.
+#-------------------------------
+[TAPUNIUMZ]
+Name = Tapunium Z
+NamePlural = Tapunium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade the tapus' Nature's Madness to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades the tapu's Nature's Madness to a Z-Move.
+#-------------------------------
+[SOLGANIUMZ]
+Name = Solganium Z
+NamePlural = Solganium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Solgaleo's Sunsteel Strike to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Solgaleo's Sunsteel Strike to a Z-Move.
+#-------------------------------
+[LUNALIUMZ]
+Name = Lunalium Z
+NamePlural = Lunalium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Lunala's Moongeist Beam to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Lunala's Moongeist Beam to a Z-Move.
+#-------------------------------
+[MARSHADIUMZ]
+Name = Marshadium Z
+NamePlural = Marshadium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,KeyItem
+Description = It converts Z-Power into crystals that upgrade Marshadow's Spectral Thief to an exclusive Z-Move.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Marshadow's Spectral Thief to a Z-Move.
+#-------------------------------
+[ULTRANECROZIUMZ]
+Name = Ultranecrozium Z
+NamePlural = Ultranecrozium Z
+Pocket = 9
+Price = 0
+FieldUse = OnPokemon
+Flags = ZCrystal,UltraItem,KeyItem
+Description = It's a crystal that turns Necrozma fused with Solgaleo or Lunala into a new form.
+HeldDescription = This is a crystallized form of Z-Power. It upgrades Necrozma's Photon Geyser to a Z-Move.
+#-------------------------------
+[ZBOOSTER]
+Name = Z-Booster
+NamePlural = Z-Boosters
+Pocket = 7
+Price = 4000
+BattleUse = Direct
+Flags = Fling_30,UsesAllBattleActions
+Description = A crystal brimming with Z-Power. It can fully recharge your Z-Ring in battle.
+#-------------------------------
+[DYNAMAXBAND]
+Name = Dynamax Band
+NamePlural = Dynamax Bands
+Pocket = 8
+Price = 0
+Flags = DynamaxBand,KeyItem
+Description = A Wishing Star has been affixed to it. It lets out light that allows Pokémon to Dynamax when at a Power Spot.
+#-------------------------------
+[WISHINGSTAR]
+Name = Wishing Star
+NamePlural = Wishing Stars
+Pocket = 7
+Price = 4000
+BattleUse = Direct
+Flags = Fling_50,UsesAllBattleActions
+Description = A stone that radiates Dynamax energy. It can fully recharge your Dynamax Band in battle.
+#-------------------------------
+[WISHINGPIECE]
+Name = Wishing Piece
+NamePlural = Wishing Pieces
+Pocket = 1
+Price = 10
+Flags = Fling_50
+Description = Throw one into a Pokémon Den to attract a wild Dynamax Pokémon.
+#-------------------------------
+[ARMORITEORE]
+Name = Armorite Ore
+NamePlural = Armorite Ore
+Pocket = 1
+Price = 10
+Flags = Fling_30
+Description = Rare ore that can be obtained in a Max Raid Den. Certain collectors covet these items.
+#-------------------------------
+[DYNITEORE]
+Name = Dynite Ore
+NamePlural = Dynite Ore
+Pocket = 1
+Price = 10
+Flags = Fling_30
+Description = Mysterious ore that can be obtained in a Max Lair. Certain collectors covet these items.
+#-------------------------------
+[DYNAMAXCANDY]
+Name = Dynamax Candy
+NamePlural = Dynamax Candies
+Pocket = 2
+Price = 0
+FieldUse = OnPokemon
+Flags = Fling_30
+Description = Raises the Dynamax Level of a single Pokémon by one. A higher level means higher HP when Dynamaxed.
+#-------------------------------
+[DYNAMAXCANDYXL]
+Name = Dynamax Candy XL
+NamePlural = Dynamax Candies XL
+Pocket = 2
+Price = 0
+FieldUse = OnPokemon
+Flags = Fling_30
+Description = Maxes out the Dynamax Level of a single Pokémon. A higher level means higher HP when Dynamaxed.
+#-------------------------------
+[MAXSOUP]
+Name = Max Soup
+NamePlural = Max Soups
+Pocket = 2
+Price = 10000
+FieldUse = OnPokemon
+Flags = Fling_30
+Description = A soup that packs a huge kick. Certain Pokémon that consume it may be given the ability to Gigantamax.
+#-------------------------------
+[MAXEGGS]
+Name = Max Eggs
+NamePlural = Max Eggs
+Pocket = 2
+Price = 20000
+FieldUse = Direct
+Flags = Fling_30
+Description = A bundle of highly nutritious, jumbo-sized eggs. Grants the entire party a large amount of Exp. Points.
+#-------------------------------
+[MAXSCALES]
+Name = Max Scales
+NamePlural = Max Scales
+Pocket = 2
+Price = 4000
+FieldUse = OnPokemon
+Flags = Fling_30
+Description = Reflective scales that act like a mirror. Pokémon are able to recall a past move when gazing into them.
+#-------------------------------
+[MAXPLUMAGE]
+Name = Max Plumage
+NamePlural = Max Plumage
+Pocket = 2
+Price = 4000
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = A bundle of six distinctly colored feathers. Increases each base stat of a Pokémon by 1 point.
+#-------------------------------
+[DYNAMAXCRYSTAL]
+Name = Dynamax Crystal
+NamePlural = Dynamax Crystals
+Pocket = 1
+Price = 10
+Flags = Fling_30
+Description = Throw one into certain Pokémon Dens, and it may lure a rare wild Dynamaxed Pokémon.

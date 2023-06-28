@@ -111,6 +111,7 @@ TutorMoves = THUNDERPUNCH,BODYSLAM,TAKEDOWN,SURF,HYPERBEAM,THUNDERBOLT,THUNDERWA
 Height = 0.7
 Weight = 21.0
 Color = Brown
+Habitat = WatersEdge
 Pokedex = It uses psychokinesis to control electricity. It hops aboard its own tail, using psychic power to lift the tail and move about while riding it.
 Generation = 7
 #-------------------------------
@@ -126,6 +127,7 @@ EggMoves = AMNESIA,CHIPAWAY,COUNTER,CRUSHCLAW,CURSE,ENDURE,FLAIL,HONECLAWS,ICICL
 Height = 0.7
 Weight = 40.0
 Color = White
+Habitat = Mountain
 Pokedex = The skin on its back is as hard as steel. Predators go after its soft belly, so it clings to the ground desperately.
 Generation = 7
 Flags = InheritFormWithEverStone
@@ -142,6 +144,7 @@ TutorMoves = AERIALACE,AQUATAIL,ATTRACT,AURORAVEIL,BLIZZARD,BRICKBREAK,BULLDOZE,
 Height = 1.2
 Weight = 55.0
 Color = Blue
+Habitat = Mountain
 Pokedex = It runs across snow-covered plains at high speeds. It developed thick, sharp claws to plow through the snow.
 Generation = 7
 Flags = InheritFormWithEverStone
@@ -312,6 +315,7 @@ TutorMoves = AGILITY,ALLYSWITCH,ATTRACT,BODYSLAM,BOUNCE,CALMMIND,CHARM,DAZZLINGG
 Height = 0.8
 Weight = 24.0
 Color = White
+Habitat = Forest
 Category = Unique Horn
 Pokedex = Its small horn hides a healing power. With a few rubs from this Pokémon's horn, any slight wound you have will be healed.
 Generation = 8
@@ -326,6 +330,7 @@ Moves = 0,PSYCHOCUT,1,PSYCHOCUT,1,MEGAHORN,1,TACKLE,1,QUICKATTACK,1,GROWL,1,TAIL
 TutorMoves = AGILITY,ALLYSWITCH,ATTRACT,BATONPASS,BODYSLAM,BOUNCE,CALMMIND,CHARM,DAZZLINGGLEAM,DRILLRUN,ENDURE,EXPANDINGFORCE,FACADE,FUTURESIGHT,GIGAIMPACT,HIDDENPOWER,HIGHHORSEPOWER,HYPERBEAM,IMPRISON,IRONTAIL,LOWKICK,MAGICROOM,MEGAHORN,MISTYTERRAIN,MYSTICALFIRE,PAYDAY,PLAYROUGH,PROTECT,PSYCHIC,PSYCHICTERRAIN,PSYCHOCUT,REST,ROUND,SLEEPTALK,SMARTSTRIKE,SNORE,STOREDPOWER,SUBSTITUTE,SWIFT,SWORDSDANCE,THROATCHOP,TRICKROOM,WILDCHARGE,WONDERROOM,ZENHEADBUTT
 Weight = 80.0
 Color = White
+Habitat = Forest
 Category = Unique Horn
 Pokedex = Little can stand up to its psycho cut. Unleashed from this Pokémon's horn, the move will punch a hole right through a thick metal sheet.
 Generation = 8
@@ -336,7 +341,6 @@ FormName = Galarian
 Types = PSYCHIC
 Abilities = GLUTTONY,OWNTEMPO
 Moves = 1,TACKLE,1,CURSE,3,GROWL,6,ACID,9,YAWN,12,CONFUSION,15,DISABLE,18,WATERPULSE,21,HEADBUTT,24,ZENHEADBUTT,27,AMNESIA,30,SURF,33,SLACKOFF,36,PSYCHIC,39,PSYCHUP,42,RAINDANCE,45,HEALPULSE
-TutorMoves = BODYSLAM,TAKEDOWN,FLAMETHROWER,HYDROPUMP,SURF,ICEBEAM,BLIZZARD,PSYBEAM,THUNDERWAVE,EARTHQUAKE,DIG,PSYCHIC,LIGHTSCREEN,FIREBLAST,WATERFALL,SWIFT,AMNESIA,REST,SUBSTITUTE,PROTECT,ICYWIND,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,SHADOWBALL,FACADE,HELPINGHAND,TRICK,SKILLSWAP,IMPRISON,MUDSHOT,CALMMIND,WATERPULSE,AVALANCHE,ZENHEADBUTT,TRICKROOM,GRASSKNOT,PSYSHOCK,FOULPLAY,STOREDPOWER,BULLDOZE,PSYCHICTERRAIN,LIQUIDATION,SNOWSCAPE,CHILLINGWATER
 Pokedex = Although this Pokémon is normally zoned out, its expression abruptly sharpens on occasion. The cause for this seems to lie in Slowpoke's diet.
 Generation = 8
 Flags = InheritFormWithEverStone
@@ -487,6 +491,7 @@ TutorMoves = ALLYSWITCH,ATTRACT,AVALANCHE,BATONPASS,BLIZZARD,BODYSLAM,BRICKBREAK
 Height = 1.4
 Weight = 56.8
 Color = White
+Habitat = Mountain
 Category = Dancing
 Pokedex = Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to use as a barrier.
 Generation = 8
@@ -542,6 +547,7 @@ Moves = 1,GUST,5,CONFUSION,10,REFLECT,15,HYPNOSIS,20,AGILITY,25,ANCIENTPOWER,30,
 TutorMoves = FLY,TAKEDOWN,PSYBEAM,HYPERBEAM,PSYCHIC,AGILITY,LIGHTSCREEN,REFLECT,SWIFT,REST,SUBSTITUTE,PROTECT,SCARYFACE,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,SHADOWBALL,FACADE,HELPINGHAND,TRICK,SKILLSWAP,IMPRISON,HYPERVOICE,AIRCUTTER,CALMMIND,TAILWIND,UTURN,AIRSLASH,BRAVEBIRD,GIGAIMPACT,TRICKROOM,PSYSHOCK,STOREDPOWER,HURRICANE,SNOWSCAPE
 Weight = 50.9
 Color = Purple
+Habitat = Grassland
 Category = Cruel
 Pokedex = Its feather-like blades are composed of psychic energy and can shear through thick iron sheets as if they were paper.
 Generation = 8
@@ -556,6 +562,7 @@ HiddenAbilities = DEFIANT
 Moves = 1,PECK,1,FOCUSENERGY,5,ROCKSMASH,10,LIGHTSCREEN,15,PLUCK,20,AGILITY,25,ANCIENTPOWER,30,BRICKBREAK,35,DRILLPECK,40,QUICKGUARD,45,THUNDEROUSKICK,50,BULKUP,55,COUNTER,60,DETECT,65,CLOSECOMBAT,70,REVERSAL
 TutorMoves = FLY,TAKEDOWN,HYPERBEAM,LOWKICK,AGILITY,LIGHTSCREEN,SWIFT,REST,SUBSTITUTE,REVERSAL,PROTECT,SCARYFACE,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,FACADE,TAUNT,HELPINGHAND,BRICKBREAK,AERIALACE,BULKUP,TAILWIND,UTURN,CLOSECOMBAT,BRAVEBIRD,GIGAIMPACT,LOWSWEEP,ACROBATICS,HURRICANE,STOMPINGTANTRUM,TRAILBLAZE
 Weight = 58.2
+Habitat = Grassland
 Category = Strong Legs
 Pokedex = When its feathers rub together, they produce a crackling sound like the zapping of electricity. That's why this Pokémon is called Zapdos.
 Generation = 8
@@ -571,6 +578,7 @@ Moves = 1,GUST,1,LEER,5,PAYBACK,10,SAFEGUARD,15,WINGATTACK,20,AGILITY,25,ANCIENT
 TutorMoves = FLY,TAKEDOWN,HYPERBEAM,AGILITY,SWIFT,REST,SUBSTITUTE,THIEF,PROTECT,SCARYFACE,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,SHADOWBALL,FACADE,TAUNT,HELPINGHAND,IMPRISON,HYPERVOICE,AERIALACE,TAILWIND,UTURN,DARKPULSE,AIRSLASH,BRAVEBIRD,GIGAIMPACT,NASTYPLOT,FOULPLAY,HEX,ACROBATICS,HURRICANE,SNARL
 Weight = 66.0
 Color = Red
+Habitat = Grassland
 Category = Malevolent
 Pokedex = This Pokémon's sinister, flame-like aura will consume the spirit of any creature it hits. Victims become burned-out shadows of themselves.
 Generation = 8
@@ -585,6 +593,7 @@ Abilities = STEADFAST
 HiddenAbilities = STEADFAST
 Height = 2.3
 Weight = 127.0
+Habitat = Rare
 Pokedex = Psychic power has augmented its muscles. It has a grip strength of one ton and can sprint a hundred meters in two seconds flat!
 Generation = 6
 #-------------------------------
@@ -597,6 +606,7 @@ Abilities = INSOMNIA
 HiddenAbilities = INSOMNIA
 Height = 1.5
 Weight = 33.0
+Habitat = Rare
 Pokedex = Despite its diminished size, its mental power has grown phenomenally. With a mere thought, it can smash a skyscraper to smithereens.
 Generation = 6
 #-------------------------------
@@ -939,18 +949,21 @@ Generation = 6
 FormName = Sunny Form
 Types = FIRE
 Color = Red
+Habitat = Grassland
 Pokedex = This is the form Castform takes on the brightest of days. Its skin is unexpectedly hot to the touch, so approach with care.
 #-------------------------------
 [CASTFORM,2]
 FormName = Rainy Form
 Types = WATER
 Color = Blue
+Habitat = Grassland
 Pokedex = This is the form Castform takes when soaked with rain. When its body is compressed, water will seep out as if from a sponge.
 #-------------------------------
 [CASTFORM,3]
 FormName = Snowy Form
 Types = ICE
 Color = White
+Habitat = Grassland
 Pokedex = This is the form Castform takes when covered in snow. Its body becomes an ice-like material, with a temperature near -5 degrees Celsius.
 #-------------------------------
 [BANETTE,1]
@@ -1220,7 +1233,6 @@ FormName = Origin Forme
 BaseStats = 150,120,100,90,120,100
 Abilities = LEVITATE
 HiddenAbilities = LEVITATE
-TutorMoves = FLY,BODYSLAM,TAKEDOWN,HYPERBEAM,THUNDERBOLT,THUNDERWAVE,THUNDER,EARTHQUAKE,PSYCHIC,CONFUSERAY,SWIFT,REST,SUBSTITUTE,PROTECT,SCARYFACE,ICYWIND,OUTRAGE,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,SHADOWBALL,WILLOWISP,FACADE,HYPERVOICE,DRAGONCLAW,CALMMIND,AURASPHERE,DARKPULSE,DRAGONPULSE,ENERGYBALL,EARTHPOWER,GIGAIMPACT,SHADOWCLAW,DRACOMETEOR,IRONHEAD,STONEEDGE,HEX,BULLDOZE,DRAGONTAIL,PHANTOMFORCE
 Height = 6.9
 Weight = 650.0
 Shape = Serpentine
@@ -1337,6 +1349,7 @@ EggMoves = FLAMEWHEEL,FOCUSPUNCH,FREEZEDRY,HAMMERARM,INCINERATE,POWERUPPUNCH,TAK
 Height = 0.7
 Weight = 40.0
 Color = White
+Habitat = Mountain
 Pokedex = The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.
 Generation = 8
 Flags = InheritFormWithEverStone
@@ -1360,6 +1373,7 @@ TutorMoves = ATTRACT,AVALANCHE,BLIZZARD,BODYPRESS,BODYSLAM,BRICKBREAK,BULKUP,BUL
 Height = 1.7
 Weight = 120.0
 Color = White
+Habitat = Mountain
 Category = Zen Charm
 Pokedex = On days when blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.
 Generation = 8
@@ -1377,7 +1391,6 @@ TutorMoves = ATTRACT,AVALANCHE,BLIZZARD,BODYPRESS,BODYSLAM,BRICKBREAK,BULKUP,BUL
 Height = 1.7
 Weight = 120.0
 Color = White
-Category = Blazing
 Pokedex = Anger has reignited its atrophied flame sac. This Pokémon spews fire everywhere as it rampages indiscriminately.
 Generation = 8
 #-------------------------------
@@ -1425,6 +1438,7 @@ TutorMoves = ATTRACT,BOUNCE,BULLDOZE,CRUNCH,DIG,EARTHPOWER,EARTHQUAKE,ENDURE,FAC
 EggMoves = ASTONISH,BIND,COUNTER,CURSE,PAINSPLIT,REFLECTTYPE,SPITE,YAWN
 Weight = 20.5
 Color = Green
+Habitat = Cave
 Pokedex = Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.
 Generation = 8
 Flags = InheritFormWithEverStone
@@ -1444,7 +1458,6 @@ BaseStats = 79,105,70,101,145,80
 EVs = SPECIAL_ATTACK,3
 Abilities = VOLTABSORB
 HiddenAbilities = VOLTABSORB
-TutorMoves = THUNDERPUNCH,FLY,BODYSLAM,TAKEDOWN,HYPERBEAM,THUNDERBOLT,THUNDERWAVE,THUNDER,PSYCHIC,AGILITY,REST,SUBSTITUTE,THIEF,PROTECT,SCARYFACE,SLUDGEBOMB,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,CRUNCH,FACADE,TAUNT,BRICKBREAK,BULKUP,UTURN,FLING,DARKPULSE,FOCUSBLAST,GIGAIMPACT,NASTYPLOT,ZENHEADBUTT,FLASHCANNON,GRASSKNOT,CHARGEBEAM,ELECTROBALL,FOULPLAY,ACROBATICS,VOLTSWITCH,WILDCHARGE,SNARL,EERIEIMPULSE,ELECTRICTERRAIN,SMARTSTRIKE
 Height = 3.0
 Shape = BipedalTail
 #-------------------------------
@@ -2046,7 +2059,6 @@ Pokedex = This Cramorant has accidentally gotten a Pikachu lodged in its gullet.
 FormName = Low Key Form
 Abilities = PUNKROCK,MINUS
 Moves = 0,SPARK,1,LEER,1,GROWL,1,ACID,1,THUNDERSHOCK,1,NUZZLE,1,NOBLEROAR,1,FLAIL,1,BELCH,1,TEARFULLOOK,1,ACIDSPRAY,4,CHARGE,8,SHOCKWAVE,12,SCARYFACE,16,TAUNT,24,SCREECH,28,SWAGGER,32,TOXIC,36,DISCHARGE,40,POISONJAB,44,OVERDRIVE,48,BOOMBURST,52,MAGNETICFLUX
-TutorMoves = FIREPUNCH,THUNDERPUNCH,TAKEDOWN,HYPERBEAM,THUNDERBOLT,THUNDERWAVE,THUNDER,METRONOME,SWIFT,REST,SUBSTITUTE,THIEF,PROTECT,SCARYFACE,SLUDGEBOMB,ENDURE,CHARM,SLEEPTALK,ENCORE,RAINDANCE,SUNNYDAY,FACADE,TAUNT,HELPINGHAND,BRICKBREAK,HYPERVOICE,POISONTAIL,FLING,TOXICSPIKES,POISONJAB,DRAINPUNCH,GIGAIMPACT,THUNDERFANG,GUNKSHOT,CHARGEBEAM,VENOSHOCK,ELECTROBALL,ACIDSPRAY,STOREDPOWER,HEX,VOLTSWITCH,WILDCHARGE,SNARL,EERIEIMPULSE,ELECTRICTERRAIN,TRAILBLAZE
 Pokedex = Capable of generating 15,000 volts of electricity, this Pokémon looks down on all that would challenge it.
 #-------------------------------
 [SINISTEA,1]
@@ -2325,8 +2337,8 @@ TutorMoves = BODYSLAM,TAKEDOWN,FLAMETHROWER,FIRESPIN,DIG,AGILITY,FIREBLAST,REST,
 EggMoves = DOUBLEKICK,THRASH,DOUBLEEDGE,MORNINGSUN,COVET,HEADSMASH
 Height = 0.8
 Weight = 22.7
-Pokedex = They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.
 Category = Scout
+Pokedex = They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.
 Generation = 8
 Flags = InheritFormWithEverStone
 #-------------------------------
@@ -2350,11 +2362,12 @@ Moves = 1,CHARGE,1,TACKLE,4,THUNDERSHOCK,6,STUNSPORE,9,BULLETSEED,11,ROLLOUT,13,
 TutorMoves = TAKEDOWN,SOLARBEAM,THUNDERBOLT,THUNDERWAVE,THUNDER,AGILITY,REFLECT,SWIFT,REST,SUBSTITUTE,THIEF,PROTECT,GIGADRAIN,ENDURE,SLEEPTALK,RAINDANCE,FACADE,TAUNT,BULLETSEED,SEEDBOMB,ENERGYBALL,LEAFSTORM,GRASSKNOT,CHARGEBEAM,ELECTROBALL,FOULPLAY,VOLTSWITCH,WILDCHARGE,GRASSYTERRAIN,ELECTRICTERRAIN
 EggMoves = LEECHSEED,RECYCLE,WORRYSEED
 Weight = 13.0
+Habitat = Grassland
+Category = Sphere
 Pokedex = An enigmatic Pokémon that happens to bear a resemblance to a Poké Ball. When excited, it discharges the electric current it has stored in its belly, then lets out a great, uproarious laugh.
 Generation = 8
-Category = Sphere
-Evolutions = ELECTRODE,Item,LEAFSTONE
 Flags = InheritFormWithEverStone
+Evolutions = ELECTRODE,Item,LEAFSTONE
 #-------------------------------
 [ELECTRODE,1]
 FormName = Hisuian Form
@@ -2362,13 +2375,13 @@ Types = ELECTRIC,GRASS
 Moves = 0,CHLOROBLAST,1,CHARGE,1,TACKLE,4,THUNDERSHOCK,6,STUNSPORE,9,BULLETSEED,11,ROLLOUT,13,SCREECH,16,CHARGEBEAM,20,SWIFT,22,ELECTROBALL,26,SELFDESTRUCT,29,ENERGYBALL,34,SEEDBOMB,34,DISCHARGE,41,EXPLOSION,46,GYROBALL,50,GRASSYTERRAIN
 TutorMoves = TAKEDOWN,HYPERBEAM,SOLARBEAM,THUNDERBOLT,THUNDERWAVE,THUNDER,AGILITY,REFLECT,SWIFT,REST,SUBSTITUTE,THIEF,PROTECT,SCARYFACE,GIGADRAIN,ENDURE,SLEEPTALK,RAINDANCE,FACADE,TAUNT,BULLETSEED,SEEDBOMB,ENERGYBALL,GIGAIMPACT,LEAFSTORM,GRASSKNOT,CHARGEBEAM,ELECTROBALL,FOULPLAY,VOLTSWITCH,WILDCHARGE,GRASSYTERRAIN,ELECTRICTERRAIN
 Weight = 71.0
+Habitat = Grassland
+Category = Sphere
 Pokedex = The tissue on the surface of its body is curiously similar in composition to an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts.
 Generation = 8
-Category = Sphere
 Flags = InheritFormWithEverStone
 #-------------------------------
 [QUILAVA,1]
-Evolutions = TYPHLOSION,Level,36
 Flags = InheritFormWithEverStone
 #-------------------------------
 [TYPHLOSION,1]
@@ -2393,20 +2406,20 @@ TutorMoves = SWORDSDANCE,TAKEDOWN,HYDROPUMP,SURF,ICEBEAM,BLIZZARD,AGILITY,WATERF
 EggMoves = SUPERSONIC,BUBBLEBEAM,HAZE,SELFDESTRUCT,FLAIL,ASTONISH,WATERPULSE,AQUATAIL,AQUAJET,ACIDSPRAY
 Pokedex = Fishers detest this troublesome Pokémon because it sprays poison from its spines, getting it everywhere. A different form of Qwilfish lives in other regions.
 Generation = 8
-Evolutions = OVERQWIL,HasMove,BARBBARRAGE
 Flags = InheritFormWithEverStone
+Evolutions = OVERQWIL,HasMove,BARBBARRAGE
 #-------------------------------
 [SNEASEL,1]
 FormName = Hisuian Form
 Types = FIGHTING,POISON
 Moves = 1,SCRATCH,1,LEER,1,ROCKSMASH,6,TAUNT,12,QUICKATTACK,18,METALCLAW,24,POISONJAB,30,BRICKBREAK,36,HONECLAWS,42,SLASH,48,AGILITY,54,SCREECH,60,CLOSECOMBAT
 TutorMoves = SWORDSDANCE,TAKEDOWN,LOWKICK,DIG,AGILITY,SWIFT,REST,SUBSTITUTE,THIEF,REVERSAL,PROTECT,SLUDGEBOMB,ENDURE,FALSESWIPE,SLEEPTALK,METALCLAW,RAINDANCE,SUNNYDAY,SHADOWBALL,FACADE,TAUNT,BRICKBREAK,AERIALACE,BULKUP,POISONTAIL,CALMMIND,CLOSECOMBAT,FLING,TOXICSPIKES,POISONJAB,XSCISSOR,FOCUSBLAST,GIGAIMPACT,NASTYPLOT,SHADOWCLAW,GUNKSHOT,GRASSKNOT,VENOSHOCK,LOWSWEEP,ACIDSPRAY,TRAILBLAZE
-Eggmoves = COUNTER,DOUBLEHIT,FAKEOUT,FEINT,NIGHTSLASH,QUICKGUARD,SWITCHEROO
 Weight = 27.0
+Habitat = Grassland
 Pokedex = Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel's grasp.
 Generation = 8
-Evolutions = SNEASLER,ItemDay,RAZORCLAW
 Flags = InheritFormWithEverStone
+Evolutions = SNEASLER,ItemDay,RAZORCLAW
 #-------------------------------
 [DIALGA,1]
 FormName = Origin Forme
@@ -2423,7 +2436,6 @@ Weight = 659.0
 Pokedex = It soars across the sky in a form that greatly resembles the creator of all things. Perhaps this imitation of appearance is Palkia's strategy for gaining Arceus's powers.
 #-------------------------------
 [DEWOTT,1]
-Evolutions = SAMUROTT,Level,36
 Flags = InheritFormWithEverStone
 #-------------------------------
 [SAMUROTT,1]
@@ -2439,7 +2451,6 @@ Generation = 8
 Flags = InheritFormWithEverStone
 #-------------------------------
 [PETILIL,1]
-Evolutions = LILLIGANT,Item,SUNSTONE
 Flags = InheritFormWithEverStone
 #-------------------------------
 [LILLIGANT,1]
@@ -2450,9 +2461,9 @@ Abilities = CHLOROPHYLL,HUSTLE
 Moves = 0,VICTORYDANCE,1,TEETERDANCE,1,SOLARBLADE,1,PETALBLIZZARD,1,AFTERYOU,1,ENTRAINMENT,1,LEAFSTORM,1,DEFOG,1,ENERGYBALL,1,LEAFBLADE,1,MAGICALLEAF,1,MEGAKICK,1,SUNNYDAY,1,SYNTHESIS,1,GIGADRAIN,1,SLEEPPOWDER,1,STUNSPORE,1,GROWTH,1,LEECHSEED,1,MEGADRAIN,1,ABSORB,1,HELPINGHAND,5,AXEKICK
 TutorMoves = SWORDSDANCE,TAKEDOWN,HYPERBEAM,LOWKICK,SOLARBEAM,METRONOME,REST,SUBSTITUTE,PROTECT,GIGADRAIN,ENDURE,CHARM,SLEEPTALK,ENCORE,RAINDANCE,SUNNYDAY,FACADE,HELPINGHAND,BRICKBREAK,BULLETSEED,AERIALACE,MAGICALLEAF,CLOSECOMBAT,POISONJAB,SEEDBOMB,AIRSLASH,ENERGYBALL,GIGAIMPACT,LEAFSTORM,GRASSKNOT,LOWSWEEP,ACROBATICS,HURRICANE,GRASSYTERRAIN,POLLENPUFF,ICESPINNER,TRAILBLAZE
 Height = 1.3
+Category = Spin
 Pokedex = They suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity.
 Generation = 8
-Category = Spin
 Flags = InheritFormWithEverStone
 #-------------------------------
 [BASCULIN,2]
@@ -2461,11 +2472,11 @@ Abilities = RATTLED,ADAPTABILITY
 Moves = 1,TAILWHIP,1,WATERGUN,4,TACKLE,8,FLAIL,12,AQUAJET,16,BITE,20,SCARYFACE,24,HEADBUTT,28,SOAK,32,CRUNCH,36,TAKEDOWN,40,UPROAR,44,WAVECRASH,48,THRASH,52,DOUBLEEDGE,56,HEADSMASH
 TutorMoves = TAKEDOWN,HYDROPUMP,SURF,ICEBEAM,BLIZZARD,AGILITY,WATERFALL,SWIFT,REST,SUBSTITUTE,PROTECT,SCARYFACE,ICYWIND,ENDURE,SLEEPTALK,RAINDANCE,CRUNCH,FACADE,MUDSHOT,WATERPULSE,ICEFANG,ZENHEADBUTT,PSYCHICFANGS,LIQUIDATION,SNOWSCAPE,CHILLINGWATER
 EggMoves = ENDEAVOR,LASTRESPECTS
+Category = Gentle
 Pokedex = Though it differs from other Basculin in several respects, including demeanor—this one is gentle—people have categorized it as a regional form given the vast array of shared qualities.
 Generation = 8
-Category = Gentle
-Evolutions = BASCULEGION,LevelRecoilDamage,294
 Flags = InheritFormWithEverStone
+Evolutions = BASCULEGION,LevelRecoilDamage,294
 #-------------------------------
 [ZORUA,1]
 FormName = Hisuian Form
@@ -2493,7 +2504,6 @@ Generation = 8
 Flags = InheritFormWithEverStone
 #-------------------------------
 [RUFFLET,1]
-Evolutions = BRAVIARY,Level,54
 Flags = InheritFormWithEverStone
 #-------------------------------
 [BRAVIARY,1]
@@ -2512,7 +2522,6 @@ Generation = 8
 Flags = InheritFormWithEverStone
 #-------------------------------
 [GOOMY,1]
-Evolutions = SLIGGOO,Level,40
 Flags = InheritFormWithEverStone
 #-------------------------------
 [SLIGGOO,1]
@@ -2538,14 +2547,12 @@ Moves = 0,IRONTAIL,1,SHELTER,1,ACIDSPRAY,1,FEINT,1,TEARFULLOOK,1,DRAGONBREATH,1,
 TutorMoves = FIREPUNCH,THUNDERPUNCH,BODYSLAM,TAKEDOWN,FLAMETHROWER,HYDROPUMP,SURF,ICEBEAM,BLIZZARD,HYPERBEAM,THUNDERBOLT,THUNDER,EARTHQUAKE,FIREBLAST,REST,ROCKSLIDE,SUBSTITUTE,PROTECT,SCARYFACE,SLUDGEBOMB,OUTRAGE,SANDSTORM,ENDURE,CHARM,SLEEPTALK,RAINDANCE,SUNNYDAY,FACADE,ROCKTOMB,DRAGONCLAW,MUDSHOT,WATERPULSE,DRAGONPULSE,GIGAIMPACT,FLASHCANNON,DRACOMETEOR,IRONHEAD,HEAVYSLAM,ACIDSPRAY,BULLDOZE,DRAGONTAIL,STOMPINGTANTRUM,BODYPRESS,STEELBEAM,ICESPINNER,CHILLINGWATER
 Height = 1.7
 Weight = 334.1
+Category = Shell Bunker
 Pokedex = Able to freely control the hardness of its metallic shell. It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side.
 Generation = 8
-Category = Shell Bunker
-BattlerEnemyY = 4
 Flags = InheritFormWithEverStone
 #-------------------------------
 [BERGMITE,1]
-Evolutions = AVALUGG,Level,37
 Flags = InheritFormWithEverStone
 #-------------------------------
 [AVALUGG,1]
@@ -2562,7 +2569,6 @@ Generation = 8
 Flags = InheritFormWithEverStone
 #-------------------------------
 [DARTRIX,1]
-Evolutions = DECIDUEYE,Level,34
 Flags = InheritFormWithEverStone
 #-------------------------------
 [DECIDUEYE,1]
@@ -2579,7 +2585,6 @@ Flags = InheritFormWithEverStone
 #-------------------------------
 [BASCULEGION,1]
 BaseStats = 120,92,65,78,100,75
-BattlerEnemyY = 17
 Flags = InheritFormWithEverStone
 #-------------------------------
 [ENAMORUS,1]
@@ -2603,11 +2608,11 @@ Weight = 47.4
 #-------------------------------
 [PALAFIN,1]
 FormName = Hero Form
-Category = Hero
-Height = 1.8
-Weight = 97.4
 BaseStats = 100,160,97,100,106,87
 BaseExp = 228
+Height = 1.8
+Weight = 97.4
+Category = Hero
 #-------------------------------
 [MAUSHOLD,1]
 FormName = Family of Three
@@ -2655,89 +2660,81 @@ Pokedex = Blue-feathered Squawkabilly view their green- feathered counterparts a
 #-------------------------------
 [SQUAWKABILLY,2]
 FormName = Yellow Plumage
-Color = Yellow
 HiddenAbilities = SHEERFORCE
+Color = Yellow
 Pokedex = The yellow Squawkabilly are especially fierce. They've even been known to drive other bird Pokémon out of town.
 #-------------------------------
 [SQUAWKABILLY,3]
 FormName = White Plumage
-Color = White
 HiddenAbilities = SHEERFORCE
+Color = White
 Pokedex = Though these Squawkabilly are the fewest in number, they have no trouble living in towns since they blend in with the white buildings.
 #-------------------------------
 [WOOPER,1]
-Types = POISON,GROUND
 FormName = Paldean Form
-Color = Brown
-Abilities = POISONPOINT, WATERABSORB
+Types = POISON,GROUND
+Abilities = POISONPOINT,WATERABSORB
 Moves = 1,TAILWHIP,1,MUDSHOT,4,TACKLE,8,POISONTAIL,12,TOXICSPIKES,16,SLAM,21,YAWN,24,POISONJAB,28,SLUDGEWAVE,32,AMNESIA,36,TOXIC,40,EARTHQUAKE
 TutorMoves = BODYSLAM,TAKEDOWN,HYDROPUMP,SURF,LOWKICK,EARTHQUAKE,DIG,WATERFALL,AMNESIA,REST,ROCKSLIDE,SUBSTITUTE,PROTECT,SLUDGEBOMB,MUDSLAP,SPIKES,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,FACADE,HELPINGHAND,ROCKTOMB,MUDSHOT,POISONTAIL,WATERPULSE,TOXICSPIKES,POISONJAB,EARTHPOWER,GUNKSHOT,STONEEDGE,STEALTHROCK,VENOSHOCK,ACIDSPRAY,BULLDOZE,STOMPINGTANTRUM,LIQUIDATION,BODYPRESS,TRAILBLAZE,CHILLINGWATER
 EggMoves = DOUBLEKICK,MIST,COUNTER,RECOVER,HAZE,CURSE,ANCIENTPOWER,STOCKPILE,SPITUP,SWALLOW,ACIDSPRAY,AFTERYOU
-Weight = 11
-Pokedex = After losing a territorial struggle, Wooper began living on land. The Pokémon changed over time, developing a poisonous film to protect its body.
-Evolutions = CLODSIRE,Level,20
+Weight = 11.0
+Color = Brown
 Category = Poison Fish
+Pokedex = After losing a territorial struggle, Wooper began living on land. The Pokémon changed over time, developing a poisonous film to protect its body.
 Flags = InheritFormWithEverStone
+Evolutions = CLODSIRE,Level,20
 #-------------------------------
 [TAUROS,1]
 FormName = Paldean Form (Combat Breed)
 Types = FIGHTING
-Color = Black
-HiddenAbilities = CUDCHEW
 BaseStats = 75,110,105,100,30,70
+HiddenAbilities = CUDCHEW
 Moves = 1,TACKLE,1,TAILWHIP,5,WORKUP,10,DOUBLEKICK,15,ASSURANCE,20,HEADBUTT,25,SCARYFACE,30,ZENHEADBUTT,35,RAGINGBULL,40,REST,45,SWAGGER,50,THRASH,55,DOUBLEEDGE,60,CLOSECOMBAT
 TutorMoves = BODYSLAM,TAKEDOWN,SURF,HYPERBEAM,EARTHQUAKE,DIG,REST,ROCKSLIDE,SUBSTITUTE,THIEF,REVERSAL,PROTECT,SCARYFACE,OUTRAGE,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,FACADE,ROCKTOMB,BULKUP,CLOSECOMBAT,GIGAIMPACT,ZENHEADBUTT,IRONHEAD,STONEEDGE,BULLDOZE,WILDCHARGE,DRILLRUN,SMARTSTRIKE,STOMPINGTANTRUM,BODYPRESS,TRAILBLAZE
 EggMoves = CURSE,ENDEAVOR
-Weight = 115
+Weight = 115.0
+Color = Black
 Pokedex = This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition.
 Flags = InheritFormWithEverStone
 #-------------------------------
 [TAUROS,2]
 FormName = Paldean Form (Blaze Breed)
 Types = FIGHTING,FIRE
-Color = Black
-HiddenAbilities = CUDCHEW
 BaseStats = 75,110,105,100,30,70
+HiddenAbilities = CUDCHEW
 Moves = 1,TACKLE,1,TAILWHIP,5,WORKUP,10,DOUBLEKICK,15,FLAMECHARGE,20,HEADBUTT,25,SCARYFACE,30,ZENHEADBUTT,35,RAGINGBULL,40,REST,45,SWAGGER,50,THRASH,55,FLAREBLITZ,60,CLOSECOMBAT
 TutorMoves = BODYSLAM,TAKEDOWN,FLAMETHROWER,HYPERBEAM,FIRESPIN,EARTHQUAKE,DIG,FIREBLAST,REST,ROCKSLIDE,SUBSTITUTE,THIEF,REVERSAL,PROTECT,SCARYFACE,OUTRAGE,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,SUNNYDAY,WILLOWISP,FACADE,OVERHEAT,ROCKTOMB,BULKUP,CLOSECOMBAT,FLAREBLITZ,GIGAIMPACT,ZENHEADBUTT,IRONHEAD,STONEEDGE,FLAMECHARGE,BULLDOZE,WILDCHARGE,DRILLRUN,SMARTSTRIKE,STOMPINGTANTRUM,BODYPRESS,TRAILBLAZE
 EggMoves = CURSE,ENDEAVOR
-Weight = 85
+Weight = 85.0
+Color = Black
 Pokedex = People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined.
 Flags = InheritFormWithEverStone
 #-------------------------------
 [TAUROS,3]
 FormName = Paldean Form (Aqua Breed)
-Types = FIGHTING, WATER
-Color = Black
-HiddenAbilities = CUDCHEW
+Types = FIGHTING,WATER
 BaseStats = 75,110,105,100,30,70
+HiddenAbilities = CUDCHEW
 Moves = 1,TACKLE,1,TAILWHIP,5,WORKUP,10,DOUBLEKICK,15,AQUAJET,20,HEADBUTT,25,SCARYFACE,30,ZENHEADBUTT,35,RAGINGBULL,40,REST,45,SWAGGER,50,THRASH,55,WAVECRASH,60,CLOSECOMBAT
 TutorMoves = BODYSLAM,TAKEDOWN,HYDROPUMP,SURF,HYPERBEAM,EARTHQUAKE,DIG,REST,ROCKSLIDE,SUBSTITUTE,THIEF,REVERSAL,PROTECT,SCARYFACE,OUTRAGE,SANDSTORM,ENDURE,SLEEPTALK,RAINDANCE,FACADE,ROCKTOMB,BULKUP,WATERPULSE,CLOSECOMBAT,GIGAIMPACT,ZENHEADBUTT,IRONHEAD,STONEEDGE,BULLDOZE,WILDCHARGE,DRILLRUN,SMARTSTRIKE,STOMPINGTANTRUM,LIQUIDATION,BODYPRESS,TRAILBLAZE,CHILLINGWATER
 EggMoves = CURSE,ENDEAVOR
-Weight = 110
+Weight = 110.0
+Color = Black
 Pokedex = It swims by jetting water from its horns. The most notable characteristic of the Aqua Breed is its high body fat, which allows it to float easily.
 Flags = InheritFormWithEverStone
 #-------------------------------
 [GIMMIGHOUL,1]
 FormName = Roaming Form
-Category = Coin Hunter
-Color = Gray
-Shape = Bipedal
+CatchRate = 0
 Abilities = RUNAWAY
 Height = 0.1
 Weight = 0.1
+Color = Gray
+Shape = Bipedal
+Category = Coin Hunter
 Pokedex = This Pokémon was born from passion that seeped into a coin. It wanders, apparently seeking to return to the treasure chest it once inhabited.
-CatchRate = 0
 Evolutions = GHOLDENGO,None,
 #-------------------------------
 [SALANDIT,1]
 FormName = Primal Salandit
 PrimalStone = VENUSAURITE
-PrimalMessage = {1} reversed to custom Primal Form!!!!
-BaseStats = 80,100,123,80,122,120
-BaseExp = 313
-Abilities = THICKFAT
-HiddenAbilities = THICKFAT
-Height = 2.4
-Weight = 155.5
-Pokedex = In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.

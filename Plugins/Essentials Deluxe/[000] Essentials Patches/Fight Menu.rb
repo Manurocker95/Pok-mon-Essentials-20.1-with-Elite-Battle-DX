@@ -569,11 +569,12 @@ class Battle::Scene
   # Hides various plugin UI's.
   #-----------------------------------------------------------------------------
   def pbHidePluginUI
+    return
     pbHideMoveInfo
     pbHideBattleInfo
     pbHideFocusPanel
     return if pbInSafari?
-    @battle.allBattlers.each { |b| @sprites["battler_icon#{b.index}"].visible = false if b }
+    @battle.allBattlers.each { |b| @sprites["battler_icon#{b.index}"].visible = false if b && @sprites["battler_icon#{b.index}"] }
   end
   
   def pbHideMoveInfo

@@ -258,8 +258,8 @@ module Compiler
         f.write(sprintf("PrimalStone = %s\r\n", species.primal_stone)) if species.primal_stone
         f.write(sprintf("PrimalMove = %s\r\n", species.primal_move)) if species.primal_move
         f.write(sprintf("UnprimalForm = %d\r\n", species.unprimal_form)) if species.unprimal_form != 0
-        f.write(sprintf("PrimalMessage = %d\r\n", species.primal_message)) if species.primal_message && species.primal_message != ""
-        f.write(sprintf("PrimalCommonAnimation = %d\r\n", species.primal_common_animation)) if species.primal_common_animation && species.primal_common_animation != ""
+        f.write(sprintf("PrimalMessage = %s\r\n", species.primal_message)) if species.primal_message && species.primal_message != ""
+        f.write(sprintf("PrimalCommonAnimation = %s\r\n", species.primal_common_animation)) if species.primal_common_animation && species.primal_common_animation != ""
         if species.types.uniq.compact != base_species.types.uniq.compact
           f.write(sprintf("Types = %s\r\n", species.types.uniq.compact.join(",")))
         end

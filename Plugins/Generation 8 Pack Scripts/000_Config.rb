@@ -11,5 +11,5 @@ module Settings
 
   # Whether the game should run at a smooth 60 FPS (true) or the default 40 FPS
   # of RPG Maker (false).
-  SMOOTH_FRAMERATE              = true
+  SMOOTH_FRAMERATE              = false
 end
