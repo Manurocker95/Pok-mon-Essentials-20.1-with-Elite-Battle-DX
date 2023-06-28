@@ -1,34 +1,28 @@
 #-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 # Refresh Following Pokemon when mounting Bike
 #-------------------------------------------------------------------------------
-alias __followingpkmn__pbDismountBike pbDismountBike unless defined?(__followingpkmn__pbDismountBike)
-def pbDismountBike(*args)
-  return if !$PokemonGlobal.bicycle
-  ret = __followingpkmn__pbDismountBike(*args)
+alias __followingpkmn__pbMountBike pbMountBike unless defined?(__followingpkmn__pbMountBike)
+def pbMountBike(*args)
+  bike_anim_1 = FollowingPkmn.active?
+  ret = __followingpkmn__pbMountBike(*args)
   FollowingPkmn.refresh_internal
-  FollowingPkmn.refresh(FollowingPkmn.active?)
+  bike_anim_2 = FollowingPkmn.active?
+  FollowingPkmn.refresh(bike_anim_1 != bike_anim_2)
   return ret
 end
 
 #-------------------------------------------------------------------------------
 # Refresh Following Pokemon when dismounting Bike
 #-------------------------------------------------------------------------------
-alias __followingpkmn__pbMountBike pbMountBike unless defined?(__followingpkmn__pbMountBike)
-def pbMountBike(*args)
-  ret = __followingpkmn__pbMountBike(*args)
-  map_metadata = GameData::MapMetadata.try_get($game_map.map_id)
-  bike_anim = map_metadata && !map_metadata.always_bicycle
-  FollowingPkmn.refresh(bike_anim)
+alias __followingpkmn__pbDismountBike pbDismountBike unless defined?(__followingpkmn__pbDismountBike)
+def pbDismountBike(*args)
+  bike_anim_1 = FollowingPkmn.active?
+  ret = __followingpkmn__pbDismountBike(*args)
+  FollowingPkmn.refresh_internal
+  bike_anim_2 = FollowingPkmn.active?
+  FollowingPkmn.refresh(bike_anim_1 != bike_anim_2)
   return ret
-end
-
-#-------------------------------------------------------------------------------
-# Refresh Following Pokemon when any vehicle like Surf, Lava Surf etc are done
-#-------------------------------------------------------------------------------
-alias __followingpkmn__pbCancelVehicles pbCancelVehicles unless defined?(__followingpkmn__pbCancelVehicles)
-def pbCancelVehicles(*args)
-  FollowingPkmn.refresh(false) if args[0].nil?
-  return __followingpkmn__pbCancelVehicles(*args)
 end
 
 #-------------------------------------------------------------------------------
@@ -131,6 +125,20 @@ class Scene_Map
 end
 
 #-------------------------------------------------------------------------------
+# Refresh Following Pokemon after depositing Pokemon in Daycare
+#-------------------------------------------------------------------------------
+class DayCare
+  class << self
+    alias __followingpkmn__deposit deposit unless method_defined?(:followingpkmn__deposit)
+  end
+
+  def self.deposit(*args)
+    __followingpkmn__deposit(*args)
+    FollowingPkmn.refresh(false)
+  end
+end
+
+#-------------------------------------------------------------------------------
 # Refresh Following Pokemon upon loading up the game
 #-------------------------------------------------------------------------------
 module Game
@@ -148,12 +156,17 @@ end
 #-------------------------------------------------------------------------------
 # Queue a Following Pokemon refresh after the end of a battle
 #-------------------------------------------------------------------------------
-alias __followingpkmn__pbAfterBattle pbAfterBattle unless defined?(__followingpkmn__pbAfterBattle)
-def pbAfterBattle(*args)
-  __followingpkmn__pbAfterBattle(*args)
-  $PokemonGlobal.call_refresh = true
-end
+module BattleCreationHelperMethods
+  class << self
+    alias __followingpkmn__after_battle after_battle unless method_defined?(:__followingpkmn__after_battle)
+  end
 
+  def after_battle(*args)
+    __followingpkmn__after_battle(*args)
+    FollowingPkmn.refresh(false)
+    $PokemonGlobal.call_refresh = true
+  end
+end
 
 class Scene_Map
   #-----------------------------------------------------------------------------
@@ -265,7 +278,6 @@ end
 EventHandlers.add(:on_enter_map, :pokecenter_follower_reset, proc { |_old_map_id|
   $game_temp.pokecenter_following_pkmn = 0
 })
-
 
 #-------------------------------------------------------------------------------
 # Refresh Following Pokemon after taking a step, when a refresh is queued

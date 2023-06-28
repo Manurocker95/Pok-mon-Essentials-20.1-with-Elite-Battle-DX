@@ -166,10 +166,10 @@ class Battle::AI
       end
     end
     # Of Ruin Abilities
-    multipliers[:defense_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:BEADSOFRUIN) && !user.hasActiveAbility?(:BEADSOFRUIN) && specialMove?
-    multipliers[:defense_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:SWORDOFRUIN) && !user.hasActiveAbility?(:SWORDOFRUIN) && physicalMove?
-    multipliers[:attack_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:TABLETSOFRUIN) && !user.hasActiveAbility?(:TABLETSOFRUIN) && physicalMove?
-    multipliers[:attack_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:VESSELOFRUIN) && !user.hasActiveAbility?(:VESSELOFRUIN) && specialMove?
+    multipliers[:defense_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:BEADSOFRUIN) && !user.hasActiveAbility?(:BEADSOFRUIN) && move.specialMove?
+    multipliers[:defense_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:SWORDOFRUIN) && !user.hasActiveAbility?(:SWORDOFRUIN) && move.physicalMove?
+    multipliers[:attack_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:TABLETSOFRUIN) && !user.hasActiveAbility?(:TABLETSOFRUIN) && move.physicalMove?
+    multipliers[:attack_multiplier] *= 0.75 if @battle.pbCheckGlobalAbility(:VESSELOFRUIN) && !user.hasActiveAbility?(:VESSELOFRUIN) && move.specialMove?
     # Parental Bond
     if skill >= PBTrainerAI.mediumSkill && user.hasActiveAbility?(:PARENTALBOND)
       multipliers[:base_damage_multiplier] *= 1.25
@@ -349,6 +349,89 @@ class Battle::AI
   def pbGetMoveScoreFunctionCode(score, move, user, target, skill = 100)
     case move.function
     #---------------------------------------------------------------------------
+    when "SetTargetAbilityToSimple"
+      if target.effects[PBEffects::Substitute] > 0
+        score -= 90
+      elsif skill >= PBTrainerAI.mediumSkill
+        if target.unstoppableAbility? || [:TRUANT, :SIMPLE].include?(target.ability) || target.hasActiveItem?(:ABILITYSHIELD)
+          score -= 90
+        end
+      end
+    #---------------------------------------------------------------------------
+    when "SetTargetAbilityToInsomnia"
+      if target.effects[PBEffects::Substitute] > 0
+        score -= 90
+      elsif skill >= PBTrainerAI.mediumSkill
+        if target.unstoppableAbility? || [:TRUANT, :INSOMNIA].include?(target.ability_id) || target.hasActiveItem?(:ABILITYSHIELD)
+          score -= 90
+        end
+      end
+    #---------------------------------------------------------------------------
+    when "SetUserAbilityToTargetAbility"
+      score -= 40   # don't prefer this move
+      if skill >= PBTrainerAI.mediumSkill
+        if !target.ability || user.ability == target.ability ||
+          [:MULTITYPE, :RKSSYSTEM].include?(user.ability_id) ||
+          [:FLOWERGIFT, :FORECAST, :ILLUSION, :IMPOSTER, :MULTITYPE, :RKSSYSTEM,
+            :TRACE, :WONDERGUARD, :ZENMODE].include?(target.ability_id) || user.hasActiveItem?(:ABILITYSHIELD)
+          score -= 90
+        end
+      end
+      if skill >= PBTrainerAI.highSkill
+        if target.ability == :TRUANT && user.opposes?(target)
+          score -= 90
+        elsif target.ability == :SLOWSTART && user.opposes?(target)
+          score -= 90
+        end
+      end
+    #---------------------------------------------------------------------------
+    when "SetTargetAbilityToUserAbility"
+      score -= 40   # don't prefer this move
+      if target.effects[PBEffects::Substitute] > 0
+        score -= 90
+      elsif skill >= PBTrainerAI.mediumSkill
+        if !user.ability || user.ability == target.ability ||
+          [:MULTITYPE, :RKSSYSTEM, :TRUANT].include?(target.ability_id) ||
+          [:FLOWERGIFT, :FORECAST, :ILLUSION, :IMPOSTER, :MULTITYPE, :RKSSYSTEM,
+            :TRACE, :ZENMODE].include?(user.ability_id)  || target.hasActiveItem?(:ABILITYSHIELD)
+          score -= 90
+        end
+        if skill >= PBTrainerAI.highSkill
+          if user.ability == :TRUANT && user.opposes?(target)
+            score += 90
+          elsif user.ability == :SLOWSTART && user.opposes?(target)
+            score += 90
+          end
+        end
+      end
+    #---------------------------------------------------------------------------
+    when "UserTargetSwapAbilities"
+      score -= 40   # don't prefer this move
+      if skill >= PBTrainerAI.mediumSkill
+        if (!user.ability && !target.ability) ||
+          user.ability == target.ability ||
+          [:ILLUSION, :MULTITYPE, :RKSSYSTEM, :WONDERGUARD].include?(user.ability_id) ||
+          [:ILLUSION, :MULTITYPE, :RKSSYSTEM, :WONDERGUARD].include?(target.ability_id) || 
+          target.hasActiveItem?(:ABILITYSHIELD) || user.hasActiveItem?(:ABILITYSHIELD)
+          score -= 90
+        end
+      end
+      if skill >= PBTrainerAI.highSkill
+        if target.ability == :TRUANT && user.opposes?(target)
+          score -= 90
+        elsif target.ability == :SLOWSTART && user.opposes?(target)
+          score -= 90
+        end
+      end
+    #---------------------------------------------------------------------------
+    when "NegateTargetAbility"
+      if target.effects[PBEffects::Substitute] > 0 ||
+        target.effects[PBEffects::GastroAcid]
+        score -= 90
+      elsif skill >= PBTrainerAI.highSkill
+        score -= 90 if [:MULTITYPE, :RKSSYSTEM, :SLOWSTART, :TRUANT].include?(target.ability_id) || target.hasActiveItem?(:ABILITYSHIELD)
+      end
+    #---------------------------------------------------------------------------
     when "UserSwapsPositionsWithAlly" # Ally Switch
       if skill >= PBTrainerAI.mediumSkill && user.pbOwnSide.effects[PBEffects::AllySwitch] == true
         score -= 100
@@ -444,7 +527,8 @@ class Battle::AI
         if !target.ability || user.ability == target.ability ||
            [:MULTITYPE, :RKSSYSTEM].include?(user.ability_id) ||
            [:FLOWERGIFT, :FORECAST, :ILLUSION, :IMPOSTER, :MULTITYPE, :RKSSYSTEM,
-            :TRACE, :WONDERGUARD, :ZENMODE].include?(target.ability_id)
+            :TRACE, :WONDERGUARD, :ZENMODE].include?(target.ability_id) ||
+            (user.itemActive? && user.item_id == :ABILITYSHIELD)
           score -= 90
         end
       end

@@ -43,7 +43,7 @@ EventHandlers.add(:following_pkmn_talk, :music_generic, proc { |pkmn, random_val
     case value
     # Special move route to go along with some of the dialogue
     when 3, 9
-      pbMoveRoute($game_player, [PBMoveRoute::Wait, 65])
+      pbMoveRoute($game_player, [PBMoveRoute::Wait, 80])
       FollowingPkmn.move_route([
         PBMoveRoute::TurnRight,
         PBMoveRoute::Wait, 4,
@@ -291,7 +291,7 @@ EventHandlers.add(:following_pkmn_talk, :happy_generic, proc { |pkmn, random_val
 #-------------------------------------------------------------------------------
 # All dialogues with the Heart animation
 #-------------------------------------------------------------------------------
-EventHandlers.add(:following_pkmn_talk, :angry_generic, proc { |pkmn, random_val|
+EventHandlers.add(:following_pkmn_talk, :heart_generic, proc { |pkmn, random_val|
   if random_val == 4
     FollowingPkmn.animation(FollowingPkmn::ANIMATION_EMOTE_HEART)
     pbMoveRoute($game_player, [PBMoveRoute::Wait, 20])

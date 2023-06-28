@@ -22,6 +22,7 @@ module PBEffects
   SilkTrap            = 412
   SaltCure            = 413
   AllySwitch          = 414
+  Commander_index     = 416
 end
 #===============================================================================
 # Ability Effects

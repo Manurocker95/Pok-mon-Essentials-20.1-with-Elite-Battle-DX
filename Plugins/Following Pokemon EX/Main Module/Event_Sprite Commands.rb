@@ -43,7 +43,23 @@ module FollowingPkmn
     return false if !pkmn
     return true if pkmn.hasType?(:FLYING)
     return true if pkmn.hasAbility?(:LEVITATE)
-    return true if FollowingPkmn::SURFING_FOLLOWERS_EXCEPTIONS.any? { |s| s == pkmn.species || s.to_s == "#{pkmn.species}_#{pkmn.form}" }
+    return true if FollowingPkmn::LEVITATING_FOLLOWERS.any? { |s| s == pkmn.species || s.to_s == "#{pkmn.species}_#{pkmn.form}" }
+    return false
+  end
+  #-----------------------------------------------------------------------------
+  # Script Command for checking whether the current follower is waterborne
+  #-----------------------------------------------------------------------------
+  def self.waterborne_follower?
+    return false if !FollowingPkmn.can_check?
+    pkmn = FollowingPkmn.get_pokemon
+    return false if !pkmn
+    return true if pkmn.hasType?(:WATER)
+    # Don't follow if the Pokemon is manually selected
+    return false if FollowingPkmn::SURFING_FOLLOWERS_EXCEPTIONS.any? do |s|
+      s == pkmn.species || s.to_s == "#{pkmn.species}_#{pkmn.form}"
+    end
+    # Follow if the Pokemon flies or levitates
+    return true if FollowingPkmn.airborne_follower?
     return false
   end
   #-----------------------------------------------------------------------------
@@ -51,13 +67,15 @@ module FollowingPkmn
   #-----------------------------------------------------------------------------
   def self.refresh(anim = false)
     return if !FollowingPkmn.can_check?
+    event = FollowingPkmn.get_event
     FollowingPkmn.remove_sprite
+    event&.calculate_bush_depth
     first_pkmn = FollowingPkmn.get_pokemon
     return if !first_pkmn
     FollowingPkmn.refresh_internal
     ret = FollowingPkmn.active?
+    event = FollowingPkmn.get_event
     if anim
-      event = FollowingPkmn.get_event
       anim_name = ret ? :ANIMATION_COME_OUT : :ANIMATION_COME_IN
       anim_id   = nil
       anim_id   = FollowingPkmn.const_get(anim_name) if FollowingPkmn.const_defined?(anim_name)
@@ -69,6 +87,7 @@ module FollowingPkmn
     end
     FollowingPkmn.change_sprite(first_pkmn) if ret
     FollowingPkmn.move_route([(ret ? PBMoveRoute::StepAnimeOn : PBMoveRoute::StepAnimeOff)]) if FollowingPkmn::ALWAYS_ANIMATE
+    event&.calculate_bush_depth
     $PokemonGlobal.time_taken = 0 if !ret
     return ret
   end

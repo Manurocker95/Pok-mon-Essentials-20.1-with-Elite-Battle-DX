@@ -1,5 +1,5 @@
 Name       = Generation 8 Pack Scripts
-Version    = 1.0.3
+Version    = 1.0.4
 Essentials = 20.1
 Requires   = v20.1 Hotfixes, 1.0.0
 Website    = https://www.youtube.com/watch?v=dQw4w9WgXcQ

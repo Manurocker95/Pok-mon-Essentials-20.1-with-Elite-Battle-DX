@@ -16,7 +16,6 @@ class Game_Follower
   end
 end
 
-
 #-------------------------------------------------------------------------------
 # Defining a new class for Following Pokemon event which has several additions
 # to make it more robust as a Following Pokemon
@@ -78,21 +77,21 @@ class Game_FollowingPkmn < Game_Follower
     passed_tile_checks = false
     bit = (1 << ((direction / 2) - 1)) & 0x0f
     # Check all events for ones using tiles as graphics, and see if they're passable
-    this_map.events.values.each do |event|
+    this_map.events.each_value do |event|
       next if event.tile_id < 0 || event.through || !event.at_coordinate?(x, y)
       tile_data = GameData::TerrainTag.try_get(this_map.terrain_tags[event.tile_id])
       next if tile_data.ignore_passability
       next if tile_data.bridge && $PokemonGlobal.bridge == 0
       return false if tile_data.ledge
-      # Allow Folllowers to surf freely
-      return true if tile_data.can_surf
+      # Allow Folllowers to surf if they can travel on water
+      return true if tile_data.can_surf && FollowingPkmn.waterborne_follower?
       passage = this_map.passages[event.tile_id] || 0
       return false if passage & bit != 0
       passed_tile_checks = true if (tile_data.bridge && $PokemonGlobal.bridge > 0) ||
                                    (this_map.priorities[event.tile_id] || -1) == 0
       break if passed_tile_checks
     end
-    # Check if tiles at (x, y) allow passage for followe
+    # Check if tiles at (x, y) allow passage for follower
     if !passed_tile_checks
       [2, 1, 0].each do |i|
         tile_id = this_map.data[x, y, i] || 0
@@ -101,8 +100,8 @@ class Game_FollowingPkmn < Game_Follower
         next if tile_data.ignore_passability
         next if tile_data.bridge && $PokemonGlobal.bridge == 0
         return false if tile_data.ledge
-        # Allow Folllowers to surf freely
-        return true if tile_data.can_surf
+        # Allow Folllowers to surf if they can travel on water
+        return true if tile_data.can_surf && FollowingPkmn.waterborne_follower?
         passage = this_map.passages[tile_id] || 0
         return false if passage & bit != 0
         break if tile_data.bridge && $PokemonGlobal.bridge > 0
@@ -129,6 +128,7 @@ class Game_FollowingPkmn < Game_Follower
   # work with Marin and Boonzeets side stairs
   #-----------------------------------------------------------------------------
   def follow_leader(leader, instant = false, leaderIsTrueLeader = true)
+	return if @move_route_forcing
     maps_connected = $map_factory.areConnected?(leader.map.map_id, self.map.map_id)
     target = nil
     # Get the target tile that self wants to move to
@@ -194,6 +194,13 @@ class Game_FollowingPkmn < Game_Follower
     else
       fancy_moveto(target[1], target[2], leader)
     end
+  end
+  #-----------------------------------------------------------------------------
+  # Make Follower Appear above player
+  #-----------------------------------------------------------------------------
+  def screen_z(height = 0)
+    ret = super
+    return ret + 1
   end
   #-----------------------------------------------------------------------------
 end

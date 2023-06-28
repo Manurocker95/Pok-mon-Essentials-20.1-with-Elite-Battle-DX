@@ -18,7 +18,7 @@ EventHandlers.add(:following_pkmn_appear, :map_flag_keep, proc { |pkmn|
 #-------------------------------------------------------------------------------
 EventHandlers.add(:following_pkmn_appear, :height, proc { |pkmn|
   metadata = $game_map.metadata
-  if metadata && metadata.outdoor_map != true
+  if metadata && metadata.outdoor_map != true && $PokemonEncounters
     # Don't follow if the Pokemon's height is greater than 3 meters and there are no encounters ie a building or something
     height =  GameData::Species.get_species_form(pkmn.species, pkmn.form).height
     next false if (height / 10.0) > 3.0 && !$PokemonEncounters.encounter_possible_here?
@@ -31,27 +31,13 @@ EventHandlers.add(:following_pkmn_appear, :map_flag_remove, proc { |pkmn|
   next true if metadata && metadata.has_flag?("HideFollowingPkmn")
 })
 #-------------------------------------------------------------------------------
-EventHandlers.add(:following_pkmn_appear, :map_flag_remove, proc { |pkmn|
-  metadata = $game_map.metadata
-  if metadata && metadata.outdoor_map != true
-    # The Pokemon disappears if it's height is greater than 3 meters and there are no encounters ie a building or something
-    height =  GameData::Species.get_species_form(pkmn.species, pkmn.form).height
-    next false if (height / 10.0) > 3.0 && !$PokemonEncounters.encounter_possible_here?
-  end
-})
-#-------------------------------------------------------------------------------
 EventHandlers.add(:following_pkmn_appear, :surfing, proc { |pkmn|
-  if $PokemonGlobal.surfing
+  if ($PokemonGlobal.surfing && !$game_temp.ending_surf) ||
+     (FollowingPkmn.get_event&.terrain_tag&.can_surf && FollowingPkmn.active?)
     # Don't follow if this is the Pokemon currently being ridden
     next false if pkmn == $PokemonGlobal.current_surfing
-    # Follow if the Pokemon is water type
-    next true if pkmn.hasType?(:WATER)
-    # Don't follow if the Pokemon is manually selected
-    next false if FollowingPkmn::SURFING_FOLLOWERS_EXCEPTIONS.any? do |s|
-                    s == pkmn.species || s.to_s == "#{pkmn.species}_#{pkmn.form}"
-                  end
-    # Follow if the Pokemon flies or levitates
-    next true if FollowingPkmn.airborne_follower?
+    # Follow if the Pokemon is water type, levitates or is manually removed
+    next true if FollowingPkmn.waterborne_follower?
     # Don't Follow
     next false
   end

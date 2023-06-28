@@ -38,28 +38,16 @@ Battle::AbilityEffects::OnSwitchIn.add(:COMMANDER,
       next if b.effects[PBEffects::CommanderDondozo] >= 0
       battle.pbShowAbilitySplash(battler)
       battle.pbDisplay(_INTL("{1} goes inside the mouth of {2}!", battler.pbThis, b.pbThis(true)))
+      battle.pbHideAbilitySplash(battler)
       b.effects[PBEffects::CommanderDondozo] = battler.form
+      b.effects[PBEffects::Commander_index] = battler.index
       battler.effects[PBEffects::CommanderTatsugiri] = true
-      GameData::Stat.each_main_battle { |stat| 
-      #   2.times do
-      #     battler.stages[stat.id] += 1 if !user.statStageAtMax?(stat)
-      #   end
+      battler.effects[PBEffects::Commander_index] = b.index
+      GameData::Stat.each_main_battle { |stat|
         b.pbRaiseStatStageByAbility(stat.id, 2, b, false) if b.pbCanRaiseStatStage?(stat.id, b)
       }
-      # dondozo = b
-      battle.pbHideAbilitySplash(battler)
       break
     }
-  }
-)
-# OnBattlerFainting
-Battle::AbilityEffects::OnBattlerFainting.add(:COMMANDER,
-  proc { |ability, battler, fainted, battle|
-    next if fainted.species != :DONDOZO
-    next if fainted.effects[PBEffects::CommanderDondozo] == -1
-    next if battler.opposes?(fainted)
-    fainted.effects[PBEffects::CommanderDondozo] = -1
-    battler.effects[PBEffects::CommanderTatsugiri] = false
   }
 )
 
@@ -70,12 +58,14 @@ Battle::AbilityEffects::CertainSwitching.add(:COMMANDER,
       next if b.effects[PBEffects::CommanderTatsugiri]
       battle.pbShowAbilitySplash(b)
       battle.pbDisplay(_INTL("{1} goes inside the mouth of {2}!", b.pbThis, switcher.pbThis(true)))
+      battle.pbHideAbilitySplash(b)
       switcher.effects[PBEffects::CommanderDondozo] = b.form
+      switcher.effects[PBEffects::Commander_index] = b.index
       b.effects[PBEffects::CommanderTatsugiri] = true
+      b.effects[PBEffects::Commander_index] = switcher.index
       GameData::Stat.each_main_battle { |stat|
         switcher.pbRaiseStatStageByAbility(stat.id, 2, switcher,false) if switcher.pbCanRaiseStatStage?(stat.id, switcher)
       }
-      battle.pbHideAbilitySplash(b)
       break
     }
   }

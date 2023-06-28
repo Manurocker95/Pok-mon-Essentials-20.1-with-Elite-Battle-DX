@@ -1,0 +1,17 @@
+Name         = Essentials Deluxe
+Version      = 1.2.7
+Essentials   = 20.1
+Requires     = v20.1 Hotfixes,1.0.7
+Optional     = Generation 9 Pack,1.1
+Optional     = Generation 8 Pack Scripts,1.0.4
+Optional     = Following Pokemon EX,2.2.3
+Optional     = Visible Overworld Wild Encounters,20.0
+Optional     = Bag Screen w/int. Party,2.2
+Optional     = BW Party Screen,2.1
+Optional     = BW Summary Screen,2.3
+Optional     = BW Storage System,2.0
+Optional     = BW PokéMart Screen,3.0
+Optional     = SOS Battles,1.0.0
+Optional     = All Abilities Mutation,1.2
+Website      = https://www.pokecommunity.com/showthread.php?t=478494
+Credits      = Lucidious89

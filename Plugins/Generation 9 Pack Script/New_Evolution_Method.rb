@@ -4,23 +4,23 @@
 GameData::Evolution.register({
   :id            => :LevelUseMoveCount,
   :parameter     => :Move,
-  :minimum_level        => 1,   # Needs any level up
-  :level_up_proc        => proc { |pkmn, parameter|
+  :minimum_level => 1,   # Needs any level up
+  :level_up_proc => proc { |pkmn, parameter|
     next pkmn.get_move_count(parameter) >= 20
   },
 })
 GameData::Evolution.register({
   :id            => :LevelWithPartner,
   :parameter     => Integer,
-  :level_up_proc        => proc { |pkmn, parameter|
+  :level_up_proc => proc { |pkmn, parameter|
     next pkmn.level >= parameter && $PokemonGlobal.partner
   },
 })
 GameData::Evolution.register({
   :id            => :Walk,
   :parameter     => Integer,
-  :minimum_level        => 1,   # Needs any level up
-  :level_up_proc        => proc { |pkmn, parameter|
+  :minimum_level => 1,   # Needs any level up
+  :level_up_proc => proc { |pkmn, parameter|
     next pkmn.step_count && pkmn.step_count >= parameter
   },
 })
@@ -35,16 +35,16 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :LevelDefeatItsKindWithItem,
   :parameter     => :Item,
-  :minimum_level        => 1,   # Needs any level up
-  :level_up_proc        => proc { |pkmn, parameter|
-    next pkmn.defeated_species && pkmn.defeated_species(pkmn.species) >= 3
+  :minimum_level => 1,   # Needs any level up
+  :level_up_proc => proc { |pkmn, parameter|
+    next pkmn.defeated_species(pkmn.species) >= 3
   },
 })
 GameData::Evolution.register({
   :id            => :LevelRecoilDamage,
   :parameter     => Integer,
-  :minimum_level        => 1,   # Needs any level up
-  :level_up_proc        => proc { |pkmn, parameter|
+  :minimum_level => 1,   # Needs any level up
+  :level_up_proc => proc { |pkmn, parameter|
     next pkmn.recoil_dmg_taken && pkmn.recoil_dmg_taken >= parameter
   },
 })

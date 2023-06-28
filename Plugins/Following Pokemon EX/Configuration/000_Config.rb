@@ -61,12 +61,13 @@ module FollowingPkmn
   # Pokeballs at the Pokecenter.
   SHOW_POKECENTER_ANIMATION = true
 
-  # List of Pokemon that will always appear behind the player when surfing
+  # List of Pokemon that are classifed as "Levitating" and will always appear
+  # behind the player when surfing.
   # Doesn't include any flying or water types because those are handled already
-  SURFING_FOLLOWERS = [
+  LEVITATING_FOLLOWERS = [
     # Gen 1
     :BEEDRILL, :VENOMOTH, :ABRA, :GEODUDE, :MAGNEMITE, :GASTLY, :HAUNTER,
-    :KOFFING, :WEEZING, :PORYGON, :MEWTWO, :MEW,
+    :KOFFING, :WEEZING, :PORYGON, :MEW,
     # Gen 2
     :MISDREAVUS, :UNOWN, :PORYGON2, :CELEBI,
     # Gen 3
@@ -76,7 +77,7 @@ module FollowingPkmn
     # Gen 4
     :MISMAGIUS, :BRONZOR, :BRONZONG, :SPIRITOMB, :CARNIVINE, :MAGNEZONE,
     :PORYGONZ, :PROBOPASS, :DUSKNOIR, :FROSLASS, :ROTOM, :UXIE, :MESPRIT,
-    :AZELF, :GIRATINA, :CRESSELIA, :DARKRAI,
+    :AZELF, :GIRATINA_1, :CRESSELIA, :DARKRAI,
     # Gen 5
     :MUNNA, :MUSHARNA, :YAMASK, :COFAGRIGUS, :SOLOSIS, :DUOSION, :REUNICLUS,
     :VANILLITE, :VANILLISH, :VANILLUXE, :ELGYEM, :BEHEEYEM, :LAMPENT,
@@ -94,7 +95,7 @@ module FollowingPkmn
 
   # List of Pokemon that will not appear behind the player when surfing,
   # regardless of whether they are flying type, have levitate or are mentioned
-  # in the SURFING_FOLLOWERS.
+  # in the LEVITATING_FOLLOWERS array.
   SURFING_FOLLOWERS_EXCEPTIONS = [
     # Gen I
     :CHARIZARD, :PIDGEY, :SPEAROW, :FARFETCHD, :DODUO, :DODRIO, :SCYTHER,

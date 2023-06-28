@@ -73,16 +73,10 @@ module FollowingPkmn
   def self.talk
     return false if !FollowingPkmn.can_talk?(true)
     return false if !$game_temp || $game_temp.in_battle || $game_temp.in_menu
-    facing = pbFacingTile
-    if !FollowingPkmn.active? || !$game_map.passable?(facing[1], facing[2], $game_player.direction, $game_player)
-      $game_player.straighten
-      EventHandlers.trigger(:on_player_interact)
-      return false
-    end
     event = FollowingPkmn.get_event
     pbTurnTowardEvent(event, $game_player)
     first_pkmn = FollowingPkmn.get_pokemon
-    GameData::Species.play_cry(first_pkmn)
+    first_pkmn&.play_cry
     random_val = rand(6)
     if $PokemonGlobal&.follower_hold_item
       EventHandlers.trigger_2(:following_pkmn_item, first_pkmn, random_val)
@@ -108,7 +102,7 @@ module FollowingPkmn
   #-----------------------------------------------------------------------------
   # Script Command for adding an animation to the Following Pokemon event
   #-----------------------------------------------------------------------------
-  def self.animation(id)
+  def self.animation(id = nil)
     return if !FollowingPkmn.can_check? || !FollowingPkmn.active?
     if id.nil?
       pbMapInterpreter&.follower_animation("FollowingPkmn")

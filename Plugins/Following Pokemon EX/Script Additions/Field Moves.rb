@@ -38,12 +38,12 @@ end
 #-------------------------------------------------------------------------------
 alias __followingpkmn__pbEndSurf pbEndSurf unless defined?(__followingpkmn__pbEndSurf)
 def pbEndSurf(*args)
+  surf_anim_1 = FollowingPkmn.active?
   ret = __followingpkmn__pbEndSurf(*args)
   return false if !ret
-  surf_anim_1 = FollowingPkmn.active?
+  $PokemonGlobal.current_surfing = nil
   FollowingPkmn.refresh_internal
   surf_anim_2 = FollowingPkmn.active?
-  $PokemonGlobal.current_surfing = nil
   $PokemonGlobal.call_refresh = [true, (surf_anim_1 != surf_anim_2), 1]
   return ret
 end
@@ -87,14 +87,14 @@ def pbUseHiddenMove(pokemon, move)
   if move == :SURF
     old_data = $PokemonGlobal.current_surfing
     $PokemonGlobal.current_surfing = pokemon
-  else
+  elsif move == :DIVE
     old_data = $PokemonGlobal.current_diving
     $PokemonGlobal.current_diving = pokemon
   end
   ret = __followingpkmn__pbUseHiddenMove(pokemon, move)
   if move == :SURF
     $PokemonGlobal.current_surfing = old_data if !ret
-  else
+  elsif move == :DIVE
     $PokemonGlobal.current_diving = old_data if !ret
   end
   $game_temp.no_follower_field_move = false

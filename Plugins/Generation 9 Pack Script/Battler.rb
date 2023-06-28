@@ -101,6 +101,7 @@ class Battle::Battler
     @effects[PBEffects::GlaiveRush]           = 0
     @effects[PBEffects::CommanderTatsugiri]   = false
     @effects[PBEffects::CommanderDondozo]     = -1
+    @effects[PBEffects::Commander_index]      = -1
     @effects[PBEffects::SaltCure]             = false
     @effects[PBEffects::SupremeOverlord]      = 0
   end
@@ -119,8 +120,26 @@ class Battle::Battler
       return
     end
     return if @fainted   # Has already fainted properly
+    # Commander Effect
+    dondozo = []
+    if self.species == :DONDOZO && @effects[PBEffects::CommanderDondozo] >= 0 # Dondozo faint
+      dondozo = [self.index,@effects[PBEffects::Commander_index],true]
+    elsif self.species == :TATSUGIRI && @effects[PBEffects::CommanderTatsugiri] # Tatsugiri faint
+      dondozo = [@effects[PBEffects::Commander_index],self.index,false]
+    end
+    #
     paldea_pbFaint(showMessage)
     @battle.addFaintedCount(self)
+    if !dondozo.empty?
+      if dondozo[2] # Dondozo faint
+        @battle.battlers[dondozo[1]].effects[PBEffects::CommanderTatsugiri] = false
+        @battle.battlers[dondozo[1]].effects[PBEffects::Commander_index] = -1
+      else # Tatsugiri faint
+        @battle.battlers[dondozo[0]].effects[PBEffects::CommanderDondozo] = -1
+        @battle.battlers[dondozo[0]].effects[PBEffects::Commander_index] = -1
+      end
+      @battle.pbDisplay(_INTL("{1} comes out of {2}'s mouth!", @battle.battlers[dondozo[1]].pbThis, @battle.battlers[dondozo[0]].pbThis(true))) if showMessage
+    end
   end
 
   # Add Cud Chew counter
@@ -781,6 +800,34 @@ class Battle::Battler
     end
     if numHits > 0
       @battle.allBattlers.each { |b| b.pbItemEndOfMoveCheck }
+    end
+  end
+  
+  # Called when a Pokémon (self) enters battle, at the end of each move used,
+  # and at the end of each round.
+  def pbContinualAbilityChecks(onSwitchIn = false)
+    # Check for end of primordial weather
+    @battle.pbEndPrimordialWeather
+    # Trace
+    if hasActiveAbility?(:TRACE) && !hasActiveItem?(:ABILITYSHIELD)
+      # NOTE: In Gen 5 only, Trace only triggers upon the Trace bearer switching
+      #       in and not at any later times, even if a traceable ability turns
+      #       up later. Essentials ignores this, and allows Trace to trigger
+      #       whenever it can even in Gen 5 battle mechanics.
+      choices = @battle.allOtherSideBattlers(@index).select { |b|
+        next !b.ungainableAbility? &&
+             ![:POWEROFALCHEMY, :RECEIVER, :TRACE].include?(b.ability_id)
+      }
+      if choices.length > 0
+        choice = choices[@battle.pbRandom(choices.length)]
+        @battle.pbShowAbilitySplash(self)
+        self.ability = choice.ability
+        @battle.pbDisplay(_INTL("{1} traced {2}'s {3}!", pbThis, choice.pbThis(true), choice.abilityName))
+        @battle.pbHideAbilitySplash(self)
+        if !onSwitchIn && (unstoppableAbility? || abilityActive?)
+          Battle::AbilityEffects.triggerOnSwitchIn(self.ability, self, @battle)
+        end
+      end
     end
   end
 end

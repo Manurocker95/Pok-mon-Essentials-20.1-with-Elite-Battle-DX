@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Change EBDX Following Pokemon check since EBDX hasn't updated
 #-------------------------------------------------------------------------------
-if PluginManager.findDirectory("Elite Battle: DX")
+if PluginManager.installed?("Elite Battle: DX")
   module EliteBattle
     def self.follower(battle)
       return nil if !EliteBattle::USE_FOLLOWER_EXCEPTION
@@ -22,6 +22,36 @@ module GameData
       ret = "Graphics/Characters/Followers/" if nil_or_empty?(ret)
 	    return ret
     end
+  end
+end
+
+#-------------------------------------------------------------------------------
+# Prevent Enhanced Stairs from messing with FollowingPokemon
+#-------------------------------------------------------------------------------
+class Game_FollowerFactory
+  alias __followingpkmn__update update unless method_defined?(:__followingpkmn__update)
+  def update(*args)
+    __followingpkmn__update(*args)
+    followers = $PokemonGlobal.followers
+    return if followers.length == 0
+    leader = $game_player
+    followers.each_with_index do |follower, i|
+      event = @events[i]
+      next if !@events[i]
+      event.move_speed = leader.move_speed if follower.following_pkmn?
+      leader = event
+    end
+  end
+end
+
+#-------------------------------------------------------------------------------
+# Make sure shadows of Following Pokemon exist
+#-------------------------------------------------------------------------------
+class Game_Follower
+  alias __followingpkmn__initialize initialize unless method_defined?(:__followingpkmn__initialize)
+  def initialize(*args)
+    __followingpkmn__initialize(*args)
+    calculate_bush_depth
   end
 end
 

@@ -13,6 +13,7 @@ module FollowingPkmn
     return false if !$game_temp.respond_to?(:followers) || !$game_temp.followers
     return false if !$PokemonGlobal.respond_to?(:followers) || !$PokemonGlobal.followers
     return false if !$player.respond_to?(:party) || !$player.party
+	return false if !$scene.is_a?(Scene_Map)
     return true
   end
   #-----------------------------------------------------------------------------
@@ -23,13 +24,15 @@ module FollowingPkmn
       @@can_refresh = false
       return
     end
-    refresh = false
-    first_pkmn = FollowingPkmn.get_pokemon
+    old_refresh = @@can_refresh
+    refresh     = false
+    first_pkmn  = FollowingPkmn.get_pokemon
     if first_pkmn
       refresh = EventHandlers.trigger_2(:following_pkmn_appear, first_pkmn)
       refresh = true if refresh == -1
     end
     @@can_refresh = refresh
+    $PokemonGlobal.call_refresh[1] = true if old_refresh != @@can_refresh && !$PokemonGlobal.call_refresh[1] 
   end
   #-----------------------------------------------------------------------------
   # Raises The Current Following Pokemon's Happiness by 3-5 and
@@ -101,6 +104,8 @@ module FollowingPkmn
   def self.can_talk?(interact = false)
     return false if !FollowingPkmn.can_check?
     return false if !$game_temp || $game_temp.in_battle || $game_temp.in_menu
+    return false if FollowingPkmn.get_event.move_route_forcing
+    return false if $game_player.move_route_forcing
     facing = pbFacingTile
     if !FollowingPkmn.active? || !$game_map.passable?(facing[1], facing[2], $game_player.direction, $game_player)
       if interact
