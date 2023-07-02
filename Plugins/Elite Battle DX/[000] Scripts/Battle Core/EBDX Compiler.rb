@@ -78,7 +78,7 @@ module CompilerEBDX
     for idx in 0..cache.length # for ch in cache
       ch = cache[idx] 
       # run each from cache
-      EliteBattle.add_data(*ch)
+      EliteBattle.add_data(*ch) if !ch.nil?
     end
 
     # clear cache
