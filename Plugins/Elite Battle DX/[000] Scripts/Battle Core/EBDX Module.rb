@@ -72,6 +72,11 @@ module EliteBattle
   def self.InitializeSpecies 
     GameData::Species.each_species { |s| @full_species.push(s.species) }
   end
+
+  def self.CanGetItemData?(item)
+    return !@full_items.nil? && @full_items.include?(item)
+  end
+
   def self.InitializeItems
     GameData::Item.each do |item|
       @full_items.push(item.id)

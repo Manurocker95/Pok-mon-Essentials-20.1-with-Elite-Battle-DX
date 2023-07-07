@@ -200,7 +200,7 @@ class BagWindowEBDX
     # get a list of all the items
     self.checkPockets
     for item in @mergedPockets
-      next if item.nil?
+      next if item.nil? || item.length == 0 || !EliteBattle.CanGetItemData?(item[0])
       next if !(ItemHandlers.hasUseInBattle(item[0]) || ItemHandlers.hasBattleUseOnPokemon(item[0]) || ItemHandlers.hasBattleUseOnBattler(item[0]))
       case index
       when 0 # Medicine
@@ -243,8 +243,8 @@ class BagWindowEBDX
       @items["#{i}"].bitmap.blt(pbmp.width - icon.width - (pbmp.width - ibmp.width)/2 - 4, (pbmp.height/4 - icon.height)/2, icon, icon.rect, 164); icon.dispose
       # draw texxt
       text = [
-        ["#{GameData::Item.get(@pocket[i][0]).real_name}", pbmp.width/2 - 15, 2*pbmp.height/64 - 8, 2, @baseColor, Color.new(0, 0, 0, 32)],
-        ["x#{@pocket[i][1]}", pbmp.width/2 - 12, 8*pbmp.height/64 - 14, 2, @baseColor, Color.new(0, 0, 0, 32)],
+        ["#{GameData::Item.get(@pocket[i][0]).real_name}", pbmp.width/2 - 15, 2*pbmp.height/64, 2, @baseColor, Color.new(0, 0, 0, 32)],
+        ["x#{@pocket[i][1]}", pbmp.width/2 - 12, 8*pbmp.height/64, 2, @baseColor, Color.new(0, 0, 0, 32)],
       ]
       pbDrawTextPositions(@items["#{i}"].bitmap, text)
       # center sprite
@@ -275,8 +275,8 @@ class BagWindowEBDX
     bitmap.blt(0, 0, bmp, Rect.new(0,0,320,44))
     # draw text
     text = [
-      [@pname, bmp.width/2, -5, 2, Color.white, nil],
-      ["#{@page+1}/#{@pages}", bmp.width, -5, 0, Color.white, nil]
+      [@pname, bmp.width/2, 8, 2, Color.white, nil],
+      ["#{@page+1}/#{@pages}", bmp.width, 8, 0, Color.white, nil]
     ]
     pbDrawTextPositions(bitmap, text)
     bmp.dispose
@@ -524,7 +524,7 @@ class BagWindowEBDX
     bitmap.blt(28, (bmp.height/2 - icon.height)/2 - 2, icon, icon.rect) if last > 0
     icon.dispose
     # draw text
-    dtext = [[text[i], bmp.width/2, 0, 2, @baseColor, Color.new(0, 0, 0, 32)]]
+    dtext = [[text[i], bmp.width/2, 14, 2, @baseColor, Color.new(0, 0, 0, 32)]]
     pbDrawTextPositions(bitmap, dtext); bmp.dispose
     @sprites["sel"].target(@sprites["pocket#{@index}"]) unless skip
   end
