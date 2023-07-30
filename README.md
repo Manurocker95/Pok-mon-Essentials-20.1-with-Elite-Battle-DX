@@ -163,5 +163,7 @@ Ruben1986
 Full Sprites Credit List:
 https://docs.google.com/spreadsheets/d/1T-KC-4XDOeFKq0Z6tfN6Sz4JIlpaK7B8A0lbmBg9fNY/edit?usp=sharing
 
+EBDX Extra moves: NikDie
+
 And let me know if there is someone that I forget to mentions here.
 
