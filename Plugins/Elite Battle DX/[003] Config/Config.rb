@@ -74,6 +74,9 @@ module EliteBattle
 
   # ZUD plugins clear cached data so EBDX gets stuck. Setting this to true skips the cache and directly loads the game.
   SKIP_CACHED_DATA = false
+
+  #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
+  FORCE_EBDX_ALTITUDE = true
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
