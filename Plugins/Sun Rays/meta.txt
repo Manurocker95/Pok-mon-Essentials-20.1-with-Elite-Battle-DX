@@ -1,0 +1,8 @@
+Name         = Sun Rays
+Version      = 1.0
+Essentials   = 20.1
+Website      = [coming soon]
+Credits      = Polectron, Manurocker95
+
+#===================CHANGELOG=========================#
+# Ported from 16.2

@@ -116,3 +116,7 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
+#-------------------------------
+[YOUNGSTER,Test]
+LoseText = Aww, I lost.
+Pokemon = IRONLEAVES,15
