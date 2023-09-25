@@ -9,7 +9,7 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
   playingBGS = nil
   playingBGM = nil
   # memorizes currently playing BGM and BGS
-  if $game_system.is_a?(Game_System)
+ if $game_system && $game_system.is_a?(Game_System)
     playingBGS = $game_system.getPlayingBGS
     playingBGM = $game_system.getPlayingBGM
     $game_system.bgm_pause
