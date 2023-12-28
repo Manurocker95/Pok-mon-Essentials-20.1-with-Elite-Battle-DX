@@ -7,7 +7,9 @@
 #===============================================================================
 # * Main
 #===============================================================================
-  UPDATESPERSECONDS=5
+UPDATESPERSECONDS=5
+ACTIVATESUNRAYS = false
+
 class Spriteset_Map
   
   alias :initializeSun :initialize
@@ -39,10 +41,10 @@ end
 # * HUD Data
 #===============================================================================
   def createSun
-    @hideSun = PBDayNight.isNight? || !$sun_switch || !pbGetMetadata($game_map.map_id).outdoor_map
-    @correctWather = GameData::Weather.get($game_screen.weather_type).category == :None
+    @hideSun = $game_map == nil || !ACTIVATESUNRAYS || PBDayNight.isNight? || !$sun_switch ||!pbGetMetadata($game_map.map_id) || !pbGetMetadata($game_map.map_id).outdoor_map
+    @correctWather = $game_map == nil ? false : GameData::Weather.get($game_screen.weather_type).category == :None
     
-    return if @hideSun || !@correctWather || $game_map.fog_name != ""
+    return if $game_map == nil || @hideSun || !@correctWather || $game_map.fog_name != ""
     yposition = 0
     @sun = []
 #===============================================================================
