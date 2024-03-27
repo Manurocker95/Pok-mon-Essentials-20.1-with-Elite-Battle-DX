@@ -170,3 +170,10 @@ ModularMenu.add_entry(:DEBUG, _INTL("Debug"), "menuDebug") do |menu|
 end
 # condition to satisfy
 ModularMenu.add_condition(:DEBUG) { next $DEBUG }
+
+#-------------------------------------------------------------------------------
+#  Close Menu
+#-------------------------------------------------------------------------------
+ModularMenu.add_entry(:CLOSE, _INTL("Close"), "menuQuit") do |menu|
+  menu.close = true
+end

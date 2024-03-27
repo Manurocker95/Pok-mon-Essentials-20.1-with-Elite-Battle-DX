@@ -89,3 +89,12 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
   viewport.dispose
   $game_temp.in_battle = false
 end
+
+def pbTestBossBattle3
+  EliteBattle.assign_bgm("Battle victory leader.ogg", :DIALGA)
+  EliteBattle.bossBattle(:DIALGA, 15, 2, false, {
+    :iv => { :HP => 31, :ATTACK => 31, :DEFENSE => 31, :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE =>31, :SPEED =>31 },
+    :bossboost => { :HP => 2.00, :ATTACK => 1.25, :DEFENSE => 1.50, :SPECIAL_ATTACK => 1.50, :SPECIAL_DEFENSE => 2.00, :SPEED => 1.25 },
+    :moves => [ :FLAMETHROWER, :ROAROFTIME, :SNARL, :TACKLE ]
+  })
+end
