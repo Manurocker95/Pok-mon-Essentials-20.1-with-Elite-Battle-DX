@@ -83,6 +83,11 @@ module EliteBattle
     end
   end
   def self.GetSpeciesIndex(species)
+    
+    if EliteBattle::TRY_TO_ALWAYS_INITIALIZE && @full_species.length <= GameData::Species.species_count
+      EliteBattle.InitializeSpecies()
+    end
+    #echoln "#{species} #{ @full_species.length} #{@full_species.index(species)}"
     number = @full_species.index(species) || 0
     return number
   end

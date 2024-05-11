@@ -209,14 +209,28 @@ def pbCheckPokemonBitmapFiles(params)
 
       if EliteBattle::PRIORITIZE_ANIMATED_SPRITES
         bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-        bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
+        if !pbResolveBitmap(bitmapFileName)
+          bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") 
+          if !pbResolveBitmap(bitmapFileName)
+            bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+            if !pbResolveBitmap(bitmapFileName)
+              bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+            end  
+          end
+        end
       else
-        bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") 
-        bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
+        bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+        if !pbResolveBitmap(bitmapFileName)
+          bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") 
+          if !pbResolveBitmap(bitmapFileName)
+            bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+            if !pbResolveBitmap(bitmapFileName)
+              bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+            end  
+          end
+        end
       end  
-
+      #echoln "Finding #{bitmapFileName}"
       ret = pbResolveBitmap(bitmapFileName)
       return ret if ret 
     end
@@ -237,13 +251,16 @@ def pbPokemonBitmapFile(species, shiny, back=false)
     end
     folder = "Graphics/EBDX/Battlers/"+subdir
     folder2 = "Graphics/Pokemon/"+subdir
+    species_id = EliteBattle.GetSpeciesIndex(species) 
   #GameData::Species.try_get(species)&.species
   if EliteBattle::PRIORITIZE_ANIMATED_SPRITES
-    species_id = EliteBattle.GetSpeciesIndex(species) 
     name = sprintf("#{folder}%03d", species_id) #check %s 
     ret = pbResolveBitmap(name)
     return ret if ret
     name = sprintf("#{folder}%s", species) rescue nil
+    ret = pbResolveBitmap(name)
+    return ret if ret
+    name = sprintf("#{folder2}%03d", species_id) #check %s 
     ret = pbResolveBitmap(name)
     return ret if ret
     name = sprintf("#{folder2}%s", species) rescue nil
@@ -252,11 +269,13 @@ def pbPokemonBitmapFile(species, shiny, back=false)
     name = sprintf("#{folder}%s", species) rescue nil
     ret = pbResolveBitmap(name)
     return ret if ret
-    species_id = EliteBattle.GetSpeciesIndex(species) 
     name = sprintf("#{folder}%03d", species_id) #check %s 
     ret = pbResolveBitmap(name)
     return ret if ret
     name = sprintf("#{folder2}%s", species) rescue nil
+    ret = pbResolveBitmap(name)
+    return ret if ret
+    name = sprintf("#{folder2}%03d", species_id) #check %s 
     return pbResolveBitmap(name)
   end
 end

@@ -77,6 +77,9 @@ module EliteBattle
 
   #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
   FORCE_EBDX_ALTITUDE = true
+
+  # If true, it always check the species count in GameData. If the full count is detected to be less than expected, it reinitilize the pokemon species list.
+  TRY_TO_ALWAYS_INITIALIZE = true
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
