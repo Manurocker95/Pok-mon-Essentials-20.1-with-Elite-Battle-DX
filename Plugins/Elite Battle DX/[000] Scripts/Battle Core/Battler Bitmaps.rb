@@ -31,7 +31,7 @@ def pbLoadPokemonBitmapSpecies(pokemon, species, back = false, scale = EliteBatt
     if !pbResolveBitmap(bitmapFileName)
       bitmapFileName = sprintf("#{eggPath}%03d", species_id)
       if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("#{eggPath}Eggs/000")
+        bitmapFileName = sprintf("#{eggPath}000")
       end
     end
 
@@ -41,12 +41,11 @@ def pbLoadPokemonBitmapSpecies(pokemon, species, back = false, scale = EliteBatt
       if !pbResolveBitmap(bitmapFileName)
         bitmapFileName = sprintf("#{eggPath}%03d", species_id)
         if !pbResolveBitmap(bitmapFileName)
-          bitmapFileName = sprintf("#{eggPath}Eggs/000")
+          bitmapFileName = sprintf("#{eggPath}000")
         end
       end
     end
-
-    bitmapFileName = pbResolveBitmap(bitmapFileName)
+    #bitmapFileName = pbResolveBitmap(bitmapFileName)
   else
     shiny = pokemon.shiny?
     shiny = pokemon.superVariant if (!pokemon.superVariant.nil? && pokemon.superShiny?)
@@ -117,25 +116,28 @@ def pbLoadSpeciesBitmap(species, female=false, form=0, shiny=false, shadow=false
   if egg
     eggPath = "Graphics/EBDX/Battlers/Eggs/"
     bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
-    if !pbResolveBitmap(bitmapFileName)
+    ret = pbResolveBitmap(bitmapFileName)
+    if !ret
       bitmapFileName = sprintf("#{eggPath}%03d", species_id)
-      if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("#{eggPath}Eggs/000")
+      ret = pbResolveBitmap(bitmapFileName)
+      if !ret
+        bitmapFileName = sprintf("#{eggPath}000")
       end
     end
 
     if !pbResolveBitmap(bitmapFileName)
       eggPath = "Graphics/Pokemon/Eggs/"
       bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
-      if !pbResolveBitmap(bitmapFileName)
+      ret = pbResolveBitmap(bitmapFileName)
+      if !ret
         bitmapFileName = sprintf("#{eggPath}%03d", species_id)
-        if !pbResolveBitmap(bitmapFileName)
-          bitmapFileName = sprintf("#{eggPath}Eggs/000")
+        ret = pbResolveBitmap(bitmapFileName)
+        if !ret
+          bitmapFileName = sprintf("#{eggPath}000")
         end
       end
     end
-
-    bitmapFileName = pbResolveBitmap(bitmapFileName)
+    #bitmapFileName = pbResolveBitmap(bitmapFileName)
   else
     bitmapFileName = pbCheckPokemonBitmapFiles([species, back, female, shiny, form, shadow, false, false])
   end
@@ -206,33 +208,125 @@ def pbCheckPokemonBitmapFiles(params)
     for dir in dirs
       species_id = EliteBattle.GetSpeciesIndex(species)
       species_ = EliteBattle.GetSpeciesID(species)
-
       if EliteBattle::PRIORITIZE_ANIMATED_SPRITES
         bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-        if !pbResolveBitmap(bitmapFileName)
-          bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") 
-          if !pbResolveBitmap(bitmapFileName)
-            bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-            if !pbResolveBitmap(bitmapFileName)
-              bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-            end  
+        ret = pbResolveBitmap(bitmapFileName)
+        if !ret
+          bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+          ret = pbResolveBitmap(bitmapFileName)
+          if !ret
+            if EliteBattle::PRIORITIZE_REGULAR_SPRITES
+              bitmapFileName = sprintf("#{folder}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+              ret = pbResolveBitmap(bitmapFileName)
+              if !ret
+                bitmapFileName = sprintf("#{folder}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                ret = pbResolveBitmap(bitmapFileName)
+                if !ret
+                  bitmapFileName = sprintf("#{folder2}/%03d%s%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+                  ret = pbResolveBitmap(bitmapFileName)
+                  if !ret
+                    bitmapFileName = sprintf("#{folder2}/%s%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+                    ret = pbResolveBitmap(bitmapFileName)
+                    if !ret
+                      bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                      ret = pbResolveBitmap(bitmapFileName)
+                      if !ret
+                        bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                        ret = pbResolveBitmap(bitmapFileName)
+                      end 
+                    end 
+                  end 
+                end  
+              end
+            else  
+              if !ret
+                bitmapFileName = sprintf("#{folder2}/%03d%s%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+                ret = pbResolveBitmap(bitmapFileName)
+                if !ret
+                  bitmapFileName = sprintf("#{folder2}/%s%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+                  ret = pbResolveBitmap(bitmapFileName)
+                  if !ret
+                    bitmapFileName = sprintf("#{folder}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                    ret = pbResolveBitmap(bitmapFileName)
+                    if !ret
+                      bitmapFileName = sprintf("#{folder}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                      ret = pbResolveBitmap(bitmapFileName)
+                      if !ret
+                        bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                        ret = pbResolveBitmap(bitmapFileName)
+                        if !ret
+                          bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                          ret = pbResolveBitmap(bitmapFileName)
+                        end 
+                      end 
+                    end  
+                  end  
+                end 
+              end 
+            end
           end
-        end
+        end  
       else
-        bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-        if !pbResolveBitmap(bitmapFileName)
-          bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") 
-          if !pbResolveBitmap(bitmapFileName)
-            bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-            if !pbResolveBitmap(bitmapFileName)
+        bitmapFileName = sprintf("#{folder2}/%03d%s%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+        ret = pbResolveBitmap(bitmapFileName)
+        if !ret
+          bitmapFileName = sprintf("#{folder2}/%s%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "","_#{dir}")
+          ret = pbResolveBitmap(bitmapFileName)
+          if !ret
+            if EliteBattle::PRIORITIZE_REGULAR_SPRITES
               bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
-            end  
+              ret = pbResolveBitmap(bitmapFileName)
+              if !ret
+                bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                ret = pbResolveBitmap(bitmapFileName)
+                if !ret
+                  bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                  ret = pbResolveBitmap(bitmapFileName)
+                  if !ret
+                    bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                    ret = pbResolveBitmap(bitmapFileName)
+                    if !ret
+                      bitmapFileName = sprintf("#{folder}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                      ret = pbResolveBitmap(bitmapFileName)
+                      if !ret
+                        bitmapFileName = sprintf("#{folder}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                        ret = pbResolveBitmap(bitmapFileName)
+                      end 
+                    end 
+                  end 
+                end  
+              end
+            else  
+              if !ret
+                bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                ret = pbResolveBitmap(bitmapFileName)
+                if !ret
+                  bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                  ret = pbResolveBitmap(bitmapFileName)
+                  if !ret
+                    bitmapFileName = sprintf("#{folder2}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                    ret = pbResolveBitmap(bitmapFileName)
+                    if !ret
+                      bitmapFileName = sprintf("#{folder2}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                      ret = pbResolveBitmap(bitmapFileName)
+                      if !ret
+                        bitmapFileName = sprintf("#{folder}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                        ret = pbResolveBitmap(bitmapFileName)
+                        if !ret
+                          bitmapFileName = sprintf("#{folder}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
+                          ret = pbResolveBitmap(bitmapFileName)
+                        end 
+                      end 
+                    end  
+                  end  
+                end 
+              end 
+            end
           end
         end
       end  
-      #echoln "Finding #{bitmapFileName}"
-      ret = pbResolveBitmap(bitmapFileName)
-      return ret if ret 
+      #echoln "#{bitmapFileName} - #{ret}"
+      return bitmapFileName if ret
     end
   end
   return nil

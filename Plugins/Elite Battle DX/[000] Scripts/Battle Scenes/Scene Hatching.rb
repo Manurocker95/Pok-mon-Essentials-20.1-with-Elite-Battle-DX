@@ -105,6 +105,20 @@ class PokemonEggHatch_Scene
         crackfilename = sprintf("Graphics/EBDX/Battlers/Eggs/000cracks")
       end
     end
+    if !pbResolveBitmap(crackfilename)
+      # get graphics for the egg crack
+      crackfilename = sprintf("Graphics/Pokemon/Eggs/%s_cracks", @pokemon.species) rescue nil
+      if !pbResolveBitmap(crackfilename)
+        species_id = EliteBattle.GetSpeciesIndex(@pokemon.species)
+        crackfilename = sprintf("Graphics/Pokemon/Eggs/%03d_cracks", species_id)
+        if !pbResolveBitmap(crackfilename)
+          crackfilename = sprintf("Graphics/Pokemon/Eggs/000_cracks")
+        end
+      end
+    end  
+    if !pbResolveBitmap(crackfilename)
+      crackfilename = sprintf("Graphics/Pokemon/Eggs/000")
+    end
     @cracks = BitmapEBDX.new(crackfilename)
     @pokemon.steps_to_hatch = 0
     @viewport.color.alpha = 0
